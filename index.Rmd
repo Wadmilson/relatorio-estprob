@@ -5,11 +5,11 @@ links:
   - label: GitHub
     url: "https://github.com/"
   - label: Email
-    url: "mailto:name@gmail.com"
+    url: "ecruzcarlinho@aluno.ufsj.edu.br"
   - label: Relatórios
     url: "./relatorio/index.html"
 output:
   postcards::jolla
 ---
  
-Descrição sobre o aluno(a)!
+Aluno de Engenharia Mecatronica da UFSJ/CAP!
