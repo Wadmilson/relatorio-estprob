@@ -79,6 +79,7 @@ Usamos varios pacotes no R e Rstudio, e temos alguns deles como o dplyr (usado p
 ### As funções do R
 
 Também encontramos milhares de funções no Rstudio, que são blocos de código que executam tarefas específicas, procedente de tres lugares principais:
+
 1- Funções basicas do proprio R, como sum(), mean() e print(), essas funções recebem argumentos (valores de entrada) e retornam um resultado, evitam repetir código, tornando tudo mais organizado, e também pode-se  criar suas próprias funções com function(), tornado-se esencial na análise de dados, cálculos e automação de tarefa.
 
 Exemplo: soma <- function(a, b) { return(a + b) }
@@ -100,33 +101,51 @@ exemplo: x <- 10
 No R as importações e exportações de dados são escenciais para trabalhar com arquivos externos, e podemos observar alguns desses codigos de importações (trazer dados pro R) como o read.csv() →lê arquivos CSV, read.table() → lê tabelas, pacote readr → funções mais rápidas como read_csv(), e também é possível importar Excel com pacotes específicos, e alguns de exportações (salvar dados do R) como o write.csv() → salva em CSV, o
 write.table() → salva tabelas, e tambem pode exportar resultados, relatórios e dados tratados.
 
----
+### Interface com outras Linguagens
 
+No titulo esta escrito a " A beleza da linguagem R ", porque de fato o R é uma beleza, pois idependentemente de ele só possuir caracteristicas que o torna imperdivel ou extraordinario, o mesmo ainda se interage com outras linguagens.
+Vamos entender o interface como um intermediador entre duas ou mais linguagens, estabelecendo uma forma de interação entre elas. Dentro do R temos integrações prontas para  para implementar códigos em C e FORTRAN, como tambem  o pacote tcltk que integra a linguagem Tcl/TkparaoR. 
+Este pacote desenvolve interfaces gráficas para os nossos códigos, de modo que ao utilizar não seja necessário ter contato direto com a implementação em linguagem R, mas com elementos gráficos como: botões, menus, etc., isolando e protegendo possíveis erros que o usuário pode cometer com a aplicação.
+A linguagem R tanbem se interage com outras linguagens como:
 
-### 💬 Exemplo de como citar uma referência bibliográfica
+1- O C e C++ (principal pacote é o Rcpp, aumenta performance, implementa algoritmos pesados);
 
-Depois de inserido as informaçõe no arquivo **referencias.bib**, use:
+Exemplo:
+library(Rcpp)
 
-- Segundo @Rbasico2022
-- Tudo é um objeto em R [@Rbasico2022]
+cppFunction('int soma(int x, int y) {
+  return x + y;
+}')
 
-### 📊  Análise de Dados
+soma(2, 3)
 
-```{r}
-distancia <- c(10.2, 9.8, 10.5, 10.1, 9.9, 10.3)
-distancia
-```
+2- O Python (principal pacote é o reticulate, roda código Python dentro do R, importar bibliotecas como NumPy, pandas, TensorFlow);
+Exemplo:
+library(reticulate)
 
-## 🧠 Considerações finais
+py_run_string("x = 10")
+py$x
 
-Apresente uma síntese dos principais pontos observados no experimento.
+3- O Java (usa pacotes como o rJava, cria objetos Java,
+chama métodos Java diretamente, sendo usado em sistemas corporativos e aplicações baseadas em JVM);
 
-- Retome o objetivo da prática e indique se ele foi alcançado.
-- Destaque os principais aprendizados obtidos.
-- Comente brevemente sobre a qualidade dos dados coletados.
-- Sugira possíveis melhorias no procedimento experimental.
+4- O SQL (bancos de dados), usa pacotes como:DBI, RMySQL
+, RPostgres (conecta a bancos, executa queries, importa ou exporta dados);
 
-Evite repetir apenas os resultados; foque nas **conclusões e reflexões** sobre a prática realizada.
+5- O JavaScript, sendo muito comum em dashboards e apps web com:Shiny (cria interfaces interativas, e integra com bibliotecas JS (D3.js, Leaflet, etc.));
+
+6- O APIs (REST), usando pacotes como o httr, jsonlite
+(consumi APIs externas, e integra com sistemas web);
+
+7- O Shell / Sistema Operacional, possui funções como o
+system(), e o system2(), (executa scripts bash, automatiza tarefas externas);
+
+### Considerações Finais
+
+O R é uma ferramenta poderosa, gratuita e altamente versátil para análise de dados e estatística. Sua curva de aprendizado inicial pode parecer íngreme devido à sintaxe baseada em comandos, mas a recompensa é enorme: reprodutibilidade total dos resultados, integração com outras linguagens (Python, SQL) e milhares de pacotes para as mais diversas áreas do conhecimento.
+O R não substitui o raciocínio estatístico, mas potencializa a análise de forma transparente e científica.
+POr isso vos comvido a vir e aprender a trabalhar com o R, e desfrutar da sua beleza.
+
 
 ## Aprenda Quarto
 
