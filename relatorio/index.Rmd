@@ -1,6 +1,6 @@
 ---
 title: "Relatórios da Disciplina Estatística Experimental (UFSJ)"
-author: "[Ben Dêivide](https://bendeivide.github.io) | [DEFIM/UFSJ](https://ufsj.edu.br)"
+author: "[Wadmilson Coosta da Fonseca e Cruz](https://Wadmilson.github.io/relatorio-estprob-/) | [ENG.MECATRONICA/UFSJ](https://ufsj.edu.br)"
 date: "`r format(Sys.time(), '%d %B, %Y, %Hh:%Mmin:%Sseg')`"
 toc-title: "Sumário"
 output:
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Mais informações sobre mim
 
-Acesse: [Wadmilson Costa](file:///C:/Relatorio/profmatma41/index.html){target="_blank"}
+Acesse: [Wadmilson Costa da Fonseca e Cruz](https://wadmilson.github.io/relatorio-estprob-/){target="_blank"}
 
 # Página dos alunos da disciplina
 

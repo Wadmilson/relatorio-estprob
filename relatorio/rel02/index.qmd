@@ -1,7 +1,7 @@
 ---
 # Só mude aqui!!!!
-author: "Nome do Aluno"
-title: "Relatório de Aula Prática 02"
+author: "Wadmilson Costa da Fonseca e CRuz"
+title: "A beleza da linguangem R"
 bibliography: referencias.bib
 # A partir daqui nao faca alteracoes!!!!!
 link-citations: true
@@ -27,72 +27,81 @@ execute:
 
 
 ## 📌 Introdução
+### O que podemos saber sobre o ambiente R
+O R é um ambiente de software livre e código aberto, com recursos gráficos de alta qualidad, cujo objetivo se inicia pela análise e apresentação de dados até recursos para desenvolvimento de página web, por exemplo, é usado em estatistica, análise de dados, gráficos, e ciencia de dados. 
+Foi desenvolvido inicialmente por Ross Ihaka e Robert Gentleman em 1993 na Universidade de Auckland, Nova Zelândia. Trata-se de uma implementação da linguagem S, criada nos Bell Laboratories.  
+Devido a contribuição da linguagem ser realizada por toda a comunidade científica e sociedade como um todo, os recursos desenvolvidos pelo R são dos mais diversos possíveis, destacando-se pela sua  flexibilidade, extensibilidade por meio dos pacotes (packages) que nele se encontram.
+Diferentemente de softwares proprietários (como SPSS ou SAS), o R é gratuito e roda em Windows, macOS e Linux. Sua principal interface gráfica recomendada é o RStudio, que facilita o uso para iniciantes.
 
-Descreva o contexto da prática e sua importância.
-
-> Exemplo: análise da variabilidade em experimentos físicos utilizando uma catapulta.
-
-
-
-## 🎯 Objetivos
 
 ### Objetivo geral
 
-Descrever o objetivo principal da prática.
+Conhecer a linguagem R e sua estrutura funcional.
 
 ### Objetivos específicos
 
-- Coletar dados experimentais  
-- Aplicar estatística descritiva  
-- Construir gráficos  
-- Interpretar resultados  
-
----
+ Aprenderemos a baixar o R e o Rstudio e os instalar, trabalhar com o R, intalar os seus pacotes, entender e saber usar os objetos e estruturas de dados, as funções no R, as importações e exportações de dados, e a sua interface com outras linguas. 
 
 ## 📚  Fundamentação Teórica
 
-Apresente os conceitos principais:
+### Como baixar e intalar o R e o Restudio
 
-- Média
-- Variância
-- Desvio padrão
-- Amostragem
+Para instlar o R é so acessar o site oficial: https://www.r-project.org., cliquar em “CRAN” (Comprehensive R Archive Network), escolher um mirror próximo (ex.: UFPR para usuários no Brasil),
+selecionear a versão para seu sistema operacional e baixar o instalador (opção “base”), depois executar o arquivo e siguir as configurações padrões. Na versão mais recente (4.5.3 ou superior), é possível escolher o idioma Português (Brasil) para mensagens.
 
-$$
-\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-$$
+Para instalar o Rstudio, baixe gratuitamente em https://posit.co/download/rstudio-desktop, depois instalar a versão mais compacta com o seu dispositivo, e executar o arquivo e seguir com as configurações padrões. O RStudio é um Ambiente de Desenvolvimento Integrado (IDE) que organiza o console, scripts, gráficos e ajuda em uma única janela.
+
+Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nos cursos em  disponivel em https://bendeivide.github.io/. 
+
+
+### Como o R trabalha 
+ 
+O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).
+ 
+Toda ação no R é uma chamada de função (Operadores e funções), que  é armazenada na forma de um objeto, e este é associado a um nome. Esta ação basea-se em
+argumentos (dados, fórmulas, expressões, etc) padrões vistas como entradas pré-estabelecidas na criação da
+função, que podem ser modificados na execução da função, e a saída que é o resultado, também sendo um objeto, e é
+usado como argumento de outras funções.
+
+Ao ter o contacto com o R, o primeiro comando que temos o aceeso é o prompt de comando “>”(este símbolo diz-no que o R está pronto para receber os comandos dos usuarios), e está localizado no console do R, e armazernamos os comandosatravés do script (um arquivo de texto com extensão“<>.R”, para criar basta ir em: “Arquivo > Novo script...”).
+Já o Rstudio se apresenta como uma interface para facilitar a utilização do R, tendo por padrão quatro quadrantes, que organiza as atividades realizadas de forma mais vantajosa.
+
+### Os quadrantes do Rstudio
+
+O primeiro quadrante é responsável pela entrada de dados , comandos, é chamado de input, o segundo é o console do R, representando tanto a entrada como a saída de informa
+ções (input/output), o terceiro  representa informações básicas, como objetos no ambiente global, a memória de comandos na aba History, dentre outras, e também representa a entrada como a saída de informações (input/output), e o quarto que é responsável por representações gráficas, instalação de pacotes, renderização de páginas web, etc.
+OS comandos são digitados uma de cada vez, desde que o simbolo do prompt do comando é visivel, e esse simbolo  pode ser alterado segundo o gosto do usuario.
+
+### Alguns pacotes do R
+
+Usamos varios pacotes no R e Rstudio, e temos alguns deles como o dplyr (usado para manipular dados (filtrar, ordenar, resumir), o ggplot2 (criar gráficos de forma simples e poderosa), o tidyr (organiza e “limpa” dados (deixa no formato ideal)), o readr (importa dados rapidamente (ex: arquivos CSV)), o stringr (facilita no trabalho com textos), o forcats (ajuda a lidar com variáveis categóricas (fatores)), e o leem (trabalha com dados que têm medidas repetidas, ajusta modelos estatísticos mais avançados, e lida com dependência entre observações).
+
+### As funções do R
+
+Também encontramos milhares de funções no Rstudio, que são blocos de código que executam tarefas específicas, procedente de tres lugares principais:
+1- Funções basicas do proprio R, como sum(), mean() e print(), essas funções recebem argumentos (valores de entrada) e retornam um resultado, evitam repetir código, tornando tudo mais organizado, e também pode-se  criar suas próprias funções com function(), tornado-se esencial na análise de dados, cálculos e automação de tarefa.
+
+Exemplo: soma <- function(a, b) { return(a + b) }
+
+2- Funções de pacotes como dplyr e ggplot2 que adicionam muitas outras funções.
+
+3- Funções que o usuario pode reproduzir ou criar.
+
+### Os objetos e as estrutura dos dados 
+
+No R, temos os objetos que são tudo que armazena dados (valores, tabelas, resultados), criados com <-: .
+
+exemplo: x <- 10
+
+, e estruturas de dados que definem como esses dados são organizados para analises, como vetores (sequência de valores do mesmo tipo → c(1,2,3)), matrizes (dados em formato de tabela (linhas e colunas, mesmo tipo)), data frames (tabelas mais usadas (colunas podem ter tipos diferentes)), listas (podem guardar vários tipos de dados juntos), fatores (usados para dados categóricos (ex: sexo, cor)), arrays (semelhantes a matrizes, mas com mais de 2 dimensões), tibbles (versão moderna de data frames (do tidyverse)), data tables (estrutura otimizada para grandes volumes de dados (pacote data.table)), e muitos outros.
+
+### Importações e exportações de dados no R 
+
+No R as importações e exportações de dados são escenciais para trabalhar com arquivos externos, e podemos observar alguns desses codigos de importações (trazer dados pro R) como o read.csv() →lê arquivos CSV, read.table() → lê tabelas, pacote readr → funções mais rápidas como read_csv(), e também é possível importar Excel com pacotes específicos, e alguns de exportações (salvar dados do R) como o write.csv() → salva em CSV, o
+write.table() → salva tabelas, e tambem pode exportar resultados, relatórios e dados tratados.
 
 ---
 
-## ⚙️ Metodologia
-
-::: {.callout-note}
-Descreva como o experimento foi realizado.
-:::
-
-- Materiais utilizados  
-- Procedimento  
-- Número de repetições  
-
----
-
-## 🔍 Resultados e Discussão
-
-Apresente e interprete os resultados obtidos a partir dos dados coletados.
-
-- Descreva os principais resultados numéricos (média, variabilidade, etc.).
-- Comente o comportamento dos dados observados nos gráficos.
-- Indique se há presença de valores discrepantes (outliers).
-- Avalie se os dados apresentam simetria ou tendência.
-
-Em seguida, discuta os resultados à luz dos conceitos teóricos:
-
-- Os resultados estão de acordo com o esperado?
-- Há grande variabilidade? O que isso significa no contexto do experimento?
-- Quais fatores podem ter influenciado os resultados?
-- Existem possíveis fontes de erro experimental?
-
-Procure não apenas descrever, mas **interpretar os dados**.
 
 ### 💬 Exemplo de como citar uma referência bibliográfica
 
