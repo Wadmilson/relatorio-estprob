@@ -3,6 +3,7 @@
 author: "Wadmilson Costa da Fonseca e CRuz"
 title: "A beleza da linguangem R"
 bibliography: referencias.bib
+output: html_document
 # A partir daqui nao faca alteracoes!!!!!
 link-citations: true
 csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
@@ -146,9 +147,7 @@ O R é uma ferramenta poderosa, gratuita e altamente versátil para análise de 
 O R não substitui o raciocínio estatístico, mas potencializa a análise de forma transparente e científica.
 POr isso vos comvido a vir e aprender a trabalhar com o R, e desfrutar da sua beleza.
 
-
-## Aprenda Quarto
-
-Acesse [Quarto](https://quarto.org/).
+O R é uma linguagem poderosa @r_core_2026.
+Outros livros importantes são @ferreira2020 e @wickham2017.
 
 ## 📖 Referências
