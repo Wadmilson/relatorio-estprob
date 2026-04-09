@@ -1,7 +1,7 @@
 ---
 # Só mude aqui!!!!
-author: "Nome do Aluno"
-title: "Relatório de Aula Prática 03"
+author: "Wadmilson Costa da Fonseca e Cruz"
+title: "Relatorio do experimento da cataputa"
 bibliography: referencias.bib
 # A partir daqui nao faca alteracoes!!!!!
 link-citations: true
@@ -27,100 +27,85 @@ execute:
 
 
 ## 📌 Introdução
-
-Descreva o contexto da prática e sua importância.
-
-> Exemplo: análise da variabilidade em experimentos físicos utilizando uma catapulta.
+Como forma de aplicar os conceitos que estudamos na aula de estatistica de um jeito mais pratico, usando a catapulta, realizamos 40 lançamentos seguidos, midimos e anotamos as distancias alcançadas em cada lançamento.
+A partir desses valores anotados, vamos trabalhar os dados aplicando os conceitos estudados. 
 
 
 
-## 🎯 Objetivos
+## 🎯 Objetivo
+### Objetivos especificos
 
-### Objetivo geral
-
-Descrever o objetivo principal da prática.
-
-### Objetivos específicos
-
-- Coletar dados experimentais  
-- Aplicar estatística descritiva  
-- Construir gráficos  
-- Interpretar resultados  
-
----
-
-## 📚  Fundamentação Teórica
-
-Apresente os conceitos principais:
-
-- Média
-- Variância
-- Desvio padrão
-- Amostragem
-
-$$
-\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-$$
-
----
+Realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, calcular medidas de posição e de dispersão, tanto com ou sem agrupamento de dados, e discutir as diferença observadas entre os resultados. 
+Além disso, analisar a assimetria e a curtose do conjunto dos dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  
 
 ## ⚙️ Metodologia
 
-::: {.callout-note}
-Descreva como o experimento foi realizado.
-:::
+O experimento foi realizado em sala de aula. A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e utilizamos uma trena para medir a distancia alcançada em cada lançamento. 
+Na catapulta, utilizamos diferentes combinações variações: A+ (segundo pino,de cima para baixo ), A-(primeiro pino, de cima para baixo), O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus).
 
-- Materiais utilizados  
-- Procedimento  
-- Número de repetições  
+![foto da cataputa montada](imagens/foto2.jpeg){width=50%}![foto da cataputa montada](imagens/foto3.jpeg){width=50%}![foto da cataputa montada](imagens/foto4.jpeg){width=50%}
 
----
+Formamos dois grupos, onde um realizou os lançamentos primeiro e depois o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas pela medição das distancias, João Pedro pela captura das fotos, e Wadmilson pela coleta e anotação dos dados. 
+Ao final, Marcos organizou todas as medidas coletadas e eviou-as como dados amostrais para o professor, e para os demais integrantes do grupo.
 
-## 🔍 Resultados e Discussão
+A catapulta foi posicionada a uma distancia inicial de 250 cm (2,5 metros) do ponto de referencia.
 
-Apresente e interprete os resultados obtidos a partir dos dados coletados.
+![Foto da medida referencial fixa](imagens/foto1.jpeg){width=40%}
 
-- Descreva os principais resultados numéricos (média, variabilidade, etc.).
-- Comente o comportamento dos dados observados nos gráficos.
-- Indique se há presença de valores discrepantes (outliers).
-- Avalie se os dados apresentam simetria ou tendência.
+Para obter a distancia total de cada lançamento, somamos esse valor fixo com a medida adicional registrada em cada lançamento, e os dados recolhidos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.
 
-Em seguida, discuta os resultados à luz dos conceitos teóricos:
+## Descrição dos dados por meio de tabulação e apresentação gráfica
 
-- Os resultados estão de acordo com o esperado?
-- Há grande variabilidade? O que isso significa no contexto do experimento?
-- Quais fatores podem ter influenciado os resultados?
-- Existem possíveis fontes de erro experimental?
+### Dados sem agrupamento (Dados brutos)
 
-Procure não apenas descrever, mas **interpretar os dados**.
-
-### 💬 Exemplo de como citar uma referência bibliográfica
-
-Depois de inserido as informaçõe no arquivo **referencias.bib**, use:
-
-- Segundo @Rbasico2022
-- Tudo é um objeto em R [@Rbasico2022]
-
-### 📊  Análise de Dados
-
+## Análise sem Intervalos de Classe
 ```{r}
-distancia <- c(10.2, 9.8, 10.5, 10.1, 9.9, 10.3)
-distancia
+
+#|code-fold: True
+#|warning: False
+library(leem)
+dados <- c(346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320)
+# Transformar para dados discretos/sem agrupamento
+dados_sem_agrupo <- new_leem(dados, variable = 'discrete')
+# Tabela de frequencia
+tabela_sem<- tabfreq(dados_sem_agrupo)
+tabela_sem
+# Criando o graficorafico
+Grafico <- barplot(table(dados), main = 'Meu Grafico', xlab = 'valores', ylab = 'frequencia')
+# MEDIDAS DE POSIÇÃO
+#| code-fold: True
+media <- mean(dados)
+mediana <- median(dados)
+# Calcula a moda
+tabela <- table(dados)
+moda <- as.numeric(names(tabela[tabela == max(tabela)]))
+cat("--- MEDIDAS DE POSIÇÃO ---\n")
+cat("Média Aritmética:", media, "\n")
+cat("Mediana:", mediana, "\n")
+cat("Moda:", moda, "\n\n")
+# MEDIDAS DE DISPERSÃO
+#| code-fold: True
+amplitude_total <- max(dados) - min(dados)
+variancia <- var(dados)
+desvio_padrao <- sd(dados)
+coeficiente_variacao <- (desvio_padrao / media) * 100
+erro_padrao_media <- desvio_padrao / sqrt(length(dados))
+cat("--- MEDIDAS DE DISPERSÃO ---\n")
+cat("Amplitude Total:", amplitude_total, "\n")
+cat("Variância:", variancia, "\n")
+cat("Desvio Padrão:", desvio_padrao, "\n")
+cat("Coeficiente de Variação (%):", coeficiente_variacao, "\n")
+cat("Erro Padrão da Média:", erro_padrao_media, "\n")
 ```
 
-## 🧠 Considerações finais
 
-Apresente uma síntese dos principais pontos observados no experimento.
 
-- Retome o objetivo da prática e indique se ele foi alcançado.
-- Destaque os principais aprendizados obtidos.
-- Comente brevemente sobre a qualidade dos dados coletados.
-- Sugira possíveis melhorias no procedimento experimental.
 
-Evite repetir apenas os resultados; foque nas **conclusões e reflexões** sobre a prática realizada.
 
-## Aprenda Quarto
 
-Acesse [Quarto](https://quarto.org/).
+
+
+
+
 
 ## 📖 Referências
