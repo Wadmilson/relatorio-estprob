@@ -28,33 +28,39 @@ execute:
 
 ## 📌 Introdução
 Como forma de aplicar os conceitos que estudamos em aula de estatistica de manera pratica, realizamos 40 lançamentos utilizando uma catapulta, midindo e anotando a distancia alcançada em cada tentativa.
-A partir desses valores coletados, analisaremos os dados aplicando os conceitos de medidas de posição e disperção, bem como realizaremos sua tabulação e representação grafica, tanto com dados agrupados em intervalos de classe quanto sem. 
+A partir desses valores coletados, analisaremos os dados aplicando os conceitos de medidas de posição e disperção, e a realizaremos sua tabulação e representação grafica, tanto com dados agrupados em intervalos de classe quanto sem. 
 
 
 ## 🎯 Objetivo
 
-O foco aqui deste relatorio consiste em realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, bem como calcular as medidas de posição e de dispersão, tanto com ou sem agrupamento de dados em intervalos de classe ou não, discutindo as diferenças observadas entre os resultados. 
+O foco deste relatorio, consiste em realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, bem como calcular as medidas de posição e de dispersão, tanto com ou sem agrupamento de dados em intervalos de classe ou não, discutindo as diferenças observadas entre os resultados. 
 
 Além disso, objetivamos analisar a assimetria e a curtose do conjunto de dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  
 
 ## ⚙️ Metodologia
 
 O experimento foi realizado em sala de aula. Formamos dois grupos, onde um realizou os lançamentos primeiro e, depois, o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas, pela medição das distancias, João Pedro, pela captura das fotos, e Wadmilson, pela coleta e anotação dos dados. 
-Utilizamos uma catapulta, uma trena e uma bolinha para a realização do experimento.A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e com a trena medimos a distancia alcançada em cada lançamento. 
+Utilizamos uma catapulta, uma trena e uma bolinha para a realização do experimento. A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e com a trena medimos a distancia alcançada em cada lançamento. 
 
 Na catapulta, utilizamos diferentes combinações de variaveis, sendo o A+ (segundo pino,de cima para baixo ), o A-(primeiro pino, de cima para baixo), o O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus), conforme mostra nas imagens que se seguem.
 
 ![foto da cataputa montada](imagens/foto2.jpeg){width=50%}![foto da cataputa montada](imagens/foto3.jpeg){width=50%}![foto da cataputa montada](imagens/foto4.jpeg){width=50%}
+
+
+
 Para torna a medição mais simples e menos trabalhosa, marcamos uma distancia inicial de 250 cm (2,5 metros) do pé da mesa, na direção do espaço que a bolinha percorreria após ser lançada, como ponto fixo de referencia. Assim como observaremos na imagem a seguir.
 
 ![Foto da medida referencial fixada](imagens/foto1.jpeg){width=40%}
 
 Para obter a distancia total de cada lançamento, somamos essa distancia fixa com a distancia adicional registrada em cada lançamento. Ao final, Marcos organizou todas as medidas coletadas e eviou os dados amostrais para o professor, e para os demais integrantes do grupo.
-As distancias totais em centimetros, que coletamos após os 40 lançamentos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.
+
+Assim as distancias totais em centimetros, que coletamos após os 40 lançamentos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.
 
 
 
 ## Análise e discussão dos resultados
+
+### Tabulação e apresentação grafica de dados brutos sem intervalos de classe e suas medidas
 
 Com os dados coletados, faremos sua tabulação e apresentação grafica, tanto agrupados em intervalos de classes quanto  sem agrupamento. Em seguida, calcularemos as medidas de posição e dispersão para cada um dos casos.
 
@@ -69,7 +75,7 @@ dados <- c(346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347,
 # Transformar para dados discretos/sem agrupamento
 dados_sem_agrupo <- new_leem(dados, variable = 'discrete')
 # Tabela de frequencia
-tabela_sem<- tabfreq(dados_sem_agrupo)
+tabela_sem<- tabfreq(dados_sem_agrupo, ncol = 4)
 tabela_sem
 # Criando o graficorafico
 Grafico <- barplot(table(dados), main = 'Meu Grafico', xlab = 'valores', ylab = 'frequencia')
@@ -98,6 +104,9 @@ cat("Desvio Padrão:", desvio_padrao, "\n")
 cat("Coeficiente de Variação (%):", coeficiente_variacao, "\n")
 cat("Erro Padrão da Média:", erro_padrao_media, "\n")
 ```
+
+### Interpretando os resultados obtidos 
+
 Os valores da média (334,45) e da mediana (335,5) são muito próximos, indicando que os dados são simétricos e bem distribuídos, sem valores extremos que alterem o centro da distribuição.
 A moda é 339, pois este foi o valor que mais se repetiu na amostra, ocorrendo com maior frequencia. 
 
@@ -107,6 +116,7 @@ O Desvio Padrão de 18,37 e o Coeficiente de Variação de apenas 5,49% indicam 
 
 O erro padrão da média de 2,9 significa que o valor de 334,45 é bastante preciso, representando muito bem a realidade dos dados com uma pequena margem de erro.
  
+### Tabulação e apresentação grafica de dados agrupados com intervalos de classe e suas medidas
 
 Agora, faremos a tabulação e a apresentação grafica com dados agrupados em intervalos de classe, bem como o calculo das respetivas medidas de posição e dispersão.
 
@@ -164,6 +174,8 @@ cat("Coef. Variação:", round(coeficiente_variacao, 2), "%\n")
 cat("Erro Padrão Média:", round(erro_padrao_media, 2), "\n")
 cat("\n")
 ```
+
+### Interpretando os resultados obtidos
 
 Os resultados obtidos com os dados agrupados foram muito próximos aos encontrados na análise sem agrupamento. A média de 334,45 e a mediana de 335,5 continuam muito próximas, confirmando a simetria dos dados. A moda de 339 permanece como o valor mais frequente.
 O desvio padrão de 18,37 e o coeficiente de variação de 5,49% indicam, novamente, baixa dispersão e alta homogeneidade, mostrando que os valores são consistentes e próximos uns dos outros, independentemente da forma como foram organizados
