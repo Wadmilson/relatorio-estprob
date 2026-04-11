@@ -191,15 +191,19 @@ A seguir, abordaremos os coeficientes de assimetria e curtose.
 A assimetria mede se os dados estão concentrados à esquerda, à direita ou se distribuem de forma simétrica em relação à média.
 Cálculo:
 
-Sk = 3(Média - Mediana)/Desvio Padrão
-Sk = 3(334,45 - 335,5)/ 18,37
-Sk = 3(-1,05)/ 18,37
-Sk = -3,15/ 18,37
-Sk ≈ -0,17
+```{r}
 
-Sk = 0: distribuição simétrica 
-Sk > 0: assimetria positiva (calda para direita)
-Sk < 0: assimetria negativa (calda para esquerda)
+# Usando os valores que já calculamos
+media <- 334.45
+mediana <- 335.5
+desvio_padrao <- 18.37
+# Fórmula: Sk = 3 * (Média - Mediana) / Desvio Padrão
+sk <- 3 * (media - mediana) / desvio_padrao
+# Mostrando o resultado
+cat("--- Coeficiente de Assimetria (Pearson) ---\n")
+cat("Sk =", sk, "\n")
+```
+
 
 Como o valor calculado é -0,17, muito próximo de zero, a distribuição apresenta assimetria praticamente Nula / levemente negativa.
 O histograma tem formato muito próximo a uma "curva de sino" perfeita.
