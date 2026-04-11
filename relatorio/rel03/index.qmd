@@ -27,38 +27,39 @@ execute:
 
 
 ## 📌 Introdução
-Como forma de aplicar os conceitos que estudamos na aula de estatistica de um jeito mais pratico, usando a catapulta, realizamos 40 lançamentos seguidos, midimos e anotamos as distancias alcançadas em cada lançamento.
-A partir desses valores anotados, vamos trabalhar os dados aplicando os conceitos estudados. 
-
+Como forma de aplicar os conceitos que estudamos em aula de estatistica de manera pratica, realizamos 40 lançamentos utilizando uma catapulta, midindo e anotando a distancia alcançada em cada tentativa.
+A partir desses valores coletados, analisaremos os dados aplicando os conceitos de medidas de posição e disperção, bem como realizaremos sua tabulação e representação grafica, tanto com dados agrupados em intervalos de classe quanto sem. 
 
 
 ## 🎯 Objetivo
-### Objetivos especificos
 
-Realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, calcular medidas de posição e de dispersão, tanto com ou sem agrupamento de dados, e discutir as diferença observadas entre os resultados. 
-Além disso, analisar a assimetria e a curtose do conjunto dos dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  
+O foco aqui deste relatorio consiste em realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, bem como calcular as medidas de posição e de dispersão, tanto com ou sem agrupamento de dados em intervalos de classe ou não, discutindo as diferenças observadas entre os resultados. 
+
+Além disso, objetivamos analisar a assimetria e a curtose do conjunto de dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  
 
 ## ⚙️ Metodologia
 
-O experimento foi realizado em sala de aula. A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e utilizamos uma trena para medir a distancia alcançada em cada lançamento. 
-Na catapulta, utilizamos diferentes combinações variações: A+ (segundo pino,de cima para baixo ), A-(primeiro pino, de cima para baixo), O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus).
+O experimento foi realizado em sala de aula. Formamos dois grupos, onde um realizou os lançamentos primeiro e, depois, o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas, pela medição das distancias, João Pedro, pela captura das fotos, e Wadmilson, pela coleta e anotação dos dados. 
+Utilizamos uma catapulta, uma trena e uma bolinha para a realização do experimento.A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e com a trena medimos a distancia alcançada em cada lançamento. 
+
+Na catapulta, utilizamos diferentes combinações de variaveis, sendo o A+ (segundo pino,de cima para baixo ), o A-(primeiro pino, de cima para baixo), o O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus), conforme mostra nas imagens que se seguem.
 
 ![foto da cataputa montada](imagens/foto2.jpeg){width=50%}![foto da cataputa montada](imagens/foto3.jpeg){width=50%}![foto da cataputa montada](imagens/foto4.jpeg){width=50%}
-
-Formamos dois grupos, onde um realizou os lançamentos primeiro e depois o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas pela medição das distancias, João Pedro pela captura das fotos, e Wadmilson pela coleta e anotação dos dados. 
-Ao final, Marcos organizou todas as medidas coletadas e eviou-as como dados amostrais para o professor, e para os demais integrantes do grupo.
-
-A catapulta foi posicionada a uma distancia inicial de 250 cm (2,5 metros) do ponto de referencia.
-
-Para obter a distancia total de cada lançamento, somamos esse valor fixo com a medida adicional registrada em cada lançamento, e os dados recolhidos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.
+Para torna a medição mais simples e menos trabalhosa, marcamos uma distancia inicial de 250 cm (2,5 metros) do pé da mesa, na direção do espaço que a bolinha percorreria após ser lançada, como ponto fixo de referencia. Assim como observaremos na imagem a seguir.
 
 ![Foto da medida referencial fixada](imagens/foto1.jpeg){width=40%}
 
+Para obter a distancia total de cada lançamento, somamos essa distancia fixa com a distancia adicional registrada em cada lançamento. Ao final, Marcos organizou todas as medidas coletadas e eviou os dados amostrais para o professor, e para os demais integrantes do grupo.
+As distancias totais em centimetros, que coletamos após os 40 lançamentos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.
 
 
-## Descrição dos dados por meio de tabulação e apresentação gráfica
 
-### Dados sem agrupamento (Dados brutos) e análise sem intervalos de classe
+## Análise e discussão dos resultados
+
+Com os dados coletados, faremos sua tabulação e apresentação grafica, tanto agrupados em intervalos de classes quanto  sem agrupamento. Em seguida, calcularemos as medidas de posição e dispersão para cada um dos casos.
+
+Primeiramente, apresentaremos a tabulação e apresentação grafica com dados brutos, sem intervalos de classes, justamente com suas medidas de posição e dispersão.
+
 ```{r}
 
 #|code-fold: True
@@ -97,7 +98,19 @@ cat("Desvio Padrão:", desvio_padrao, "\n")
 cat("Coeficiente de Variação (%):", coeficiente_variacao, "\n")
 cat("Erro Padrão da Média:", erro_padrao_media, "\n")
 ```
-## Dados agrupados e analise com intervalos de classes 
+Os valores da média (334,45) e da mediana (335,5) são muito próximos, indicando que os dados são simétricos e bem distribuídos, sem valores extremos que alterem o centro da distribuição.
+A moda é 339, pois este foi o valor que mais se repetiu na amostra, ocorrendo com maior frequencia. 
+
+A amplitude Total deu 94, pois o valor máximo é 94 unidades superior ao valor mínimo, mostrando a extensão total do intervalo coberto pelos  seus dados. A variância foi de 337,48, uma medidaque expressa o grau de dispersão, quanto maior esse valor, mais afastados da media estão os dados, refletetindo o cálculo das distâncias quadradas em relação ao  centro.
+ 
+O Desvio Padrão de 18,37 e o Coeficiente de Variação de apenas 5,49% indicam baixa dispersão e alta homogeneidade, ou seja, os dados são consistentes e poucos variaveis em torno da media. 
+
+O erro padrão da média de 2,9 significa que o valor de 334,45 é bastante preciso, representando muito bem a realidade dos dados com uma pequena margem de erro.
+ 
+
+Agora, faremos a tabulação e a apresentação grafica com dados agrupados em intervalos de classe, bem como o calculo das respetivas medidas de posição e dispersão.
+
+
 
 ```{r}
 
@@ -152,13 +165,15 @@ cat("Erro Padrão Média:", round(erro_padrao_media, 2), "\n")
 cat("\n")
 ```
 
-### Análise e discussão dos resultados
- Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. pois os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios para o cálculo. 
+Os resultados obtidos com os dados agrupados foram muito próximos aos encontrados na análise sem agrupamento. A média de 334,45 e a mediana de 335,5 continuam muito próximas, confirmando a simetria dos dados. A moda de 339 permanece como o valor mais frequente.
+O desvio padrão de 18,37 e o coeficiente de variação de 5,49% indicam, novamente, baixa dispersão e alta homogeneidade, mostrando que os valores são consistentes e próximos uns dos outros, independentemente da forma como foram organizados
+ 
+ Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. Isso ocorreu porque os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios como base para os cálculos. 
 
 O  agrupamento dos dados facilita a visualização gráfica e a leitura da tabela, sem perder a precisão das informações principais. Porém, trata-se sempre de uma estimativa: perdemos um pouco da identidade individual de cada valor em troca de uma visão geral. Já os dados brutos oferecem exatidão total.
 
-## Medidas de forma: Assimetria e Curtose 
- 
+A seguir, abordaremos os coeficientes de assimetria e curtose.
+
 ### Coeficiente de Assimetria (Pearson)
  
 A assimetria mede se os dados estão concentrados à esquerda, à direita ou se distribuem de forma simétrica em relação à média.
@@ -183,9 +198,9 @@ A curtose mede o "grau de achatamento" ou "pontuação" da curva de frequência,
 
 Ela é classificada em: 
 
-mesocúrtica: curva normal (padrão); 
-leptocúrtica: curva mais "alta e pontuda" (dados muito concentrados);
-platicúrtica: curva mais "baixa e achatada" (dados muito espalhados);
+- mesocúrtica: curva normal (padrão); 
+- leptocúrtica: curva mais "alta e pontuda" (dados muito concentrados);
+- platicúrtica: curva mais "baixa e achatada" (dados muito espalhados);
 
 Com base na dispersão e quartis, observa-se que os dados estão bem concentrados em torno da média, com caudas adequadas, logo, a distribuição é mesocúrtica, pois seu formato é muito semelhante ao da distribuição normal padrão.
 
@@ -203,27 +218,12 @@ Embora sejam esperadas pequenas variações entre os lançamentos, a diferença 
 
 Além disso, ocorreram falhas na medição por parte da equipe: nem todas as marcções foram feitas exatamente no ponto de impacto da bolinha. A trena ficou ligeiramente deslocada da referencia e, em alguns casos, oponto registrado não correspondia ao primeiro contacto entre da bolinha com o solo. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 📖 Referências
+
+R CORE TEAM. R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2025. Disponível em: <https://www.R-project.org/>.
+
+BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. R package version 1.1.3, 2023. Disponível em: <https://bendeivide.github.io/leem/>.
+
+MORETTIN, Pedro Alberto; BUSSAB, Wilton de Oliveira. Estatística Básica. 9. ed. São Paulo: Saraiva, 2017.
+
+TRIOLA, Mario F. Introdução à Estatística. 12. ed. Rio de Janeiro: LTC, 2017.

@@ -84,26 +84,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">1</span> 📌 Introdução</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">2</span> 🎯 Objetivo</a>
-  <ul class="collapse">
-  <li><a href="#objetivos-especificos" id="toc-objetivos-especificos" class="nav-link" data-scroll-target="#objetivos-especificos"><span class="header-section-number">2.1</span> Objetivos especificos</a></li>
-  </ul></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="header-section-number">2</span> 🎯 Objetivo</a></li>
   <li><a href="#metodologia" id="toc-metodologia" class="nav-link" data-scroll-target="#metodologia"><span class="header-section-number">3</span> ⚙️ Metodologia</a></li>
-  <li><a href="#descrição-dos-dados-por-meio-de-tabulação-e-apresentação-gráfica" id="toc-descrição-dos-dados-por-meio-de-tabulação-e-apresentação-gráfica" class="nav-link" data-scroll-target="#descrição-dos-dados-por-meio-de-tabulação-e-apresentação-gráfica"><span class="header-section-number">4</span> Descrição dos dados por meio de tabulação e apresentação gráfica</a>
+  <li><a href="#análise-e-discussão-dos-resultados" id="toc-análise-e-discussão-dos-resultados" class="nav-link" data-scroll-target="#análise-e-discussão-dos-resultados"><span class="header-section-number">4</span> Análise e discussão dos resultados</a>
   <ul class="collapse">
-  <li><a href="#dados-sem-agrupamento-dados-brutos-e-análise-sem-intervalos-de-classe" id="toc-dados-sem-agrupamento-dados-brutos-e-análise-sem-intervalos-de-classe" class="nav-link" data-scroll-target="#dados-sem-agrupamento-dados-brutos-e-análise-sem-intervalos-de-classe"><span class="header-section-number">4.1</span> Dados sem agrupamento (Dados brutos) e análise sem intervalos de classe</a></li>
+  <li><a href="#coeficiente-de-assimetria-pearson" id="toc-coeficiente-de-assimetria-pearson" class="nav-link" data-scroll-target="#coeficiente-de-assimetria-pearson"><span class="header-section-number">4.1</span> Coeficiente de Assimetria (Pearson)</a></li>
+  <li><a href="#coeficiente-de-curtose" id="toc-coeficiente-de-curtose" class="nav-link" data-scroll-target="#coeficiente-de-curtose"><span class="header-section-number">4.2</span> Coeficiente de Curtose</a></li>
+  <li><a href="#possíveis-falhas-de-execução-do-experimento" id="toc-possíveis-falhas-de-execução-do-experimento" class="nav-link" data-scroll-target="#possíveis-falhas-de-execução-do-experimento"><span class="header-section-number">4.3</span> Possíveis falhas de execução do experimento</a></li>
   </ul></li>
-  <li><a href="#dados-agrupados-e-analise-com-intervalos-de-classes" id="toc-dados-agrupados-e-analise-com-intervalos-de-classes" class="nav-link" data-scroll-target="#dados-agrupados-e-analise-com-intervalos-de-classes"><span class="header-section-number">5</span> Dados agrupados e analise com intervalos de classes</a>
-  <ul class="collapse">
-  <li><a href="#análise-e-discussão-dos-resultados" id="toc-análise-e-discussão-dos-resultados" class="nav-link" data-scroll-target="#análise-e-discussão-dos-resultados"><span class="header-section-number">5.1</span> Análise e discussão dos resultados</a></li>
-  </ul></li>
-  <li><a href="#medidas-de-forma-assimetria-e-curtose" id="toc-medidas-de-forma-assimetria-e-curtose" class="nav-link" data-scroll-target="#medidas-de-forma-assimetria-e-curtose"><span class="header-section-number">6</span> Medidas de forma: Assimetria e Curtose</a>
-  <ul class="collapse">
-  <li><a href="#coeficiente-de-assimetria-pearson" id="toc-coeficiente-de-assimetria-pearson" class="nav-link" data-scroll-target="#coeficiente-de-assimetria-pearson"><span class="header-section-number">6.1</span> Coeficiente de Assimetria (Pearson)</a></li>
-  <li><a href="#coeficiente-de-curtose" id="toc-coeficiente-de-curtose" class="nav-link" data-scroll-target="#coeficiente-de-curtose"><span class="header-section-number">6.2</span> Coeficiente de Curtose</a></li>
-  <li><a href="#possíveis-falhas-de-execução-do-experimento" id="toc-possíveis-falhas-de-execução-do-experimento" class="nav-link" data-scroll-target="#possíveis-falhas-de-execução-do-experimento"><span class="header-section-number">6.3</span> Possíveis falhas de execução do experimento</a></li>
-  </ul></li>
-  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">7</span> 📖 Referências</a></li>
+  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">5</span> 📖 Referências</a></li>
   </ul>
 </nav>
 </div>
@@ -144,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">10/04/2026, 00:30</p>
+      <p class="date">11/04/2026, 01:38</p>
     </div>
   </div>
   
@@ -158,33 +147,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introdução" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">1</span> 📌 Introdução</h2>
-<p>Como forma de aplicar os conceitos que estudamos na aula de estatistica de um jeito mais pratico, usando a catapulta, realizamos 40 lançamentos seguidos, midimos e anotamos as distancias alcançadas em cada lançamento. A partir desses valores anotados, vamos trabalhar os dados aplicando os conceitos estudados.</p>
+<p>Como forma de aplicar os conceitos que estudamos em aula de estatistica de manera pratica, realizamos 40 lançamentos utilizando uma catapulta, midindo e anotando a distancia alcançada em cada tentativa. A partir desses valores coletados, analisaremos os dados aplicando os conceitos de medidas de posição e disperção, bem como realizaremos sua tabulação e representação grafica, tanto com dados agrupados em intervalos de classe quanto sem.</p>
 </section>
 <section id="objetivo" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">2</span> 🎯 Objetivo</h2>
-<section id="objetivos-especificos" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="objetivos-especificos"><span class="header-section-number">2.1</span> Objetivos especificos</h3>
-<p>Realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, calcular medidas de posição e de dispersão, tanto com ou sem agrupamento de dados, e discutir as diferença observadas entre os resultados. Além disso, analisar a assimetria e a curtose do conjunto dos dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.</p>
-</section>
+<p>O foco aqui deste relatorio consiste em realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, bem como calcular as medidas de posição e de dispersão, tanto com ou sem agrupamento de dados em intervalos de classe ou não, discutindo as diferenças observadas entre os resultados.</p>
+<p>Além disso, objetivamos analisar a assimetria e a curtose do conjunto de dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.</p>
 </section>
 <section id="metodologia" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="metodologia"><span class="header-section-number">3</span> ⚙️ Metodologia</h2>
-<p>O experimento foi realizado em sala de aula. A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e utilizamos uma trena para medir a distancia alcançada em cada lançamento. Na catapulta, utilizamos diferentes combinações variações: A+ (segundo pino,de cima para baixo ), A-(primeiro pino, de cima para baixo), O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus).</p>
-<p><img src="imagens/foto2.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"><img src="imagens/foto3.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"><img src="imagens/foto4.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"></p>
-<p>Formamos dois grupos, onde um realizou os lançamentos primeiro e depois o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas pela medição das distancias, João Pedro pela captura das fotos, e Wadmilson pela coleta e anotação dos dados. Ao final, Marcos organizou todas as medidas coletadas e eviou-as como dados amostrais para o professor, e para os demais integrantes do grupo.</p>
-<p>A catapulta foi posicionada a uma distancia inicial de 250 cm (2,5 metros) do ponto de referencia.</p>
-<p>Para obter a distancia total de cada lançamento, somamos esse valor fixo com a medida adicional registrada em cada lançamento, e os dados recolhidos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.</p>
+<p>O experimento foi realizado em sala de aula. Formamos dois grupos, onde um realizou os lançamentos primeiro e, depois, o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas, pela medição das distancias, João Pedro, pela captura das fotos, e Wadmilson, pela coleta e anotação dos dados. Utilizamos uma catapulta, uma trena e uma bolinha para a realização do experimento.A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e com a trena medimos a distancia alcançada em cada lançamento.</p>
+<p>Na catapulta, utilizamos diferentes combinações de variaveis, sendo o A+ (segundo pino,de cima para baixo ), o A-(primeiro pino, de cima para baixo), o O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus), conforme mostra nas imagens que se seguem.</p>
+<p><img src="imagens/foto2.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"><img src="imagens/foto3.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"><img src="imagens/foto4.jpeg" class="img-fluid" style="width:50.0%" alt="foto da cataputa montada"> Para torna a medição mais simples e menos trabalhosa, marcamos uma distancia inicial de 250 cm (2,5 metros) do pé da mesa, na direção do espaço que a bolinha percorreria após ser lançada, como ponto fixo de referencia. Assim como observaremos na imagem a seguir.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens/foto1.jpeg" class="img-fluid figure-img" style="width:40.0%"></p>
 <figcaption>Foto da medida referencial fixada</figcaption>
 </figure>
 </div>
+<p>Para obter a distancia total de cada lançamento, somamos essa distancia fixa com a distancia adicional registrada em cada lançamento. Ao final, Marcos organizou todas as medidas coletadas e eviou os dados amostrais para o professor, e para os demais integrantes do grupo. As distancias totais em centimetros, que coletamos após os 40 lançamentos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.</p>
 </section>
-<section id="descrição-dos-dados-por-meio-de-tabulação-e-apresentação-gráfica" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="descrição-dos-dados-por-meio-de-tabulação-e-apresentação-gráfica"><span class="header-section-number">4</span> Descrição dos dados por meio de tabulação e apresentação gráfica</h2>
-<section id="dados-sem-agrupamento-dados-brutos-e-análise-sem-intervalos-de-classe" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="dados-sem-agrupamento-dados-brutos-e-análise-sem-intervalos-de-classe"><span class="header-section-number">4.1</span> Dados sem agrupamento (Dados brutos) e análise sem intervalos de classe</h3>
+<section id="análise-e-discussão-dos-resultados" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="análise-e-discussão-dos-resultados"><span class="header-section-number">4</span> Análise e discussão dos resultados</h2>
+<p>Com os dados coletados, faremos sua tabulação e apresentação grafica, tanto agrupados em intervalos de classes quanto sem agrupamento. Em seguida, calcularemos as medidas de posição e dispersão para cada um dos casos.</p>
+<p>Primeiramente, apresentaremos a tabulação e apresentação grafica com dados brutos, sem intervalos de classes, justamente com suas medidas de posição e dispersão.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
@@ -341,10 +327,11 @@ Fac2p: Frequência acumulada percentual (acima de) </code></pre>
 <pre><code>Erro Padrão da Média: 2.904671 </code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="dados-agrupados-e-analise-com-intervalos-de-classes" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="dados-agrupados-e-analise-com-intervalos-de-classes"><span class="header-section-number">5</span> Dados agrupados e analise com intervalos de classes</h2>
+<p>Os valores da média (334,45) e da mediana (335,5) são muito próximos, indicando que os dados são simétricos e bem distribuídos, sem valores extremos que alterem o centro da distribuição. A moda é 339, pois este foi o valor que mais se repetiu na amostra, ocorrendo com maior frequencia.</p>
+<p>A amplitude Total deu 94, pois o valor máximo é 94 unidades superior ao valor mínimo, mostrando a extensão total do intervalo coberto pelos seus dados. A variância foi de 337,48, uma medidaque expressa o grau de dispersão, quanto maior esse valor, mais afastados da media estão os dados, refletetindo o cálculo das distâncias quadradas em relação ao centro.</p>
+<p>O Desvio Padrão de 18,37 e o Coeficiente de Variação de apenas 5,49% indicam baixa dispersão e alta homogeneidade, ou seja, os dados são consistentes e poucos variaveis em torno da media.</p>
+<p>O erro padrão da média de 2,9 significa que o valor de 334,45 é bastante preciso, representando muito bem a realidade dos dados com uma pequena margem de erro.</p>
+<p>Agora, faremos a tabulação e a apresentação grafica com dados agrupados em intervalos de classe, bem como o calculo das respetivas medidas de posição e dispersão.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
@@ -495,40 +482,44 @@ Fac2p: Frequência acumulada percentual (acima de) </code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="análise-e-discussão-dos-resultados" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="análise-e-discussão-dos-resultados"><span class="header-section-number">5.1</span> Análise e discussão dos resultados</h3>
-<p>Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. pois os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios para o cálculo.</p>
+<p>Os resultados obtidos com os dados agrupados foram muito próximos aos encontrados na análise sem agrupamento. A média de 334,45 e a mediana de 335,5 continuam muito próximas, confirmando a simetria dos dados. A moda de 339 permanece como o valor mais frequente. O desvio padrão de 18,37 e o coeficiente de variação de 5,49% indicam, novamente, baixa dispersão e alta homogeneidade, mostrando que os valores são consistentes e próximos uns dos outros, independentemente da forma como foram organizados</p>
+<p>Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. Isso ocorreu porque os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios como base para os cálculos.</p>
 <p>O agrupamento dos dados facilita a visualização gráfica e a leitura da tabela, sem perder a precisão das informações principais. Porém, trata-se sempre de uma estimativa: perdemos um pouco da identidade individual de cada valor em troca de uma visão geral. Já os dados brutos oferecem exatidão total.</p>
-</section>
-</section>
-<section id="medidas-de-forma-assimetria-e-curtose" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="medidas-de-forma-assimetria-e-curtose"><span class="header-section-number">6</span> Medidas de forma: Assimetria e Curtose</h2>
-<section id="coeficiente-de-assimetria-pearson" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="coeficiente-de-assimetria-pearson"><span class="header-section-number">6.1</span> Coeficiente de Assimetria (Pearson)</h3>
+<p>A seguir, abordaremos os coeficientes de assimetria e curtose.</p>
+<section id="coeficiente-de-assimetria-pearson" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="coeficiente-de-assimetria-pearson"><span class="header-section-number">4.1</span> Coeficiente de Assimetria (Pearson)</h3>
 <p>A assimetria mede se os dados estão concentrados à esquerda, à direita ou se distribuem de forma simétrica em relação à média. Cálculo:</p>
 <p>Sk = 3(Média - Mediana)/Desvio Padrão Sk = 3(334,45 - 335,5)/ 18,37 Sk = 3(-1,05)/ 18,37 Sk = -3,15/ 18,37 Sk ≈ -0,17</p>
 <p>Sk = 0: distribuição simétrica Sk &gt; 0: assimetria positiva (calda para direita) Sk &lt; 0: assimetria negativa (calda para esquerda)</p>
 <p>Como o valor calculado é -0,17, muito próximo de zero, a distribuição apresenta assimetria praticamente Nula / levemente negativa. O histograma tem formato muito próximo a uma “curva de sino” perfeita.</p>
 </section>
-<section id="coeficiente-de-curtose" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="coeficiente-de-curtose"><span class="header-section-number">6.2</span> Coeficiente de Curtose</h3>
+<section id="coeficiente-de-curtose" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="coeficiente-de-curtose"><span class="header-section-number">4.2</span> Coeficiente de Curtose</h3>
 <p>A curtose mede o “grau de achatamento” ou “pontuação” da curva de frequência, comparando-a com a Curva Normal.</p>
 <p>Ela é classificada em:</p>
-<p>mesocúrtica: curva normal (padrão); leptocúrtica: curva mais “alta e pontuda” (dados muito concentrados); platicúrtica: curva mais “baixa e achatada” (dados muito espalhados);</p>
+<ul>
+<li>mesocúrtica: curva normal (padrão);</li>
+<li>leptocúrtica: curva mais “alta e pontuda” (dados muito concentrados);</li>
+<li>platicúrtica: curva mais “baixa e achatada” (dados muito espalhados);</li>
+</ul>
 <p>Com base na dispersão e quartis, observa-se que os dados estão bem concentrados em torno da média, com caudas adequadas, logo, a distribuição é mesocúrtica, pois seu formato é muito semelhante ao da distribuição normal padrão.</p>
 <p>Essas medidas são importantes porque a média e o desvio padrão sozinhos não revelam toda a informação. Saber que a distribuição é simétrica confirma que a média é uma boa medida representativa dos dados, caso fosse muito assimétrica, a mediana seria a melhor opção.</p>
 <p>Muitos modelos e testes estatistico, como o Teste T ou Análise de Regressão, exigem que os dados tenham distribuição próxima da normal, e o valor -0,17 obtido valida o uso dessas ferramentas.</p>
 <p>Conhecer a forma da curva ajuda a compreender o comportamento do fenômeno estudado, neste caso, os valores são consistentes e bem distribuídos em torno do centro.</p>
 </section>
-<section id="possíveis-falhas-de-execução-do-experimento" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="possíveis-falhas-de-execução-do-experimento"><span class="header-section-number">6.3</span> Possíveis falhas de execução do experimento</h3>
+<section id="possíveis-falhas-de-execução-do-experimento" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="possíveis-falhas-de-execução-do-experimento"><span class="header-section-number">4.3</span> Possíveis falhas de execução do experimento</h3>
 <p>Durante a coleta dos dados, observou-se que os resultados do lançamento 5, 27 apresentaram valores muito inferiores aos demais, indicabdo provaveis erro na execução.</p>
 <p>Embora sejam esperadas pequenas variações entre os lançamentos, a diferença observada foi excessiva.</p>
 <p>Além disso, ocorreram falhas na medição por parte da equipe: nem todas as marcções foram feitas exatamente no ponto de impacto da bolinha. A trena ficou ligeiramente deslocada da referencia e, em alguns casos, oponto registrado não correspondia ao primeiro contacto entre da bolinha com o solo.</p>
 </section>
 </section>
-<section id="referências" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="referências"><span class="header-section-number">7</span> 📖 Referências</h2>
+<section id="referências" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="referências"><span class="header-section-number">5</span> 📖 Referências</h2>
+<p>R CORE TEAM. R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2025. Disponível em: <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+<p>BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. R package version 1.1.3, 2023. Disponível em: <a href="https://bendeivide.github.io/leem/" class="uri">https://bendeivide.github.io/leem/</a>.</p>
+<p>MORETTIN, Pedro Alberto; BUSSAB, Wilton de Oliveira. Estatística Básica. 9. ed.&nbsp;São Paulo: Saraiva, 2017.</p>
+<p>TRIOLA, Mario F. Introdução à Estatística. 12. ed.&nbsp;Rio de Janeiro: LTC, 2017.</p>
 <!-- -->
 
 </section>
@@ -1015,204 +1006,204 @@ Fac2p: Frequência acumulada percentual (acima de) </code></pre>
 <span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Introdução</span></span>
-<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a>Como forma de aplicar os conceitos que estudamos na aula de estatistica de um jeito mais pratico, usando a catapulta, realizamos 40 lançamentos seguidos, midimos e anotamos as distancias alcançadas em cada lançamento.</span>
-<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>A partir desses valores anotados, vamos trabalhar os dados aplicando os conceitos estudados. </span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a>Como forma de aplicar os conceitos que estudamos em aula de estatistica de manera pratica, realizamos 40 lançamentos utilizando uma catapulta, midindo e anotando a distancia alcançada em cada tentativa.</span>
+<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>A partir desses valores coletados, analisaremos os dados aplicando os conceitos de medidas de posição e disperção, bem como realizaremos sua tabulação e representação grafica, tanto com dados agrupados em intervalos de classe quanto sem. </span>
 <span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Objetivo</span></span>
-<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivos especificos</span></span>
+<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Objetivo</span></span>
+<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a>O foco aqui deste relatorio consiste em realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, bem como calcular as medidas de posição e de dispersão, tanto com ou sem agrupamento de dados em intervalos de classe ou não, discutindo as diferenças observadas entre os resultados. </span>
 <span id="cb49-37"><a href="#cb49-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-38"><a href="#cb49-38" aria-hidden="true" tabindex="-1"></a>Realizar a descrição dos dados coletados por meio de tabulação e apresentação gráfica, calcular medidas de posição e de dispersão, tanto com ou sem agrupamento de dados, e discutir as diferença observadas entre os resultados. </span>
-<span id="cb49-39"><a href="#cb49-39" aria-hidden="true" tabindex="-1"></a>Além disso, analisar a assimetria e a curtose do conjunto dos dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  </span>
-<span id="cb49-40"><a href="#cb49-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-41"><a href="#cb49-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## ⚙️ Metodologia</span></span>
-<span id="cb49-42"><a href="#cb49-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-43"><a href="#cb49-43" aria-hidden="true" tabindex="-1"></a>O experimento foi realizado em sala de aula. A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e utilizamos uma trena para medir a distancia alcançada em cada lançamento. </span>
-<span id="cb49-44"><a href="#cb49-44" aria-hidden="true" tabindex="-1"></a>Na catapulta, utilizamos diferentes combinações variações: A+ (segundo pino,de cima para baixo ), A-(primeiro pino, de cima para baixo), O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus).</span>
-<span id="cb49-45"><a href="#cb49-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-46"><a href="#cb49-46" aria-hidden="true" tabindex="-1"></a><span class="al">![foto da cataputa montada](imagens/foto2.jpeg)</span>{width=50%}<span class="al">![foto da cataputa montada](imagens/foto3.jpeg)</span>{width=50%}<span class="al">![foto da cataputa montada](imagens/foto4.jpeg)</span>{width=50%}</span>
-<span id="cb49-47"><a href="#cb49-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-48"><a href="#cb49-48" aria-hidden="true" tabindex="-1"></a>Formamos dois grupos, onde um realizou os lançamentos primeiro e depois o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas pela medição das distancias, João Pedro pela captura das fotos, e Wadmilson pela coleta e anotação dos dados. </span>
-<span id="cb49-49"><a href="#cb49-49" aria-hidden="true" tabindex="-1"></a>Ao final, Marcos organizou todas as medidas coletadas e eviou-as como dados amostrais para o professor, e para os demais integrantes do grupo.</span>
-<span id="cb49-50"><a href="#cb49-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-51"><a href="#cb49-51" aria-hidden="true" tabindex="-1"></a>A catapulta foi posicionada a uma distancia inicial de 250 cm (2,5 metros) do ponto de referencia.</span>
-<span id="cb49-52"><a href="#cb49-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-53"><a href="#cb49-53" aria-hidden="true" tabindex="-1"></a>Para obter a distancia total de cada lançamento, somamos esse valor fixo com a medida adicional registrada em cada lançamento, e os dados recolhidos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.</span>
+<span id="cb49-38"><a href="#cb49-38" aria-hidden="true" tabindex="-1"></a>Além disso, objetivamos analisar a assimetria e a curtose do conjunto de dados, apresentando justificativas sobre a importância dessas medidas para a descrição estatística, bem como indicar possíveis falhas ocorridas durante a execução do experimento.  </span>
+<span id="cb49-39"><a href="#cb49-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-40"><a href="#cb49-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## ⚙️ Metodologia</span></span>
+<span id="cb49-41"><a href="#cb49-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-42"><a href="#cb49-42" aria-hidden="true" tabindex="-1"></a>O experimento foi realizado em sala de aula. Formamos dois grupos, onde um realizou os lançamentos primeiro e, depois, o outro. No primeiro grupo, as funções foram divididas da seguinte forma: Maria Eduarda e Marcos ficaram responsáveis pela execução dos lançamentos, Igor e o Lucas, pela medição das distancias, João Pedro, pela captura das fotos, e Wadmilson, pela coleta e anotação dos dados. </span>
+<span id="cb49-43"><a href="#cb49-43" aria-hidden="true" tabindex="-1"></a>Utilizamos uma catapulta, uma trena e uma bolinha para a realização do experimento.A catapulta foi posicionada sobre uma mesa com altura de 78 cm, e com a trena medimos a distancia alcançada em cada lançamento. </span>
+<span id="cb49-44"><a href="#cb49-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-45"><a href="#cb49-45" aria-hidden="true" tabindex="-1"></a>Na catapulta, utilizamos diferentes combinações de variaveis, sendo o A+ (segundo pino,de cima para baixo ), o A-(primeiro pino, de cima para baixo), o O- (terceiro pino, de cima para baixo), e B+ (angulo de 45 graus), conforme mostra nas imagens que se seguem.</span>
+<span id="cb49-46"><a href="#cb49-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-47"><a href="#cb49-47" aria-hidden="true" tabindex="-1"></a><span class="al">![foto da cataputa montada](imagens/foto2.jpeg)</span>{width=50%}<span class="al">![foto da cataputa montada](imagens/foto3.jpeg)</span>{width=50%}<span class="al">![foto da cataputa montada](imagens/foto4.jpeg)</span>{width=50%}</span>
+<span id="cb49-48"><a href="#cb49-48" aria-hidden="true" tabindex="-1"></a>Para torna a medição mais simples e menos trabalhosa, marcamos uma distancia inicial de 250 cm (2,5 metros) do pé da mesa, na direção do espaço que a bolinha percorreria após ser lançada, como ponto fixo de referencia. Assim como observaremos na imagem a seguir.</span>
+<span id="cb49-49"><a href="#cb49-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-50"><a href="#cb49-50" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da medida referencial fixada](imagens/foto1.jpeg)</span>{width=40%}</span>
+<span id="cb49-51"><a href="#cb49-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-52"><a href="#cb49-52" aria-hidden="true" tabindex="-1"></a>Para obter a distancia total de cada lançamento, somamos essa distancia fixa com a distancia adicional registrada em cada lançamento. Ao final, Marcos organizou todas as medidas coletadas e eviou os dados amostrais para o professor, e para os demais integrantes do grupo.</span>
+<span id="cb49-53"><a href="#cb49-53" aria-hidden="true" tabindex="-1"></a>As distancias totais em centimetros, que coletamos após os 40 lançamentos foram: 346, 339, 339, 332, 293, 368, 365, 341, 329, 339, 323, 335, 369, 347, 352, 340, 338, 350, 341, 336, 320, 341, 330,328, 336, 318, 275, 329, 357, 317, 302, 331, 359, 333, 324, 334, 339, 332, 331, 320.</span>
 <span id="cb49-54"><a href="#cb49-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-55"><a href="#cb49-55" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da medida referencial fixada](imagens/foto1.jpeg)</span>{width=40%}</span>
+<span id="cb49-55"><a href="#cb49-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-56"><a href="#cb49-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-57"><a href="#cb49-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-57"><a href="#cb49-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise e discussão dos resultados</span></span>
 <span id="cb49-58"><a href="#cb49-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-59"><a href="#cb49-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Descrição dos dados por meio de tabulação e apresentação gráfica</span></span>
+<span id="cb49-59"><a href="#cb49-59" aria-hidden="true" tabindex="-1"></a>Com os dados coletados, faremos sua tabulação e apresentação grafica, tanto agrupados em intervalos de classes quanto  sem agrupamento. Em seguida, calcularemos as medidas de posição e dispersão para cada um dos casos.</span>
 <span id="cb49-60"><a href="#cb49-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-61"><a href="#cb49-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Dados sem agrupamento (Dados brutos) e análise sem intervalos de classe</span></span>
-<span id="cb49-64"><a href="#cb49-64" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb49-65"><a href="#cb49-65" aria-hidden="true" tabindex="-1"></a><span class="co">#|code-fold: True</span></span>
-<span id="cb49-66"><a href="#cb49-66" aria-hidden="true" tabindex="-1"></a><span class="co">#|warning: False</span></span>
-<span id="cb49-67"><a href="#cb49-67" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
-<span id="cb49-68"><a href="#cb49-68" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">346</span>, <span class="dv">339</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">293</span>, <span class="dv">368</span>, <span class="dv">365</span>, <span class="dv">341</span>, <span class="dv">329</span>, <span class="dv">339</span>, <span class="dv">323</span>, <span class="dv">335</span>, <span class="dv">369</span>, <span class="dv">347</span>, <span class="dv">352</span>, <span class="dv">340</span>, <span class="dv">338</span>, <span class="dv">350</span>, <span class="dv">341</span>, <span class="dv">336</span>, <span class="dv">320</span>, <span class="dv">341</span>, <span class="dv">330</span>,<span class="dv">328</span>, <span class="dv">336</span>, <span class="dv">318</span>, <span class="dv">275</span>, <span class="dv">329</span>, <span class="dv">357</span>, <span class="dv">317</span>, <span class="dv">302</span>, <span class="dv">331</span>, <span class="dv">359</span>, <span class="dv">333</span>, <span class="dv">324</span>, <span class="dv">334</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">331</span>, <span class="dv">320</span>)</span>
-<span id="cb49-69"><a href="#cb49-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformar para dados discretos/sem agrupamento</span></span>
-<span id="cb49-70"><a href="#cb49-70" aria-hidden="true" tabindex="-1"></a>dados_sem_agrupo <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(dados, <span class="at">variable =</span> <span class="st">'discrete'</span>)</span>
-<span id="cb49-71"><a href="#cb49-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequencia</span></span>
-<span id="cb49-72"><a href="#cb49-72" aria-hidden="true" tabindex="-1"></a>tabela_sem<span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(dados_sem_agrupo)</span>
-<span id="cb49-73"><a href="#cb49-73" aria-hidden="true" tabindex="-1"></a>tabela_sem</span>
-<span id="cb49-74"><a href="#cb49-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando o graficorafico</span></span>
-<span id="cb49-75"><a href="#cb49-75" aria-hidden="true" tabindex="-1"></a>Grafico <span class="ot">&lt;-</span> <span class="fu">barplot</span>(<span class="fu">table</span>(dados), <span class="at">main =</span> <span class="st">'Meu Grafico'</span>, <span class="at">xlab =</span> <span class="st">'valores'</span>, <span class="at">ylab =</span> <span class="st">'frequencia'</span>)</span>
-<span id="cb49-76"><a href="#cb49-76" aria-hidden="true" tabindex="-1"></a><span class="co"># MEDIDAS DE POSIÇÃO</span></span>
-<span id="cb49-77"><a href="#cb49-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: True</span></span>
-<span id="cb49-78"><a href="#cb49-78" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dados)</span>
-<span id="cb49-79"><a href="#cb49-79" aria-hidden="true" tabindex="-1"></a>mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(dados)</span>
-<span id="cb49-80"><a href="#cb49-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula a moda</span></span>
-<span id="cb49-81"><a href="#cb49-81" aria-hidden="true" tabindex="-1"></a>tabela <span class="ot">&lt;-</span> <span class="fu">table</span>(dados)</span>
-<span id="cb49-82"><a href="#cb49-82" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(tabela[tabela <span class="sc">==</span> <span class="fu">max</span>(tabela)]))</span>
-<span id="cb49-83"><a href="#cb49-83" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"--- MEDIDAS DE POSIÇÃO ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-84"><a href="#cb49-84" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Média Aritmética:"</span>, media, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-85"><a href="#cb49-85" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana:"</span>, mediana, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-86"><a href="#cb49-86" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda:"</span>, moda, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
-<span id="cb49-87"><a href="#cb49-87" aria-hidden="true" tabindex="-1"></a><span class="co"># MEDIDAS DE DISPERSÃO</span></span>
-<span id="cb49-88"><a href="#cb49-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: True</span></span>
-<span id="cb49-89"><a href="#cb49-89" aria-hidden="true" tabindex="-1"></a>amplitude_total <span class="ot">&lt;-</span> <span class="fu">max</span>(dados) <span class="sc">-</span> <span class="fu">min</span>(dados)</span>
-<span id="cb49-90"><a href="#cb49-90" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dados)</span>
-<span id="cb49-91"><a href="#cb49-91" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dados)</span>
-<span id="cb49-92"><a href="#cb49-92" aria-hidden="true" tabindex="-1"></a>coeficiente_variacao <span class="ot">&lt;-</span> (desvio_padrao <span class="sc">/</span> media) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb49-93"><a href="#cb49-93" aria-hidden="true" tabindex="-1"></a>erro_padrao_media <span class="ot">&lt;-</span> desvio_padrao <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">length</span>(dados))</span>
-<span id="cb49-94"><a href="#cb49-94" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"--- MEDIDAS DE DISPERSÃO ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-95"><a href="#cb49-95" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Amplitude Total:"</span>, amplitude_total, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-96"><a href="#cb49-96" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Variância:"</span>, variancia, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-97"><a href="#cb49-97" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Desvio Padrão:"</span>, desvio_padrao, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-98"><a href="#cb49-98" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Coeficiente de Variação (%):"</span>, coeficiente_variacao, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-99"><a href="#cb49-99" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Erro Padrão da Média:"</span>, erro_padrao_media, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-100"><a href="#cb49-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb49-101"><a href="#cb49-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dados agrupados e analise com intervalos de classes </span></span>
-<span id="cb49-102"><a href="#cb49-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-105"><a href="#cb49-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb49-106"><a href="#cb49-106" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb49-107"><a href="#cb49-107" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb49-108"><a href="#cb49-108" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
-<span id="cb49-109"><a href="#cb49-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-110"><a href="#cb49-110" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">346</span>, <span class="dv">339</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">293</span>, <span class="dv">368</span>, <span class="dv">365</span>, <span class="dv">341</span>, <span class="dv">329</span>, <span class="dv">339</span>, <span class="dv">323</span>,</span>
-<span id="cb49-111"><a href="#cb49-111" aria-hidden="true" tabindex="-1"></a>           <span class="dv">335</span>, <span class="dv">369</span>, <span class="dv">347</span>, <span class="dv">352</span>, <span class="dv">340</span>, <span class="dv">338</span>, <span class="dv">350</span>, <span class="dv">341</span>, <span class="dv">336</span>, <span class="dv">320</span>, <span class="dv">341</span>,</span>
-<span id="cb49-112"><a href="#cb49-112" aria-hidden="true" tabindex="-1"></a>           <span class="dv">330</span>, <span class="dv">328</span>, <span class="dv">336</span>, <span class="dv">318</span>, <span class="dv">275</span>, <span class="dv">329</span>, <span class="dv">357</span>, <span class="dv">317</span>, <span class="dv">302</span>, <span class="dv">331</span>, <span class="dv">359</span>,</span>
-<span id="cb49-113"><a href="#cb49-113" aria-hidden="true" tabindex="-1"></a>           <span class="dv">333</span>, <span class="dv">324</span>, <span class="dv">334</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">331</span>, <span class="dv">320</span>)</span>
+<span id="cb49-61"><a href="#cb49-61" aria-hidden="true" tabindex="-1"></a>Primeiramente, apresentaremos a tabulação e apresentação grafica com dados brutos, sem intervalos de classes, justamente com suas medidas de posição e dispersão.</span>
+<span id="cb49-62"><a href="#cb49-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-65"><a href="#cb49-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb49-66"><a href="#cb49-66" aria-hidden="true" tabindex="-1"></a><span class="co">#|code-fold: True</span></span>
+<span id="cb49-67"><a href="#cb49-67" aria-hidden="true" tabindex="-1"></a><span class="co">#|warning: False</span></span>
+<span id="cb49-68"><a href="#cb49-68" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
+<span id="cb49-69"><a href="#cb49-69" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">346</span>, <span class="dv">339</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">293</span>, <span class="dv">368</span>, <span class="dv">365</span>, <span class="dv">341</span>, <span class="dv">329</span>, <span class="dv">339</span>, <span class="dv">323</span>, <span class="dv">335</span>, <span class="dv">369</span>, <span class="dv">347</span>, <span class="dv">352</span>, <span class="dv">340</span>, <span class="dv">338</span>, <span class="dv">350</span>, <span class="dv">341</span>, <span class="dv">336</span>, <span class="dv">320</span>, <span class="dv">341</span>, <span class="dv">330</span>,<span class="dv">328</span>, <span class="dv">336</span>, <span class="dv">318</span>, <span class="dv">275</span>, <span class="dv">329</span>, <span class="dv">357</span>, <span class="dv">317</span>, <span class="dv">302</span>, <span class="dv">331</span>, <span class="dv">359</span>, <span class="dv">333</span>, <span class="dv">324</span>, <span class="dv">334</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">331</span>, <span class="dv">320</span>)</span>
+<span id="cb49-70"><a href="#cb49-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformar para dados discretos/sem agrupamento</span></span>
+<span id="cb49-71"><a href="#cb49-71" aria-hidden="true" tabindex="-1"></a>dados_sem_agrupo <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(dados, <span class="at">variable =</span> <span class="st">'discrete'</span>)</span>
+<span id="cb49-72"><a href="#cb49-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequencia</span></span>
+<span id="cb49-73"><a href="#cb49-73" aria-hidden="true" tabindex="-1"></a>tabela_sem<span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(dados_sem_agrupo)</span>
+<span id="cb49-74"><a href="#cb49-74" aria-hidden="true" tabindex="-1"></a>tabela_sem</span>
+<span id="cb49-75"><a href="#cb49-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando o graficorafico</span></span>
+<span id="cb49-76"><a href="#cb49-76" aria-hidden="true" tabindex="-1"></a>Grafico <span class="ot">&lt;-</span> <span class="fu">barplot</span>(<span class="fu">table</span>(dados), <span class="at">main =</span> <span class="st">'Meu Grafico'</span>, <span class="at">xlab =</span> <span class="st">'valores'</span>, <span class="at">ylab =</span> <span class="st">'frequencia'</span>)</span>
+<span id="cb49-77"><a href="#cb49-77" aria-hidden="true" tabindex="-1"></a><span class="co"># MEDIDAS DE POSIÇÃO</span></span>
+<span id="cb49-78"><a href="#cb49-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: True</span></span>
+<span id="cb49-79"><a href="#cb49-79" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dados)</span>
+<span id="cb49-80"><a href="#cb49-80" aria-hidden="true" tabindex="-1"></a>mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(dados)</span>
+<span id="cb49-81"><a href="#cb49-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula a moda</span></span>
+<span id="cb49-82"><a href="#cb49-82" aria-hidden="true" tabindex="-1"></a>tabela <span class="ot">&lt;-</span> <span class="fu">table</span>(dados)</span>
+<span id="cb49-83"><a href="#cb49-83" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(tabela[tabela <span class="sc">==</span> <span class="fu">max</span>(tabela)]))</span>
+<span id="cb49-84"><a href="#cb49-84" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"--- MEDIDAS DE POSIÇÃO ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-85"><a href="#cb49-85" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Média Aritmética:"</span>, media, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-86"><a href="#cb49-86" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana:"</span>, mediana, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-87"><a href="#cb49-87" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda:"</span>, moda, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb49-88"><a href="#cb49-88" aria-hidden="true" tabindex="-1"></a><span class="co"># MEDIDAS DE DISPERSÃO</span></span>
+<span id="cb49-89"><a href="#cb49-89" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: True</span></span>
+<span id="cb49-90"><a href="#cb49-90" aria-hidden="true" tabindex="-1"></a>amplitude_total <span class="ot">&lt;-</span> <span class="fu">max</span>(dados) <span class="sc">-</span> <span class="fu">min</span>(dados)</span>
+<span id="cb49-91"><a href="#cb49-91" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dados)</span>
+<span id="cb49-92"><a href="#cb49-92" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dados)</span>
+<span id="cb49-93"><a href="#cb49-93" aria-hidden="true" tabindex="-1"></a>coeficiente_variacao <span class="ot">&lt;-</span> (desvio_padrao <span class="sc">/</span> media) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb49-94"><a href="#cb49-94" aria-hidden="true" tabindex="-1"></a>erro_padrao_media <span class="ot">&lt;-</span> desvio_padrao <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">length</span>(dados))</span>
+<span id="cb49-95"><a href="#cb49-95" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"--- MEDIDAS DE DISPERSÃO ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-96"><a href="#cb49-96" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Amplitude Total:"</span>, amplitude_total, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-97"><a href="#cb49-97" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Variância:"</span>, variancia, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-98"><a href="#cb49-98" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Desvio Padrão:"</span>, desvio_padrao, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-99"><a href="#cb49-99" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Coeficiente de Variação (%):"</span>, coeficiente_variacao, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-100"><a href="#cb49-100" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Erro Padrão da Média:"</span>, erro_padrao_media, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-101"><a href="#cb49-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb49-102"><a href="#cb49-102" aria-hidden="true" tabindex="-1"></a>Os valores da média (334,45) e da mediana (335,5) são muito próximos, indicando que os dados são simétricos e bem distribuídos, sem valores extremos que alterem o centro da distribuição.</span>
+<span id="cb49-103"><a href="#cb49-103" aria-hidden="true" tabindex="-1"></a>A moda é 339, pois este foi o valor que mais se repetiu na amostra, ocorrendo com maior frequencia. </span>
+<span id="cb49-104"><a href="#cb49-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-105"><a href="#cb49-105" aria-hidden="true" tabindex="-1"></a>A amplitude Total deu 94, pois o valor máximo é 94 unidades superior ao valor mínimo, mostrando a extensão total do intervalo coberto pelos  seus dados. A variância foi de 337,48, uma medidaque expressa o grau de dispersão, quanto maior esse valor, mais afastados da media estão os dados, refletetindo o cálculo das distâncias quadradas em relação ao  centro.</span>
+<span id="cb49-106"><a href="#cb49-106" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb49-107"><a href="#cb49-107" aria-hidden="true" tabindex="-1"></a>O Desvio Padrão de 18,37 e o Coeficiente de Variação de apenas 5,49% indicam baixa dispersão e alta homogeneidade, ou seja, os dados são consistentes e poucos variaveis em torno da media. </span>
+<span id="cb49-108"><a href="#cb49-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-109"><a href="#cb49-109" aria-hidden="true" tabindex="-1"></a>O erro padrão da média de 2,9 significa que o valor de 334,45 é bastante preciso, representando muito bem a realidade dos dados com uma pequena margem de erro.</span>
+<span id="cb49-110"><a href="#cb49-110" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb49-111"><a href="#cb49-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-112"><a href="#cb49-112" aria-hidden="true" tabindex="-1"></a>Agora, faremos a tabulação e a apresentação grafica com dados agrupados em intervalos de classe, bem como o calculo das respetivas medidas de posição e dispersão.</span>
+<span id="cb49-113"><a href="#cb49-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-114"><a href="#cb49-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-115"><a href="#cb49-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformar para dados contínuos/com agrupamento</span></span>
-<span id="cb49-116"><a href="#cb49-116" aria-hidden="true" tabindex="-1"></a>dados_com_agrupo <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(dados, <span class="at">variable =</span> <span class="st">"continuous"</span>)</span>
-<span id="cb49-117"><a href="#cb49-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-118"><a href="#cb49-118" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequência</span></span>
-<span id="cb49-119"><a href="#cb49-119" aria-hidden="true" tabindex="-1"></a>tabela_com <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(dados_com_agrupo)</span>
-<span id="cb49-120"><a href="#cb49-120" aria-hidden="true" tabindex="-1"></a>tabela_com</span>
-<span id="cb49-121"><a href="#cb49-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-115"><a href="#cb49-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-118"><a href="#cb49-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb49-119"><a href="#cb49-119" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb49-120"><a href="#cb49-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb49-121"><a href="#cb49-121" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
 <span id="cb49-122"><a href="#cb49-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-123"><a href="#cb49-123" aria-hidden="true" tabindex="-1"></a><span class="do">### Gráfico (Histograma)</span></span>
-<span id="cb49-124"><a href="#cb49-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb49-125"><a href="#cb49-125" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tabela_com, <span class="at">main =</span> <span class="st">"Histograma com Intervalos"</span>, </span>
-<span id="cb49-126"><a href="#cb49-126" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>)</span>
+<span id="cb49-123"><a href="#cb49-123" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">346</span>, <span class="dv">339</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">293</span>, <span class="dv">368</span>, <span class="dv">365</span>, <span class="dv">341</span>, <span class="dv">329</span>, <span class="dv">339</span>, <span class="dv">323</span>,</span>
+<span id="cb49-124"><a href="#cb49-124" aria-hidden="true" tabindex="-1"></a>           <span class="dv">335</span>, <span class="dv">369</span>, <span class="dv">347</span>, <span class="dv">352</span>, <span class="dv">340</span>, <span class="dv">338</span>, <span class="dv">350</span>, <span class="dv">341</span>, <span class="dv">336</span>, <span class="dv">320</span>, <span class="dv">341</span>,</span>
+<span id="cb49-125"><a href="#cb49-125" aria-hidden="true" tabindex="-1"></a>           <span class="dv">330</span>, <span class="dv">328</span>, <span class="dv">336</span>, <span class="dv">318</span>, <span class="dv">275</span>, <span class="dv">329</span>, <span class="dv">357</span>, <span class="dv">317</span>, <span class="dv">302</span>, <span class="dv">331</span>, <span class="dv">359</span>,</span>
+<span id="cb49-126"><a href="#cb49-126" aria-hidden="true" tabindex="-1"></a>           <span class="dv">333</span>, <span class="dv">324</span>, <span class="dv">334</span>, <span class="dv">339</span>, <span class="dv">332</span>, <span class="dv">331</span>, <span class="dv">320</span>)</span>
 <span id="cb49-127"><a href="#cb49-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-128"><a href="#cb49-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-129"><a href="#cb49-129" aria-hidden="true" tabindex="-1"></a><span class="do">### Medidas de Posição </span></span>
-<span id="cb49-130"><a href="#cb49-130" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb49-131"><a href="#cb49-131" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dados)</span>
-<span id="cb49-132"><a href="#cb49-132" aria-hidden="true" tabindex="-1"></a>mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(dados)</span>
-<span id="cb49-133"><a href="#cb49-133" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(<span class="fu">which.max</span>(<span class="fu">table</span>(dados))))</span>
+<span id="cb49-128"><a href="#cb49-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Transformar para dados contínuos/com agrupamento</span></span>
+<span id="cb49-129"><a href="#cb49-129" aria-hidden="true" tabindex="-1"></a>dados_com_agrupo <span class="ot">&lt;-</span> <span class="fu">new_leem</span>(dados, <span class="at">variable =</span> <span class="st">"continuous"</span>)</span>
+<span id="cb49-130"><a href="#cb49-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-131"><a href="#cb49-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequência</span></span>
+<span id="cb49-132"><a href="#cb49-132" aria-hidden="true" tabindex="-1"></a>tabela_com <span class="ot">&lt;-</span> <span class="fu">tabfreq</span>(dados_com_agrupo)</span>
+<span id="cb49-133"><a href="#cb49-133" aria-hidden="true" tabindex="-1"></a>tabela_com</span>
 <span id="cb49-134"><a href="#cb49-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-135"><a href="#cb49-135" aria-hidden="true" tabindex="-1"></a><span class="co"># --- MEDIDAS DE DISPERSÃO ---</span></span>
-<span id="cb49-136"><a href="#cb49-136" aria-hidden="true" tabindex="-1"></a>amplitude <span class="ot">&lt;-</span> <span class="fu">max</span>(dados) <span class="sc">-</span> <span class="fu">min</span>(dados)</span>
-<span id="cb49-137"><a href="#cb49-137" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dados)</span>
-<span id="cb49-138"><a href="#cb49-138" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dados)</span>
-<span id="cb49-139"><a href="#cb49-139" aria-hidden="true" tabindex="-1"></a>coeficiente_variacao <span class="ot">&lt;-</span> (desvio_padrao <span class="sc">/</span> media) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb49-140"><a href="#cb49-140" aria-hidden="true" tabindex="-1"></a>erro_padrao_media <span class="ot">&lt;-</span> desvio_padrao <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">length</span>(dados))</span>
+<span id="cb49-135"><a href="#cb49-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-136"><a href="#cb49-136" aria-hidden="true" tabindex="-1"></a><span class="do">### Gráfico (Histograma)</span></span>
+<span id="cb49-137"><a href="#cb49-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb49-138"><a href="#cb49-138" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(tabela_com, <span class="at">main =</span> <span class="st">"Histograma com Intervalos"</span>, </span>
+<span id="cb49-139"><a href="#cb49-139" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Distância (cm)"</span>, <span class="at">ylab =</span> <span class="st">"Frequência"</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>)</span>
+<span id="cb49-140"><a href="#cb49-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-141"><a href="#cb49-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-142"><a href="#cb49-142" aria-hidden="true" tabindex="-1"></a><span class="co"># --- EXIBIR TUDO ---</span></span>
-<span id="cb49-143"><a href="#cb49-143" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
-<span id="cb49-144"><a href="#cb49-144" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MEDIDAS DE POSIÇÃO</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-145"><a href="#cb49-145" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Média:"</span>, <span class="fu">round</span>(media, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-146"><a href="#cb49-146" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana:"</span>, mediana, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-147"><a href="#cb49-147" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda:"</span>, moda, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-148"><a href="#cb49-148" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MEDIDAS DE DISPERSÃO</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-149"><a href="#cb49-149" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Amplitude Total:"</span>, amplitude, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-150"><a href="#cb49-150" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Variância:"</span>, <span class="fu">round</span>(variancia, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-151"><a href="#cb49-151" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Desvio Padrão:"</span>, <span class="fu">round</span>(desvio_padrao, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-152"><a href="#cb49-152" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Coef. Variação:"</span>, <span class="fu">round</span>(coeficiente_variacao, <span class="dv">2</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-153"><a href="#cb49-153" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Erro Padrão Média:"</span>, <span class="fu">round</span>(erro_padrao_media, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-154"><a href="#cb49-154" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb49-155"><a href="#cb49-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb49-156"><a href="#cb49-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-157"><a href="#cb49-157" aria-hidden="true" tabindex="-1"></a><span class="fu">### Análise e discussão dos resultados</span></span>
-<span id="cb49-158"><a href="#cb49-158" aria-hidden="true" tabindex="-1"></a> Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. pois os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios para o cálculo. </span>
-<span id="cb49-159"><a href="#cb49-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-160"><a href="#cb49-160" aria-hidden="true" tabindex="-1"></a>O  agrupamento dos dados facilita a visualização gráfica e a leitura da tabela, sem perder a precisão das informações principais. Porém, trata-se sempre de uma estimativa: perdemos um pouco da identidade individual de cada valor em troca de uma visão geral. Já os dados brutos oferecem exatidão total.</span>
-<span id="cb49-161"><a href="#cb49-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-162"><a href="#cb49-162" aria-hidden="true" tabindex="-1"></a><span class="fu">## Medidas de forma: Assimetria e Curtose </span></span>
-<span id="cb49-163"><a href="#cb49-163" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb49-164"><a href="#cb49-164" aria-hidden="true" tabindex="-1"></a><span class="fu">### Coeficiente de Assimetria (Pearson)</span></span>
-<span id="cb49-165"><a href="#cb49-165" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb49-166"><a href="#cb49-166" aria-hidden="true" tabindex="-1"></a>A assimetria mede se os dados estão concentrados à esquerda, à direita ou se distribuem de forma simétrica em relação à média.</span>
-<span id="cb49-167"><a href="#cb49-167" aria-hidden="true" tabindex="-1"></a>Cálculo:</span>
-<span id="cb49-168"><a href="#cb49-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-169"><a href="#cb49-169" aria-hidden="true" tabindex="-1"></a>Sk = 3(Média - Mediana)/Desvio Padrão</span>
-<span id="cb49-170"><a href="#cb49-170" aria-hidden="true" tabindex="-1"></a>Sk = 3(334,45 - 335,5)/ 18,37</span>
-<span id="cb49-171"><a href="#cb49-171" aria-hidden="true" tabindex="-1"></a>Sk = 3(-1,05)/ 18,37</span>
-<span id="cb49-172"><a href="#cb49-172" aria-hidden="true" tabindex="-1"></a>Sk = -3,15/ 18,37</span>
-<span id="cb49-173"><a href="#cb49-173" aria-hidden="true" tabindex="-1"></a>Sk ≈ -0,17</span>
+<span id="cb49-142"><a href="#cb49-142" aria-hidden="true" tabindex="-1"></a><span class="do">### Medidas de Posição </span></span>
+<span id="cb49-143"><a href="#cb49-143" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb49-144"><a href="#cb49-144" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(dados)</span>
+<span id="cb49-145"><a href="#cb49-145" aria-hidden="true" tabindex="-1"></a>mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(dados)</span>
+<span id="cb49-146"><a href="#cb49-146" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(<span class="fu">which.max</span>(<span class="fu">table</span>(dados))))</span>
+<span id="cb49-147"><a href="#cb49-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-148"><a href="#cb49-148" aria-hidden="true" tabindex="-1"></a><span class="co"># --- MEDIDAS DE DISPERSÃO ---</span></span>
+<span id="cb49-149"><a href="#cb49-149" aria-hidden="true" tabindex="-1"></a>amplitude <span class="ot">&lt;-</span> <span class="fu">max</span>(dados) <span class="sc">-</span> <span class="fu">min</span>(dados)</span>
+<span id="cb49-150"><a href="#cb49-150" aria-hidden="true" tabindex="-1"></a>variancia <span class="ot">&lt;-</span> <span class="fu">var</span>(dados)</span>
+<span id="cb49-151"><a href="#cb49-151" aria-hidden="true" tabindex="-1"></a>desvio_padrao <span class="ot">&lt;-</span> <span class="fu">sd</span>(dados)</span>
+<span id="cb49-152"><a href="#cb49-152" aria-hidden="true" tabindex="-1"></a>coeficiente_variacao <span class="ot">&lt;-</span> (desvio_padrao <span class="sc">/</span> media) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb49-153"><a href="#cb49-153" aria-hidden="true" tabindex="-1"></a>erro_padrao_media <span class="ot">&lt;-</span> desvio_padrao <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">length</span>(dados))</span>
+<span id="cb49-154"><a href="#cb49-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-155"><a href="#cb49-155" aria-hidden="true" tabindex="-1"></a><span class="co"># --- EXIBIR TUDO ---</span></span>
+<span id="cb49-156"><a href="#cb49-156" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb49-157"><a href="#cb49-157" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MEDIDAS DE POSIÇÃO</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-158"><a href="#cb49-158" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Média:"</span>, <span class="fu">round</span>(media, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-159"><a href="#cb49-159" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana:"</span>, mediana, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-160"><a href="#cb49-160" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda:"</span>, moda, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-161"><a href="#cb49-161" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MEDIDAS DE DISPERSÃO</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-162"><a href="#cb49-162" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Amplitude Total:"</span>, amplitude, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-163"><a href="#cb49-163" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Variância:"</span>, <span class="fu">round</span>(variancia, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-164"><a href="#cb49-164" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Desvio Padrão:"</span>, <span class="fu">round</span>(desvio_padrao, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-165"><a href="#cb49-165" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Coef. Variação:"</span>, <span class="fu">round</span>(coeficiente_variacao, <span class="dv">2</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-166"><a href="#cb49-166" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Erro Padrão Média:"</span>, <span class="fu">round</span>(erro_padrao_media, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-167"><a href="#cb49-167" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb49-168"><a href="#cb49-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb49-169"><a href="#cb49-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-170"><a href="#cb49-170" aria-hidden="true" tabindex="-1"></a>Os resultados obtidos com os dados agrupados foram muito próximos aos encontrados na análise sem agrupamento. A média de 334,45 e a mediana de 335,5 continuam muito próximas, confirmando a simetria dos dados. A moda de 339 permanece como o valor mais frequente.</span>
+<span id="cb49-171"><a href="#cb49-171" aria-hidden="true" tabindex="-1"></a>O desvio padrão de 18,37 e o coeficiente de variação de 5,49% indicam, novamente, baixa dispersão e alta homogeneidade, mostrando que os valores são consistentes e próximos uns dos outros, independentemente da forma como foram organizados</span>
+<span id="cb49-172"><a href="#cb49-172" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb49-173"><a href="#cb49-173" aria-hidden="true" tabindex="-1"></a> Ao analisar os resultados obtidos, observa-se que os valores calculados foram extremamente próximos. Isso ocorreu porque os dados se distribuíram de forma bastante uniforme dentro das classes e porque utilizamos os pontos médios como base para os cálculos. </span>
 <span id="cb49-174"><a href="#cb49-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-175"><a href="#cb49-175" aria-hidden="true" tabindex="-1"></a>Sk = 0: distribuição simétrica </span>
-<span id="cb49-176"><a href="#cb49-176" aria-hidden="true" tabindex="-1"></a>Sk &gt; 0: assimetria positiva (calda para direita)</span>
-<span id="cb49-177"><a href="#cb49-177" aria-hidden="true" tabindex="-1"></a>Sk &lt; 0: assimetria negativa (calda para esquerda)</span>
+<span id="cb49-175"><a href="#cb49-175" aria-hidden="true" tabindex="-1"></a>O  agrupamento dos dados facilita a visualização gráfica e a leitura da tabela, sem perder a precisão das informações principais. Porém, trata-se sempre de uma estimativa: perdemos um pouco da identidade individual de cada valor em troca de uma visão geral. Já os dados brutos oferecem exatidão total.</span>
+<span id="cb49-176"><a href="#cb49-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-177"><a href="#cb49-177" aria-hidden="true" tabindex="-1"></a>A seguir, abordaremos os coeficientes de assimetria e curtose.</span>
 <span id="cb49-178"><a href="#cb49-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-179"><a href="#cb49-179" aria-hidden="true" tabindex="-1"></a>Como o valor calculado é -0,17, muito próximo de zero, a distribuição apresenta assimetria praticamente Nula / levemente negativa.</span>
-<span id="cb49-180"><a href="#cb49-180" aria-hidden="true" tabindex="-1"></a>O histograma tem formato muito próximo a uma "curva de sino" perfeita.</span>
-<span id="cb49-181"><a href="#cb49-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-182"><a href="#cb49-182" aria-hidden="true" tabindex="-1"></a><span class="fu">###  Coeficiente de Curtose</span></span>
+<span id="cb49-179"><a href="#cb49-179" aria-hidden="true" tabindex="-1"></a><span class="fu">### Coeficiente de Assimetria (Pearson)</span></span>
+<span id="cb49-180"><a href="#cb49-180" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb49-181"><a href="#cb49-181" aria-hidden="true" tabindex="-1"></a>A assimetria mede se os dados estão concentrados à esquerda, à direita ou se distribuem de forma simétrica em relação à média.</span>
+<span id="cb49-182"><a href="#cb49-182" aria-hidden="true" tabindex="-1"></a>Cálculo:</span>
 <span id="cb49-183"><a href="#cb49-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-184"><a href="#cb49-184" aria-hidden="true" tabindex="-1"></a>A curtose mede o "grau de achatamento" ou "pontuação" da curva de frequência, comparando-a com a Curva Normal.</span>
-<span id="cb49-185"><a href="#cb49-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-186"><a href="#cb49-186" aria-hidden="true" tabindex="-1"></a>Ela é classificada em: </span>
-<span id="cb49-187"><a href="#cb49-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-188"><a href="#cb49-188" aria-hidden="true" tabindex="-1"></a>mesocúrtica: curva normal (padrão); </span>
-<span id="cb49-189"><a href="#cb49-189" aria-hidden="true" tabindex="-1"></a>leptocúrtica: curva mais "alta e pontuda" (dados muito concentrados);</span>
-<span id="cb49-190"><a href="#cb49-190" aria-hidden="true" tabindex="-1"></a>platicúrtica: curva mais "baixa e achatada" (dados muito espalhados);</span>
-<span id="cb49-191"><a href="#cb49-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-192"><a href="#cb49-192" aria-hidden="true" tabindex="-1"></a>Com base na dispersão e quartis, observa-se que os dados estão bem concentrados em torno da média, com caudas adequadas, logo, a distribuição é mesocúrtica, pois seu formato é muito semelhante ao da distribuição normal padrão.</span>
+<span id="cb49-184"><a href="#cb49-184" aria-hidden="true" tabindex="-1"></a>Sk = 3(Média - Mediana)/Desvio Padrão</span>
+<span id="cb49-185"><a href="#cb49-185" aria-hidden="true" tabindex="-1"></a>Sk = 3(334,45 - 335,5)/ 18,37</span>
+<span id="cb49-186"><a href="#cb49-186" aria-hidden="true" tabindex="-1"></a>Sk = 3(-1,05)/ 18,37</span>
+<span id="cb49-187"><a href="#cb49-187" aria-hidden="true" tabindex="-1"></a>Sk = -3,15/ 18,37</span>
+<span id="cb49-188"><a href="#cb49-188" aria-hidden="true" tabindex="-1"></a>Sk ≈ -0,17</span>
+<span id="cb49-189"><a href="#cb49-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-190"><a href="#cb49-190" aria-hidden="true" tabindex="-1"></a>Sk = 0: distribuição simétrica </span>
+<span id="cb49-191"><a href="#cb49-191" aria-hidden="true" tabindex="-1"></a>Sk &gt; 0: assimetria positiva (calda para direita)</span>
+<span id="cb49-192"><a href="#cb49-192" aria-hidden="true" tabindex="-1"></a>Sk &lt; 0: assimetria negativa (calda para esquerda)</span>
 <span id="cb49-193"><a href="#cb49-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-194"><a href="#cb49-194" aria-hidden="true" tabindex="-1"></a>Essas medidas são importantes porque a média e o desvio padrão sozinhos não revelam toda a informação. Saber que a distribuição é simétrica confirma que a média é uma boa medida representativa dos dados, caso fosse muito assimétrica, a mediana seria a melhor opção. </span>
-<span id="cb49-195"><a href="#cb49-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-196"><a href="#cb49-196" aria-hidden="true" tabindex="-1"></a>Muitos modelos e testes estatistico, como o Teste T ou Análise de Regressão, exigem que os dados tenham distribuição próxima da normal, e o valor -0,17 obtido valida o uso dessas ferramentas.</span>
-<span id="cb49-197"><a href="#cb49-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-198"><a href="#cb49-198" aria-hidden="true" tabindex="-1"></a>Conhecer a forma da curva ajuda a compreender o comportamento do fenômeno estudado, neste caso, os valores são consistentes e bem distribuídos em torno do centro.</span>
-<span id="cb49-199"><a href="#cb49-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-200"><a href="#cb49-200" aria-hidden="true" tabindex="-1"></a><span class="fu">### Possíveis falhas de execução do experimento</span></span>
-<span id="cb49-201"><a href="#cb49-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-202"><a href="#cb49-202" aria-hidden="true" tabindex="-1"></a>Durante a coleta dos dados, observou-se que os resultados do lançamento 5, 27 apresentaram valores muito inferiores aos demais, indicabdo provaveis erro na execução.</span>
-<span id="cb49-203"><a href="#cb49-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-204"><a href="#cb49-204" aria-hidden="true" tabindex="-1"></a>Embora sejam esperadas pequenas variações entre os lançamentos, a diferença observada foi excessiva. </span>
-<span id="cb49-205"><a href="#cb49-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-206"><a href="#cb49-206" aria-hidden="true" tabindex="-1"></a>Além disso, ocorreram falhas na medição por parte da equipe: nem todas as marcções foram feitas exatamente no ponto de impacto da bolinha. A trena ficou ligeiramente deslocada da referencia e, em alguns casos, oponto registrado não correspondia ao primeiro contacto entre da bolinha com o solo. </span>
-<span id="cb49-207"><a href="#cb49-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-194"><a href="#cb49-194" aria-hidden="true" tabindex="-1"></a>Como o valor calculado é -0,17, muito próximo de zero, a distribuição apresenta assimetria praticamente Nula / levemente negativa.</span>
+<span id="cb49-195"><a href="#cb49-195" aria-hidden="true" tabindex="-1"></a>O histograma tem formato muito próximo a uma "curva de sino" perfeita.</span>
+<span id="cb49-196"><a href="#cb49-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-197"><a href="#cb49-197" aria-hidden="true" tabindex="-1"></a><span class="fu">###  Coeficiente de Curtose</span></span>
+<span id="cb49-198"><a href="#cb49-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-199"><a href="#cb49-199" aria-hidden="true" tabindex="-1"></a>A curtose mede o "grau de achatamento" ou "pontuação" da curva de frequência, comparando-a com a Curva Normal.</span>
+<span id="cb49-200"><a href="#cb49-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-201"><a href="#cb49-201" aria-hidden="true" tabindex="-1"></a>Ela é classificada em: </span>
+<span id="cb49-202"><a href="#cb49-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-203"><a href="#cb49-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>mesocúrtica: curva normal (padrão); </span>
+<span id="cb49-204"><a href="#cb49-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>leptocúrtica: curva mais "alta e pontuda" (dados muito concentrados);</span>
+<span id="cb49-205"><a href="#cb49-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>platicúrtica: curva mais "baixa e achatada" (dados muito espalhados);</span>
+<span id="cb49-206"><a href="#cb49-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-207"><a href="#cb49-207" aria-hidden="true" tabindex="-1"></a>Com base na dispersão e quartis, observa-se que os dados estão bem concentrados em torno da média, com caudas adequadas, logo, a distribuição é mesocúrtica, pois seu formato é muito semelhante ao da distribuição normal padrão.</span>
 <span id="cb49-208"><a href="#cb49-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-209"><a href="#cb49-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-209"><a href="#cb49-209" aria-hidden="true" tabindex="-1"></a>Essas medidas são importantes porque a média e o desvio padrão sozinhos não revelam toda a informação. Saber que a distribuição é simétrica confirma que a média é uma boa medida representativa dos dados, caso fosse muito assimétrica, a mediana seria a melhor opção. </span>
 <span id="cb49-210"><a href="#cb49-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-211"><a href="#cb49-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-211"><a href="#cb49-211" aria-hidden="true" tabindex="-1"></a>Muitos modelos e testes estatistico, como o Teste T ou Análise de Regressão, exigem que os dados tenham distribuição próxima da normal, e o valor -0,17 obtido valida o uso dessas ferramentas.</span>
 <span id="cb49-212"><a href="#cb49-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-213"><a href="#cb49-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-213"><a href="#cb49-213" aria-hidden="true" tabindex="-1"></a>Conhecer a forma da curva ajuda a compreender o comportamento do fenômeno estudado, neste caso, os valores são consistentes e bem distribuídos em torno do centro.</span>
 <span id="cb49-214"><a href="#cb49-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-215"><a href="#cb49-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-215"><a href="#cb49-215" aria-hidden="true" tabindex="-1"></a><span class="fu">### Possíveis falhas de execução do experimento</span></span>
 <span id="cb49-216"><a href="#cb49-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-217"><a href="#cb49-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-217"><a href="#cb49-217" aria-hidden="true" tabindex="-1"></a>Durante a coleta dos dados, observou-se que os resultados do lançamento 5, 27 apresentaram valores muito inferiores aos demais, indicabdo provaveis erro na execução.</span>
 <span id="cb49-218"><a href="#cb49-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-219"><a href="#cb49-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-219"><a href="#cb49-219" aria-hidden="true" tabindex="-1"></a>Embora sejam esperadas pequenas variações entre os lançamentos, a diferença observada foi excessiva. </span>
 <span id="cb49-220"><a href="#cb49-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-221"><a href="#cb49-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-221"><a href="#cb49-221" aria-hidden="true" tabindex="-1"></a>Além disso, ocorreram falhas na medição por parte da equipe: nem todas as marcções foram feitas exatamente no ponto de impacto da bolinha. A trena ficou ligeiramente deslocada da referencia e, em alguns casos, oponto registrado não correspondia ao primeiro contacto entre da bolinha com o solo. </span>
 <span id="cb49-222"><a href="#cb49-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-223"><a href="#cb49-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-223"><a href="#cb49-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Referências</span></span>
 <span id="cb49-224"><a href="#cb49-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-225"><a href="#cb49-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-225"><a href="#cb49-225" aria-hidden="true" tabindex="-1"></a>R CORE TEAM. R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2025. Disponível em: <span class="ot">&lt;https://www.R-project.org/&gt;</span>.</span>
 <span id="cb49-226"><a href="#cb49-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-227"><a href="#cb49-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-227"><a href="#cb49-227" aria-hidden="true" tabindex="-1"></a>BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. R package version 1.1.3, 2023. Disponível em: <span class="ot">&lt;https://bendeivide.github.io/leem/&gt;</span>.</span>
 <span id="cb49-228"><a href="#cb49-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-229"><a href="#cb49-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-229"><a href="#cb49-229" aria-hidden="true" tabindex="-1"></a>MORETTIN, Pedro Alberto; BUSSAB, Wilton de Oliveira. Estatística Básica. 9. ed. São Paulo: Saraiva, 2017.</span>
 <span id="cb49-230"><a href="#cb49-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-231"><a href="#cb49-231" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Referências</span></span>
+<span id="cb49-231"><a href="#cb49-231" aria-hidden="true" tabindex="-1"></a>TRIOLA, Mario F. Introdução à Estatística. 12. ed. Rio de Janeiro: LTC, 2017.</span>
 </code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
