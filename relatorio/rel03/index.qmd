@@ -64,7 +64,7 @@ Assim as distancias totais em centimetros, que coletamos após os 40 lançamento
 
 Com os dados coletados, faremos sua tabulação e apresentação grafica, tanto agrupados em intervalos de classes quanto  sem agrupamento. Em seguida, calcularemos as medidas de posição e dispersão para cada um dos casos.
 
-Primeiramente, apresentaremos a tabulação e apresentação grafica com dados brutos, sem intervalos de classes, justamente com suas medidas de posição e dispersão.
+Primeiramente, apresentaremos a tabulação e apresentação grafica com dados brutos, sem intervalos de classes, juntamente com suas medidas de posição e dispersão.
 
 ```{r}
 
