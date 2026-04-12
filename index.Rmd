@@ -3,11 +3,11 @@ title: "Wadmilson Costa da Fonseca e CRUZ"
 image: "carlinho.jpg"
 links:
   - label: GitHub
-    url: "https://github.com/Wadmilson/relatorio-estprob/"
+    url: "https://github.com/Wadmilson"
   - label: Email
     url: "ecruzcarlinho@aluno.ufsj.edu.br"
   - label: Relatórios
-    url: "./relatorio/index.html"
+    url: "./relatorio/"
 output:
   postcards::jolla
 ---
