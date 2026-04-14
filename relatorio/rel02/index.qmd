@@ -45,9 +45,9 @@ Este material tem como objetivo apresentar os conceitos fundamentais da linguage
 
 Para começar a usar, primeiro precisamos instalar dois programas:
  
-1. O R Base: É o "motor" da linguagem.- Acesse: https://cran.r-project.org/
+1. O R Base: é o "motor" da linguagem.- Acesse: https://cran.r-project.org/
 - Escolha seu sistema operacional (Windows, Mac ou Linux) e clique em Download.
-2. O RStudio: É a "casa" onde vamos escrever os códigos. Ele deixa o programa mais bonito e fácil de usar.- Acesse: https://www.rstudio.com/products/rstudio/download/
+2. O RStudio: é a "casa" onde vamos escrever os códigos. Ele deixa o programa mais bonito e fácil de usar.- Acesse: https://www.rstudio.com/products/rstudio/download/
 Baixe a versão Desktop Free.
  
 OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automaticamente com o R que você instalou primeiro
@@ -55,10 +55,62 @@ OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automat
 
 Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nas videos aulas e nos livros disponivel em https://bendeivide.github.io/. 
 
+### Como o R trabalha e sua interface do R
 
-### Como o R trabalha e os quadrantes da tela
- 
 O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).
+
+Quando você clica no ícone do R e abre o programa, após instala-lo, aparece uma janela preta ou cinza claro com letras brancas ou pretas. Parece uma "tela de comando" antiga. No topo diz algo como: R x.x.x (o número da versão). Isso só confirma que você abriu o programa certo. Quando abre, aparece um monte de texto escrito automaticamente. Você não precisa ler tudo agora, mas saiba o que significa:
+
+![Foto da interface do R](imagens/Interface inicial do R.png){width=80%} 
+
+Onde ta escrito copyright: diz que é gratuito, o naturalmente, sem garantia: significa que não tem ninguém responsável se der erro, o type 'demo()'...: são exemplos prontos para você rodar se quiser ver o que o R faz, type 'license'...: mostra as regras de uso.
+ 
+Depois de todo aquele texto, você vai ver uma setinha maior que isso:
+  
+```{r}
+#>
+  
+```
+
+Esse simbolo ">" é o "prompt", ele significa: "estou pronto!, escreva aqui o que você quer que eu faça." É exatamente na frente desse símbolo que você digita seus comandos. Quando você aperta Enter, o R executa e traz o resultado, e depois mostra o simbolo ">"de novo, esperando o próximo comando.
+
+Basicamente, você usa essa janela como se fosse uma calculadora super poderosa.
+
+Exemplo do que fazer:
+ 
+1- Clique com o mouse na frente do ">".
+
+2- Digite: "2 + 2"
+
+3- Aperte Enter no teclado.
+ 
+O resultado:
+ 
+```{r}
+
+#> 2 + 2
+#[1] 4
+#>
+```
+
+O R calculou e respondeu "4", o "[1]" só quer dizer "esse é o primeiro resultado", e o ">" aparece de novo esperando mais.
+
+Outros exemplos para testar agora:
+ 
+```{r}
+
+#> 5 * 10        # Multiplicação
+#[1] 50
+#> 100 / 4       # Divisão
+#[1] 25
+#> sqrt(16)      # Raiz quadrada
+#[1] 4
+```
+
+São essas operações basicas que podemos fazer na interface do R, para colocar a mão na massa agente usa o Rstudio que é a "casa" onde vamos escrever os códigos, deixando o programa mais bonito e fácil de usar.
+
+### As interfaces do Rstudio
+
 Quando você abre o RStudio, a tela é dividida em 4 partes principais, que chamamos de quadrantes:
  
 1. Editor de Código ( superior esquerdo): É onde você escreve seus comandos. É como se fosse um bloco de notas.
@@ -70,7 +122,228 @@ Como funciona: Você escreve o comando no Editor, aperta (Ctrl + Enter) e o resu
 
 ![Foto da interface do Rstudio](imagens/foto1.png){width=80%}
 
-Para conseguirmos escrever o nosso relatorio ou texto, precisamos de usar pacotes que armazenaram as nossas informações.
+Para teres minima ideia de como é o funcionamento do Rstudio, vamos criar um grafico simples como demostração.
+Primeira coisa a fazer é cliquar em "File > New File > R Script", para abrir uma nova janela no primeiro quadrante (em cima lado esquerdo), depois so passar os codigos.
+
+```{r}
+
+# Vamos criar dois conjuntos de números
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 5, 4, 6)
+
+# Agora vamos fazer um gráfico de pontos
+plot(x, y, main="Meu Primeiro Gráfico no RStudio!", col="blue", pch=16)
+```
+
+ 
+Para rodar o Código é so colocar o mouse na primeira linha ("x <- ...") e aperte Ctrl + Enter, faça o mesmo na segunda linha ("y <- ..."), depois o mesmo na linha do "plot(...)", ou podes selecionar desde "x" até o final de "plot" e clicar em "Ctrl + Enter" e veras o resultado no painel inferior direito, na aba Plots mostrando um gráfico com pontos azuis, e no painel superior direito (Environment), aparecera "x" e "y" com os valores. 
+È basicamente assim que funciona no Rstudio.
+
+Agora, imagina que tens muitas informaçõe para guardar no computador: números, nomes, datas, resultados de provas, etc.
+Se jogares tudo misturado no programa, vai ficar uma bagunça e não vais encontrar nada depois.
+ 
+Precisas guardar essas informações de forma arrumada, é aqui aonde funciona as estruturas de dados do R. 
+
+### Estrutura de Dados 
+
+No R, encontramos varios tipos de caixas ou organizadores, que servem para organizar e guardar os dados, encontrar a informação rápida depois, e fazer cálculos e gráficos sem errar, cada caixa contem um formato diferente servindo pra guardar um tipo especifico de dados.
+
+Esses organizadores ou caixas mais usados são:
+
+1- O vetor (Vector), é a estrutura mais básica que guarda valores do mesmo tipo.
+
+Exemplo:
+
+```{r}
+x <- c(1, 2, 3, 4)
+```
+
+Podem ser números, como tambem texto.
+
+```{r}
+nomes <- c("Ana", "João", "Carlos")
+```
+
+2- A matriz (Matrix), são dados em formato de tabela (linhas e colunas), onde todos os elementos são do mesmo tipo.
+
+Exemplo:
+
+```{r}
+matriz <- matrix(c(1,2,3,4), nrow = 2, ncol = 2)
+```
+
+3- O Data Frame, sendo mais usada no dia a dia como a realização de uma tabela do Excel, e pode ter tipos diferentes em cada coluna.
+
+Exemplo:
+
+```{r}
+dados <- data.frame(
+  nome = c("Ana", "João"),
+  idade = c(20, 25),
+  aprovado = c(TRUE, TRUE))
+```
+
+Ele acaba misturando texto, número e lógico.
+
+4- A lista (List), que pode guardar qualquer coisa dentro, e possui uma estrutura mais flexível.
+
+Exemplo:
+
+```{r}
+lista <- list(
+  nome = "Ana",
+  idade = 20,
+  notas = c(7, 8, 9))
+```
+
+Ela pode ter vetor, número, texto tudo junto.
+
+5- O fator (Factor), sendo usado para categorias.
+
+Exemplo:
+
+```{r}
+sexo <- factor(c("Masculino", "Feminino", "Feminino"))
+```
+
+Ele é muito usado em estatística.
+
+Um exemplo usando todos juntos:
+
+```{r}
+# Vetor
+notas <- c(7, 8, 9)
+# Matriz
+mat <- matrix(notas, nrow = 3)
+# Data frame
+df <- data.frame(nome = c("Ana", "João"), nota = c(7, 8))
+# Lista
+lista <- list(df, notas)
+```
+
+È claro que não existe só esses, temos mais dois que são seus primos, sendo:
+
+1- As expressões (Expressions), são como "códigos guardados" que ainda não rodaram.
+Imagine que você escreve uma conta em um papel, mas não calcula ainda, você guarda ela para rodar depois.
+Serve para programação mais avançada.
+ 
+2- O objetos S4 / classes / tibble, são tipos mais "modernos" ou mais complexos.
+
+O tibble: é praticamente um Data Frame, mas com cara mais bonita e comportamentos melhores. Muito usado no pacote "tidyverse".
+O S4: são estruturas muito organizadas, usadas em pacotes grandes, mas são mais difíceis.
+
+No total são sete, mas os cinco primeiros seram oque iras usar em 99% do seu tempo quando trabalhares com R.
+
+Imagine que tens uma panilha pronta no Excel ou no computador com milhares de linhas, não vais querer digitar tudo de novo no R né!
+
+Aqui é que entra uma outra parte da beleza do R, que é a importação e exportação dos dados.
+
+### Importação e exportação de dados 
+
+A importação dos dados é o ato de trazer dados de fora para dentro do R. Pegar o arquivo do seu computador e abrir dentro do programa.
+A exportação de dados é o ato de levar dados do R para fora. Depois que você analisou, arrumou ou fez cálculos, você salva o resultado em um arquivo novo para enviar para alguém ou abrir no Excel.
+Esses dois atos economizam o seu tempo, te ajuda a trabalhar com dados reais e compartilha resultados.
+
+Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.
+
+Para arquivos CSV, escrevemos o seguinte:
+
+```{r}
+#meus_dados <- read.csv("dados.csv", header = TRUE)
+```
+
+Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:
+
+```{r}
+library(readxl)
+#meus_dados <- read_excel("dados.xlsx")
+```
+
+Depois de fazer tudo isso o R precura o nosso arquivo, e o  encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela), e guarda dentro da caixinha que nomeamos de "meus_dados". 
+
+Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.
+
+Já na realização da exportação salvando um data frame como CSV, escrevemos o seguinte:
+
+```{r}
+#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")
+```
+
+### As funções do R
+
+Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses (). As funções básicas como sum(): soma os valores, mean(): calcula a media, e o sqrt() : calcula a raiz quagrada, achar o minimo, são amplamente utilizadas para operações matemáticas, enquanto funções como data.frame() : criar tabelas, e subset() : filtrar dados são empregadas na manipulação e organização de dados. Temos outros como o max() : achar o maximo, o min() :  o c() : conbinar valores, o <- (atribuição), o plot() : graficos basicos, o summary() : resumo estatístico, e muitos outros. 
+ 
+Exemplo:
+
+```{r}
+
+# Criando um vetor de notas
+notas <- c(7, 8, 5, 9, 6)
+# Soma das notas
+soma <- sum(notas)
+# Média
+media <- mean(notas)
+# Maior nota
+maior <- max(notas)
+# Menor nota
+menor <- min(notas)
+# Quantidade de alunos
+quantidade <- length(notas)
+# Mostrando resultados
+soma
+media
+maior
+menor
+quantidade
+```
+ Já que até aqui, vimos como intalar o R e o Rstodio, vimos como R trabalha e os seus quadrantes, ouseja, a interface do Rstudio, sabemos oque são pacotes e conhecemos alguns deles, sabemos oque é uma função e conhecemos algumas funções.
+
+Agora daremos um passo a mais, saberomos como se cria um projeto no R.
+
+### Criando projetos 
+
+Para manter seu trabalho organizado, é ideal criar um Projeto no RStudio. Cria-se uma pasta específica onde tudo (códigos, dados, resultados) fica salvo junto.
+ 
+Para criar um projeto primeiramente vamos clicar em "File" -> "New Project", depois escolhemos "New Directory" -> "New Project", em seguida damos um nome ao projeto, ex: "MeuPrimeiroProjeto", e clicamos em "Create Project"".
+
+Ao seguir esse passos o seu projeto estara pronto para ser elaborado.
+
+Agora, aprenderemos sobre a estrutura dos dados  e como se faz a importação e exportação dos dados no R.
+
+ 
+### Importação e exportação de dados 
+
+
+Em relação a importação e exportação de dados, vejamos que mutas das vezes temos dados em arquivos Excel ou CSV e queremos trazer para o R.
+
+Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.
+
+Para arquivos CSV, escrevemos o seguinte:
+
+```{r}
+#meus_dados <- read.csv("dados.csv", header = TRUE)
+```
+
+Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:
+
+```{r}
+library(readxl)
+#meus_dados <- read_excel("dados.xlsx")
+```
+
+Depois de fazer tudo isso o R precura o nosso arquivo, e encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela),e guarda dentro da caixinha que nomeamos de "meus_dados". 
+
+Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.
+
+Para fazer a exportação salvando um data frame como CSV, escrevemos o seguinte:
+
+```{r}
+#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")
+```
+
+Após isso, o R pega na tabela que foi criado quando fizemos a importação, e  faz um arquivo de verdade na pasta.
+
+Agora, falaremos de uma das coisas mais lindas realizada pelo R, que é a sua interação com outras linguagens.
 
 ### Oque são pacotes do R
 
@@ -171,156 +444,6 @@ Extrai o ano. E entere outros pacotes.
 
 Como em outras linguagens, no R tanbém possue diversas funções.
 
-### As funções do R
-
-Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses (). As funções básicas como sum(): soma os valores, mean(): calcula a media, e o sqrt() : calcula a raiz quagrada, achar o minimo, são amplamente utilizadas para operações matemáticas, enquanto funções como data.frame() : criar tabelas, e subset() : filtrar dados são empregadas na manipulação e organização de dados. Temos outros como o max() : achar o maximo, o min() :  o c() : conbinar valores, o <- (atribuição), o plot() : graficos basicos, o summary() : resumo estatístico, e muitos outros. 
- 
-Exemplo:
-
-```{r}
-
-# Criando um vetor de notas
-notas <- c(7, 8, 5, 9, 6)
-# Soma das notas
-soma <- sum(notas)
-# Média
-media <- mean(notas)
-# Maior nota
-maior <- max(notas)
-# Menor nota
-menor <- min(notas)
-# Quantidade de alunos
-quantidade <- length(notas)
-# Mostrando resultados
-soma
-media
-maior
-menor
-quantidade
-```
- Já que até aqui, vimos como intalar o R e o Rstodio, vimos como R trabalha e os seus quadrantes, ouseja, a interface do Rstudio, sabemos oque são pacotes e conhecemos alguns deles, sabemos oque é uma função e conhecemos algumas funções.
-
-Agora daremos um passo a mais, saberomos como se cria um projeto no R.
-
-### Criando projetos 
-
-Para manter seu trabalho organizado, é ideal criar um Projeto no RStudio. Cria-se uma pasta específica onde tudo (códigos, dados, resultados) fica salvo junto.
- 
-Para criar um projeto primeiramente vamos clicar em "File" -> "New Project", depois escolhemos "New Directory" -> "New Project", em seguida damos um nome ao projeto, ex: "MeuPrimeiroProjeto", e clicamos em "Create Project"".
-
-Ao seguir esse passos o seu projeto estara pronto para ser elaborado.
-
-Agora, aprenderemos sobre a estrutura dos dados  e como se faz a importação e exportação dos dados no R.
- 
-### Estrutura de dados e importação e exportação de dados 
-No R, as informações são organizada e armazenada em formatos diferente.
-Alguns desses formatos, mais usados são:
-
-1- O vetor (Vector), sendo a estrutura mais básica que guarda valores do mesmo tipo.
-
-Exemplo:
-
-```{r}
-x <- c(1, 2, 3, 4)
-```
-
-Podem ser números, como tambem texto.
-
-```{r}
-nomes <- c("Ana", "João", "Carlos")
-```
-
-2- A matriz (Matrix), são dados em formato de tabela (linhas e colunas), onde todos os elementos são do mesmo tipo.
-
-Exemplo:
-
-```{r}
-matriz <- matrix(c(1,2,3,4), nrow = 2, ncol = 2)
-```
-
-3- O Data Frame, sendo mais usada no dia a dia como a realização de uma tabela do Excel, e pode ter tipos diferentes em cada coluna.
-
-Exemplo:
-
-```{r}
-dados <- data.frame(
-  nome = c("Ana", "João"),
-  idade = c(20, 25),
-  aprovado = c(TRUE, TRUE))
-```
-
-Ele acaba misturando texto, número e lógico.
-
-4- A lista (List), que pode guardar qualquer coisa dentro, e possui uma estrutura mais flexível.
-
-Exemplo:
-
-```{r}
-lista <- list(
-  nome = "Ana",
-  idade = 20,
-  notas = c(7, 8, 9))
-```
-
-Ela pode ter vetor, número, texto tudo junto.
-
-5- O fator (Factor), sendo usado para categorias.
-
-Exemplo:
-
-```{r}
-sexo <- factor(c("Masculino", "Feminino", "Feminino"))
-```
-
-Ele é muito usado em estatística.
-
-Um exemplo usando todos juntos:
-
-```{r}
-# Vetor
-notas <- c(7, 8, 9)
-# Matriz
-mat <- matrix(notas, nrow = 3)
-# Data frame
-df <- data.frame(nome = c("Ana", "João"), nota = c(7, 8))
-# Lista
-lista <- list(df, notas)
-```
-
-È claro que os formatos não são só esses, existe varios, esses são os basicos para termos a minima ideia de como  funcionam.
-
-Em relação a importação e exportação de dados, vejamos que mutas das vezes temos dados em arquivos Excel ou CSV e queremos trazer para o R.
-
-Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.
-
-Para arquivos CSV, escrevemos o seguinte:
-
-```{r}
-#meus_dados <- read.csv("dados.csv", header = TRUE)
-```
-
-Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:
-
-```{r}
-library(readxl)
-#meus_dados <- read_excel("dados.xlsx")
-```
-
-Depois de fazer tudo isso o R precura o nosso arquivo, e encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela),e guarda dentro da caixinha que nomeamos de "meus_dados". 
-
-Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.
-
-Para fazer a exportação salvando um data frame como CSV, escrevemos o seguinte:
-
-```{r}
-#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")
-```
-
-Após isso, o R pega na tabela que foi criado quando fizemos a importação, e  faz um arquivo de verdade na pasta.
-
-Agora, falaremos de uma das coisas mais lindas realizada pelo R, que é a sua interação com outras linguagens.
-
-
 ### A interface do R com outras Linguagens
 
 Uma das grandes vantagens do R é a sua flexibilidade e capacidade de se conectar com outras ferramentas. Ele não funciona sozinho; ele "conversa" com outras linguagens de programação, bancos de dados e sistemas, permitindo que você use o melhor de cada mundo em um mesmo projeto.
@@ -385,8 +508,6 @@ BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. Disp
 CHAMBERS, John M. Extending R. Boca Raton: CRC Press, 2016.. 
 
 DALGAARD, Peter. Estatística Básica com R. Rio de Janeiro: Elsevier, 2008.
-
-IHAKA, Ross; GENTLEMA
 
 KABAKOFF, Robert. R in Action: Data Analysis and Graphics with R. 2. ed. Manning Publications, 2015.
 
