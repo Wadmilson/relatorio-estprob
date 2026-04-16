@@ -55,7 +55,7 @@ OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automat
 
 Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nas videos aulas e nos livros disponivel em https://bendeivide.github.io/. 
 
-### Como o R trabalha e sua interface do R
+### Como o R trabalha e sua interface 
 
 O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).
 
@@ -269,9 +269,15 @@ Já na realização da exportação salvando um data frame como CSV, escrevemos 
 #write.csv(minha_tabela, file = "minha_tabela_pronta.csv")
 ```
 
+E assim, realizamos a importação e exportação de dados.
+
+Um dos menbros do corpo do R que usas sem saber bem no inicio quando entras no Rstudio, e que é importante conheceres são as funções do R.
+Pense assim: Função é uma "ferramenta pronta".
+Imagine que você quer cortar um pão. Você não precisa fabricar uma faca do zero, né? Você pega a faca pronta, usa ela para cortar e pronto. No R é a mesma coisa.
+
 ### As funções do R
 
-Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses (). As funções básicas como sum(): soma os valores, mean(): calcula a media, e o sqrt() : calcula a raiz quagrada, achar o minimo, são amplamente utilizadas para operações matemáticas, enquanto funções como data.frame() : criar tabelas, e subset() : filtrar dados são empregadas na manipulação e organização de dados. Temos outros como o max() : achar o maximo, o min() :  o c() : conbinar valores, o <- (atribuição), o plot() : graficos basicos, o summary() : resumo estatístico, e muitos outros. 
+Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses "()". As funções básicas como "sum()": soma os valores, "mean()": calcula a media, e o "sqrt()": calcula a raiz quagrada, são amplamente utilizadas para operações matemáticas, enquanto funções como "data.frame()": criar tabelas, e "subset()": filtrar dados, são empregadas na manipulação e organização de dados. Temos outros como o "max()": achar o maximo, o "min()":  o "c()": conbinar valores, o "<-" (atribuição), o "plot()": graficos basicos, o "summary()": resumo estatístico, e muitos outros. 
  
 Exemplo:
 
@@ -296,9 +302,11 @@ maior
 menor
 quantidade
 ```
- Já que até aqui, vimos como intalar o R e o Rstodio, vimos como R trabalha e os seus quadrantes, ouseja, a interface do Rstudio, sabemos oque são pacotes e conhecemos alguns deles, sabemos oque é uma função e conhecemos algumas funções.
+ 
+As funções são nativas do R, tornando-o em uma linguagem pratica, pois, se para somares "2 + 2", e tivesses de ensinar ao computador oque é a soma, isso daria muito trabalho e gastarias muito tempo.
+Essas funções existe para não reinventares a roda, e sim aproivetar e desfrutar da sua beleza.
 
-Agora daremos um passo a mais, saberomos como se cria um projeto no R.
+È muito importante saber como se cria um projeto no R. 
 
 ### Criando projetos 
 
@@ -308,141 +316,30 @@ Para criar um projeto primeiramente vamos clicar em "File" -> "New Project", dep
 
 Ao seguir esse passos o seu projeto estara pronto para ser elaborado.
 
-Agora, aprenderemos sobre a estrutura dos dados  e como se faz a importação e exportação dos dados no R.
-
+Busca compreender esse pensamento: " imagine o R como se fosse um celular novo. Quando você compra um celular, ele já vem com algumas funções básicas: calculadora, relógio, navegador. Isso é o R Base (o que já vem instalado).
  
-### Importação e exportação de dados 
-
-
-Em relação a importação e exportação de dados, vejamos que mutas das vezes temos dados em arquivos Excel ou CSV e queremos trazer para o R.
-
-Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.
-
-Para arquivos CSV, escrevemos o seguinte:
-
-```{r}
-#meus_dados <- read.csv("dados.csv", header = TRUE)
-```
-
-Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:
-
-```{r}
-library(readxl)
-#meus_dados <- read_excel("dados.xlsx")
-```
-
-Depois de fazer tudo isso o R precura o nosso arquivo, e encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela),e guarda dentro da caixinha que nomeamos de "meus_dados". 
-
-Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.
-
-Para fazer a exportação salvando um data frame como CSV, escrevemos o seguinte:
-
-```{r}
-#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")
-```
-
-Após isso, o R pega na tabela que foi criado quando fizemos a importação, e  faz um arquivo de verdade na pasta.
-
-Agora, falaremos de uma das coisas mais lindas realizada pelo R, que é a sua interação com outras linguagens.
-
 ### Oque são pacotes do R
 
-O R já vem com várias funções prontas, mas a comunidade cria ferramentas novas o tempo todo. Essas ferramentas extras são os Pacotes.
+Os Pacotes são como os APLICATIVOS que você baixa na loja. 
+Eles são ferramentas extras que outras pessoas criaram e disponibilizaram de graça para você usar, e serevm para dar poderes novos ao R, ler arquivos do Execel, fazer graficos bonitos e coloridos, organizar e limpar dados muito rapido, e muito mais.
+
+Os Pacotes mais Básicos e Importante do R são:
+
+1- O readxl, Servindo para ler arquivos do Excel ( .xlsx ).
+Obs: O R "de fábrica" só lê CSV direitinho. Se você quiser abrir uma planilha do Excel, precisa desse pacote!
  
-Para instalar: Usamos "install.packages("nome_do_pacote")".
-Para usar: Usamos "library(nome_do_pacote)".
-
-Dica: Você instala apenas uma vez, mas precisa carregar ("library") sempre que abrir o programa.
-
-Temos pacotes como:
-
-1- O ggplot2, é usado para gráficos.
-Exemplo:
-
+2- O ggplot2, Servindo para fazer gráficos.
+É o pacote mais famoso do mundo para criar gráficos com cara de profissional, bonitos e organizados.
+ 
+3- O dplyr, Servindo para arrumar e manipular dados.
+Imagine que você tem uma tabela enorme e quer filtrar, ordenar ou juntar informações. Esse pacote faz tudo ficar mais fácil e rápido.
+Antes de usar cada pacote, o instalamos primeiro digitando:  r
+  
 ```{r}
-library(ggplot2)
-
-dados <- data.frame(
-  x = c(1,2,3,4),
-  y = c(10,20,15,25))
-ggplot(dados, aes(x, y)) + geom_line()
+install.packages("readxl")
+library(readxl)
 ```
 
-Gera um gráfico de linha.
-
-2- O dplyr, usado para organizar e filtrar dados.
-Exemplo:
-
-```{r}
-library(dplyr)
-
-dados <- data.frame(nome = c("Ana", "João", "Carlos"),
-  idade = c(20, 25, 30))
-dados %>%
-  filter(idade > 20)
-```
-
-Filtra pessoas com idade maior que 20.
-
-3- O tidyr, arruma dados “bagunçados”.
-Exemplo:
-
-```{r}
-library(tidyr)
-
-dados <- data.frame(
-  nome = c("A", "B"),
-  nota1 = c(7,8),
-  nota2 = c(9,10))
-pivot_longer(dados, cols = nota1:nota2)
-```
-
-Transforma dados de formato largo → longo.
-
-4- O readr, para importar arquivos.
-Exemplo:
-
-```{r}
-library(readr)
-#dados <- read_csv("dados.csv")
-```
-
-Lê arquivos CSV.
-
-5- O shiny, criar aplicativos interativos.
-Exemplo simples:
-
-```{r}
-library(shiny)
-
-ui <- fluidPage("Olá, mundo!")
-server <- function(input, output) {}
-shinyApp(ui, server)
-```
-
-Cria um app básico.
-
-6- O knitr, usado em R Markdown.
-Exemplo:
-
-```{r}
-knitr::kable(head(mtcars))
-```
-
-Cria tabela formatada no relatório.
-
-7- O lubridate, facilita trabalhar com datas.
-Exemplo:
-
-```{r}
-library(lubridate)
-data <- ymd("2026-04-11")
-year(data)
-```
-
-Extrai o ano. E entere outros pacotes. 
-
-Como em outras linguagens, no R tanbém possue diversas funções.
 
 ### A interface do R com outras Linguagens
 

@@ -90,16 +90,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#fundamentação-teórica" id="toc-fundamentação-teórica" class="nav-link" data-scroll-target="#fundamentação-teórica"><span class="header-section-number">2</span> 📚 Fundamentação Teórica</a>
   <ul class="collapse">
   <li><a href="#como-baixar-e-intalar-o-r" id="toc-como-baixar-e-intalar-o-r" class="nav-link" data-scroll-target="#como-baixar-e-intalar-o-r"><span class="header-section-number">2.1</span> Como baixar e intalar o R</a></li>
-  <li><a href="#como-o-r-trabalha-e-sua-interface-do-r" id="toc-como-o-r-trabalha-e-sua-interface-do-r" class="nav-link" data-scroll-target="#como-o-r-trabalha-e-sua-interface-do-r"><span class="header-section-number">2.2</span> Como o R trabalha e sua interface do R</a></li>
+  <li><a href="#como-o-r-trabalha-e-sua-interface" id="toc-como-o-r-trabalha-e-sua-interface" class="nav-link" data-scroll-target="#como-o-r-trabalha-e-sua-interface"><span class="header-section-number">2.2</span> Como o R trabalha e sua interface</a></li>
   <li><a href="#as-interfaces-do-rstudio" id="toc-as-interfaces-do-rstudio" class="nav-link" data-scroll-target="#as-interfaces-do-rstudio"><span class="header-section-number">2.3</span> As interfaces do Rstudio</a></li>
   <li><a href="#estrutura-de-dados" id="toc-estrutura-de-dados" class="nav-link" data-scroll-target="#estrutura-de-dados"><span class="header-section-number">2.4</span> Estrutura de Dados</a></li>
   <li><a href="#importação-e-exportação-de-dados" id="toc-importação-e-exportação-de-dados" class="nav-link" data-scroll-target="#importação-e-exportação-de-dados"><span class="header-section-number">2.5</span> Importação e exportação de dados</a></li>
   <li><a href="#as-funções-do-r" id="toc-as-funções-do-r" class="nav-link" data-scroll-target="#as-funções-do-r"><span class="header-section-number">2.6</span> As funções do R</a></li>
   <li><a href="#criando-projetos" id="toc-criando-projetos" class="nav-link" data-scroll-target="#criando-projetos"><span class="header-section-number">2.7</span> Criando projetos</a></li>
-  <li><a href="#importação-e-exportação-de-dados-1" id="toc-importação-e-exportação-de-dados-1" class="nav-link" data-scroll-target="#importação-e-exportação-de-dados-1"><span class="header-section-number">2.8</span> Importação e exportação de dados</a></li>
-  <li><a href="#oque-são-pacotes-do-r" id="toc-oque-são-pacotes-do-r" class="nav-link" data-scroll-target="#oque-são-pacotes-do-r"><span class="header-section-number">2.9</span> Oque são pacotes do R</a></li>
-  <li><a href="#a-interface-do-r-com-outras-linguagens" id="toc-a-interface-do-r-com-outras-linguagens" class="nav-link" data-scroll-target="#a-interface-do-r-com-outras-linguagens"><span class="header-section-number">2.10</span> A interface do R com outras Linguagens</a></li>
-  <li><a href="#considerações-finais" id="toc-considerações-finais" class="nav-link" data-scroll-target="#considerações-finais"><span class="header-section-number">2.11</span> Considerações Finais</a></li>
+  <li><a href="#oque-são-pacotes-do-r" id="toc-oque-são-pacotes-do-r" class="nav-link" data-scroll-target="#oque-são-pacotes-do-r"><span class="header-section-number">2.8</span> Oque são pacotes do R</a></li>
+  <li><a href="#a-interface-do-r-com-outras-linguagens" id="toc-a-interface-do-r-com-outras-linguagens" class="nav-link" data-scroll-target="#a-interface-do-r-com-outras-linguagens"><span class="header-section-number">2.9</span> A interface do R com outras Linguagens</a></li>
+  <li><a href="#considerações-finais" id="toc-considerações-finais" class="nav-link" data-scroll-target="#considerações-finais"><span class="header-section-number">2.10</span> Considerações Finais</a></li>
   </ul></li>
   <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">3</span> 📖 Referências</a></li>
   </ul>
@@ -142,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">14/04/2026, 12:01</p>
+      <p class="date">15/04/2026, 21:13</p>
     </div>
   </div>
   
@@ -180,8 +179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automaticamente com o R que você instalou primeiro</p>
 <p>Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nas videos aulas e nos livros disponivel em https://bendeivide.github.io/.</p>
 </section>
-<section id="como-o-r-trabalha-e-sua-interface-do-r" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="como-o-r-trabalha-e-sua-interface-do-r"><span class="header-section-number">2.2</span> Como o R trabalha e sua interface do R</h3>
+<section id="como-o-r-trabalha-e-sua-interface" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="como-o-r-trabalha-e-sua-interface"><span class="header-section-number">2.2</span> Como o R trabalha e sua interface</h3>
 <p>O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).</p>
 <p>Quando você clica no ícone do R e abre o programa, após instala-lo, aparece uma janela preta ou cinza claro com letras brancas ou pretas. Parece uma “tela de comando” antiga. No topo diz algo como: R x.x.x (o número da versão). Isso só confirma que você abriu o programa certo. Quando abre, aparece um monte de texto escrito automaticamente. Você não precisa ler tudo agora, mas saiba o que significa:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -377,10 +376,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
+<p>E assim, realizamos a importação e exportação de dados.</p>
+<p>Um dos menbros do corpo do R que usas sem saber bem no inicio quando entras no Rstudio, e que é importante conheceres são as funções do R. Pense assim: Função é uma “ferramenta pronta”. Imagine que você quer cortar um pão. Você não precisa fabricar uma faca do zero, né? Você pega a faca pronta, usa ela para cortar e pronto. No R é a mesma coisa.</p>
 </section>
 <section id="as-funções-do-r" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="as-funções-do-r"><span class="header-section-number">2.6</span> As funções do R</h3>
-<p>Funções são “receitas de bolo” prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses (). As funções básicas como sum(): soma os valores, mean(): calcula a media, e o sqrt() : calcula a raiz quagrada, achar o minimo, são amplamente utilizadas para operações matemáticas, enquanto funções como data.frame() : criar tabelas, e subset() : filtrar dados são empregadas na manipulação e organização de dados. Temos outros como o max() : achar o maximo, o min() : o c() : conbinar valores, o &lt;- (atribuição), o plot() : graficos basicos, o summary() : resumo estatístico, e muitos outros.</p>
+<p>Funções são “receitas de bolo” prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses “()”. As funções básicas como “sum()”: soma os valores, “mean()”: calcula a media, e o “sqrt()”: calcula a raiz quagrada, são amplamente utilizadas para operações matemáticas, enquanto funções como “data.frame()”: criar tabelas, e “subset()”: filtrar dados, são empregadas na manipulação e organização de dados. Temos outros como o “max()”: achar o maximo, o “min()”: o “c()”: conbinar valores, o “&lt;-” (atribuição), o “plot()”: graficos basicos, o “summary()”: resumo estatístico, e muitos outros.</p>
 <p>Exemplo:</p>
 <div class="cell">
 <details class="code-fold">
@@ -432,283 +433,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
-<p>Já que até aqui, vimos como intalar o R e o Rstodio, vimos como R trabalha e os seus quadrantes, ouseja, a interface do Rstudio, sabemos oque são pacotes e conhecemos alguns deles, sabemos oque é uma função e conhecemos algumas funções.</p>
-<p>Agora daremos um passo a mais, saberomos como se cria um projeto no R.</p>
+<p>As funções são nativas do R, tornando-o em uma linguagem pratica, pois, se para somares “2 + 2”, e tivesses de ensinar ao computador oque é a soma, isso daria muito trabalho e gastarias muito tempo. Essas funções existe para não reinventares a roda, e sim aproivetar e desfrutar da sua beleza.</p>
+<p>È muito importante saber como se cria um projeto no R.</p>
 </section>
 <section id="criando-projetos" class="level3" data-number="2.7">
 <h3 data-number="2.7" class="anchored" data-anchor-id="criando-projetos"><span class="header-section-number">2.7</span> Criando projetos</h3>
 <p>Para manter seu trabalho organizado, é ideal criar um Projeto no RStudio. Cria-se uma pasta específica onde tudo (códigos, dados, resultados) fica salvo junto.</p>
 <p>Para criar um projeto primeiramente vamos clicar em “File” -&gt; “New Project”, depois escolhemos “New Directory” -&gt; “New Project”, em seguida damos um nome ao projeto, ex: “MeuPrimeiroProjeto”, e clicamos em “Create Project”“.</p>
 <p>Ao seguir esse passos o seu projeto estara pronto para ser elaborado.</p>
-<p>Agora, aprenderemos sobre a estrutura dos dados e como se faz a importação e exportação dos dados no R.</p>
+<p>Busca compreender esse pensamento: ” imagine o R como se fosse um celular novo. Quando você compra um celular, ele já vem com algumas funções básicas: calculadora, relógio, navegador. Isso é o R Base (o que já vem instalado).</p>
 </section>
-<section id="importação-e-exportação-de-dados-1" class="level3" data-number="2.8">
-<h3 data-number="2.8" class="anchored" data-anchor-id="importação-e-exportação-de-dados-1"><span class="header-section-number">2.8</span> Importação e exportação de dados</h3>
-<p>Em relação a importação e exportação de dados, vejamos que mutas das vezes temos dados em arquivos Excel ou CSV e queremos trazer para o R.</p>
-<p>Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.</p>
-<p>Para arquivos CSV, escrevemos o seguinte:</p>
+<section id="oque-são-pacotes-do-r" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="oque-são-pacotes-do-r"><span class="header-section-number">2.8</span> Oque são pacotes do R</h3>
+<p>Os Pacotes são como os APLICATIVOS que você baixa na loja. Eles são ferramentas extras que outras pessoas criaram e disponibilizaram de graça para você usar, e serevm para dar poderes novos ao R, ler arquivos do Execel, fazer graficos bonitos e coloridos, organizar e limpar dados muito rapido, e muito mais.</p>
+<p>Os Pacotes mais Básicos e Importante do R são:</p>
+<p>1- O readxl, Servindo para ler arquivos do Excel ( .xlsx ). Obs: O R “de fábrica” só lê CSV direitinho. Se você quiser abrir uma planilha do Excel, precisa desse pacote!</p>
+<p>2- O ggplot2, Servindo para fazer gráficos. É o pacote mais famoso do mundo para criar gráficos com cara de profissional, bonitos e organizados.</p>
+<p>3- O dplyr, Servindo para arrumar e manipular dados. Imagine que você tem uma tabela enorme e quer filtrar, ordenar ou juntar informações. Esse pacote faz tudo ficar mais fácil e rápido. Antes de usar cada pacote, o instalamos primeiro digitando: r</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read.csv("dados.csv", header = TRUE)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Agora para arquivos Excel precisaremos liberar o pacote ‘readxl’, por isso escrevemos o seguinte:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read_excel("dados.xlsx")</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<p>Depois de fazer tudo isso o R precura o nosso arquivo, e encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela),e guarda dentro da caixinha que nomeamos de “meus_dados”.</p>
-<p>Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.</p>
-<p>Para fazer a exportação salvando um data frame como CSV, escrevemos o seguinte:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<p>Após isso, o R pega na tabela que foi criado quando fizemos a importação, e faz um arquivo de verdade na pasta.</p>
-<p>Agora, falaremos de uma das coisas mais lindas realizada pelo R, que é a sua interação com outras linguagens.</p>
 </section>
-<section id="oque-são-pacotes-do-r" class="level3" data-number="2.9">
-<h3 data-number="2.9" class="anchored" data-anchor-id="oque-são-pacotes-do-r"><span class="header-section-number">2.9</span> Oque são pacotes do R</h3>
-<p>O R já vem com várias funções prontas, mas a comunidade cria ferramentas novas o tempo todo. Essas ferramentas extras são os Pacotes.</p>
-<p>Para instalar: Usamos “install.packages(”nome_do_pacote”)“. Para usar: Usamos”library(nome_do_pacote)“.</p>
-<p>Dica: Você instala apenas uma vez, mas precisa carregar (“library”) sempre que abrir o programa.</p>
-<p>Temos pacotes como:</p>
-<p>1- O ggplot2, é usado para gráficos. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">15</span>,<span class="dv">25</span>))</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dados, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Gera um gráfico de linha.</p>
-<p>2- O dplyr, usado para organizar e filtrar dados. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>, <span class="st">"Carlos"</span>),</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>))</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>dados <span class="sc">%&gt;%</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(idade <span class="sc">&gt;</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>    nome idade
-1   João    25
-2 Carlos    30</code></pre>
-</div>
-</div>
-<p>Filtra pessoas com idade maior que 20.</p>
-<p>3- O tidyr, arruma dados “bagunçados”. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>),</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">nota1 =</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>),</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">nota2 =</span> <span class="fu">c</span>(<span class="dv">9</span>,<span class="dv">10</span>))</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_longer</span>(dados, <span class="at">cols =</span> nota1<span class="sc">:</span>nota2)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 3
-  nome  name  value
-  &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;
-1 A     nota1     7
-2 A     nota2     9
-3 B     nota1     8
-4 B     nota2    10</code></pre>
-</div>
-</div>
-<p>Transforma dados de formato largo → longo.</p>
-<p>4- O readr, para importar arquivos. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- read_csv("dados.csv")</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<p>Lê arquivos CSV.</p>
-<p>5- O shiny, criar aplicativos interativos. Exemplo simples:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(<span class="st">"Olá, mundo!"</span>)</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {}</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(ui, server)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<p></p><div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div><p></p>
-</div>
-</div>
-<p>Cria um app básico.</p>
-<p>6- O knitr, usado em R Markdown. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(mtcars))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 7%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 7%">
-<col style="width: 7%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">mpg</th>
-<th style="text-align: right;">cyl</th>
-<th style="text-align: right;">disp</th>
-<th style="text-align: right;">hp</th>
-<th style="text-align: right;">drat</th>
-<th style="text-align: right;">wt</th>
-<th style="text-align: right;">qsec</th>
-<th style="text-align: right;">vs</th>
-<th style="text-align: right;">am</th>
-<th style="text-align: right;">gear</th>
-<th style="text-align: right;">carb</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Mazda RX4</td>
-<td style="text-align: right;">21.0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">160</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.90</td>
-<td style="text-align: right;">2.620</td>
-<td style="text-align: right;">16.46</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mazda RX4 Wag</td>
-<td style="text-align: right;">21.0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">160</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.90</td>
-<td style="text-align: right;">2.875</td>
-<td style="text-align: right;">17.02</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Datsun 710</td>
-<td style="text-align: right;">22.8</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">93</td>
-<td style="text-align: right;">3.85</td>
-<td style="text-align: right;">2.320</td>
-<td style="text-align: right;">18.61</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hornet 4 Drive</td>
-<td style="text-align: right;">21.4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">258</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.08</td>
-<td style="text-align: right;">3.215</td>
-<td style="text-align: right;">19.44</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hornet Sportabout</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">360</td>
-<td style="text-align: right;">175</td>
-<td style="text-align: right;">3.15</td>
-<td style="text-align: right;">3.440</td>
-<td style="text-align: right;">17.02</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Valiant</td>
-<td style="text-align: right;">18.1</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">225</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">2.76</td>
-<td style="text-align: right;">3.460</td>
-<td style="text-align: right;">20.22</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Cria tabela formatada no relatório.</p>
-<p>7- O lubridate, facilita trabalhar com datas. Exemplo:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2026-04-11"</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(data)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2026</code></pre>
-</div>
-</div>
-<p>Extrai o ano. E entere outros pacotes.</p>
-<p>Como em outras linguagens, no R tanbém possue diversas funções.</p>
-</section>
-<section id="a-interface-do-r-com-outras-linguagens" class="level3" data-number="2.10">
-<h3 data-number="2.10" class="anchored" data-anchor-id="a-interface-do-r-com-outras-linguagens"><span class="header-section-number">2.10</span> A interface do R com outras Linguagens</h3>
+<section id="a-interface-do-r-com-outras-linguagens" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="a-interface-do-r-com-outras-linguagens"><span class="header-section-number">2.9</span> A interface do R com outras Linguagens</h3>
 <p>Uma das grandes vantagens do R é a sua flexibilidade e capacidade de se conectar com outras ferramentas. Ele não funciona sozinho; ele “conversa” com outras linguagens de programação, bancos de dados e sistemas, permitindo que você use o melhor de cada mundo em um mesmo projeto.</p>
 <p>Isso é muito importante porque cada uma das linguagem tem o seu ponto forte. O R é melhor para estatística e gráficos, o Python é ótimo para machine learning e automação, o SQL é essencial para bancos de dados grandes, e o C/C++ serve para deixar cálculos muito mais rápidos.</p>
 <p>Principais Integrações</p>
@@ -717,14 +468,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar o pacote</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora você pode escrever código Python usando py_run_string()</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="st">numeros = np.array([1, 2, 3, 4, 5])</span></span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="st">print(numeros.mean())</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar o pacote</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora você pode escrever código Python usando py_run_string()</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="st">numeros = np.array([1, 2, 3, 4, 5])</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="st">print(numeros.mean())</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>3.0</code></pre>
@@ -736,22 +487,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pacote para conexão</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Conectando ao banco</span></span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">"meu_banco.db"</span>)</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Escrevendo uma consulta SQL dentro do R</span></span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- dbGetQuery(con, "SELECT * FROM tabela_clientes WHERE idade &gt; 18")</span></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver o resultado</span></span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="co">#head(dados)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pacote para conexão</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Conectando ao banco</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">"meu_banco.db"</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Escrevendo uma consulta SQL dentro do R</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- dbGetQuery(con, "SELECT * FROM tabela_clientes WHERE idade &gt; 18")</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver o resultado</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#head(dados)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>4- A integração com LaTeX e Markdown: o R trabalha muito bem com ferramentas de escrita de documentos. Com o pacote “rmarkdown”, você cria relatórios, PDFs, apresentações e sites que misturam texto, código R e os resultados automaticamente. É a base do que chamamos de Ciência Reprodutível.</p>
 <p>Tambem temos outras linguagens que o R tem interfaces, como o Java (pacote “rJava”), a Julia (para computação de alto desempenho), e o Fortran (muito usado em cálculos matemáticos antigos e robustos).</p>
 <p>Portanto, esses foram as principais estruturas do corpo da linguagem R.</p>
 </section>
-<section id="considerações-finais" class="level3" data-number="2.11">
-<h3 data-number="2.11" class="anchored" data-anchor-id="considerações-finais"><span class="header-section-number">2.11</span> Considerações Finais</h3>
+<section id="considerações-finais" class="level3" data-number="2.10">
+<h3 data-number="2.10" class="anchored" data-anchor-id="considerações-finais"><span class="header-section-number">2.10</span> Considerações Finais</h3>
 <p>Apresentamos os principais fundamentos da linguagem R, desde a instalação, organização da interface, uso de funções, pacotes e manipulação de dados. Vimos que, apesar de exigir prática inicial, o R é uma ferramenta poderosa, gratuita e versátil, capaz de se integrar com outras linguagens.</p>
 <p>Aprender R exige dedicação, mas os benefícios são enormes. Com os conceitos aqui apresentados, você já possui a base necessária para desenvolver projetos, analisar informações e evoluir nos estudos de estatística e ciência de dados.</p>
 </section>
@@ -1223,523 +974,420 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Wadmilson Costa da Fonseca e CRuz"</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A beleza da linguangem R"</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "DD/MM/YYYY, HH:mm"</span></span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
-<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
-<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
-<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
-<span id="cb41-27"><a href="#cb41-27" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb41-28"><a href="#cb41-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-29"><a href="#cb41-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Introdução</span></span>
-<span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-32"><a href="#cb41-32" aria-hidden="true" tabindex="-1"></a>A linguagem R é uma ferramenta poderosa e gratuita utilizada mundialmente para estatística, análise de dados e ciência de dados. Ela foi criada por Robert Gentleman e Ross Ihaka na Universidade de Auckland, Nova Zelândia, e hoje é mantida pela R Foundation for Statistical Computing.</span>
-<span id="cb41-33"><a href="#cb41-33" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-34"><a href="#cb41-34" aria-hidden="true" tabindex="-1"></a>O grande diferencial do R é que ele não é apenas um software, mas sim uma linguagem de programação completa, o que significa que você pode escrever comandos para que o computador execute tarefas exatamente como você deseja. Mesmo parecendo complicado no início, com um pouco de prática e seguindo este guia, qualquer pessoa consegue aprender e dominar suas funções básicas.</span>
-<span id="cb41-35"><a href="#cb41-35" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-36"><a href="#cb41-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-37"><a href="#cb41-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
-<span id="cb41-38"><a href="#cb41-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-39"><a href="#cb41-39" aria-hidden="true" tabindex="-1"></a>Este material tem como objetivo apresentar os conceitos fundamentais da linguagem R de forma simples e objetiva. Nosso foco é guiar o iniciante desde o processo de instalação até a compreensão de como o R organiza e trabalha com as informações, fornecendo exemplos práticos para facilitar o aprendizado.</span>
-<span id="cb41-40"><a href="#cb41-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-41"><a href="#cb41-41" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-42"><a href="#cb41-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚  Fundamentação Teórica</span></span>
-<span id="cb41-43"><a href="#cb41-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-44"><a href="#cb41-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Como baixar e intalar o R </span></span>
-<span id="cb41-45"><a href="#cb41-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-46"><a href="#cb41-46" aria-hidden="true" tabindex="-1"></a>Para começar a usar, primeiro precisamos instalar dois programas:</span>
-<span id="cb41-47"><a href="#cb41-47" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-48"><a href="#cb41-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>O R Base: é o "motor" da linguagem.- Acesse: https://cran.r-project.org/</span>
-<span id="cb41-49"><a href="#cb41-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Escolha seu sistema operacional (Windows, Mac ou Linux) e clique em Download.</span>
-<span id="cb41-50"><a href="#cb41-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>O RStudio: é a "casa" onde vamos escrever os códigos. Ele deixa o programa mais bonito e fácil de usar.- Acesse: https://www.rstudio.com/products/rstudio/download/</span>
-<span id="cb41-51"><a href="#cb41-51" aria-hidden="true" tabindex="-1"></a>Baixe a versão Desktop Free.</span>
-<span id="cb41-52"><a href="#cb41-52" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-53"><a href="#cb41-53" aria-hidden="true" tabindex="-1"></a>OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automaticamente com o R que você instalou primeiro</span>
-<span id="cb41-54"><a href="#cb41-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-55"><a href="#cb41-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-56"><a href="#cb41-56" aria-hidden="true" tabindex="-1"></a>Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nas videos aulas e nos livros disponivel em https://bendeivide.github.io/. </span>
-<span id="cb41-57"><a href="#cb41-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-58"><a href="#cb41-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Como o R trabalha e sua interface do R</span></span>
-<span id="cb41-59"><a href="#cb41-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-60"><a href="#cb41-60" aria-hidden="true" tabindex="-1"></a>O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).</span>
-<span id="cb41-61"><a href="#cb41-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-62"><a href="#cb41-62" aria-hidden="true" tabindex="-1"></a>Quando você clica no ícone do R e abre o programa, após instala-lo, aparece uma janela preta ou cinza claro com letras brancas ou pretas. Parece uma "tela de comando" antiga. No topo diz algo como: R x.x.x (o número da versão). Isso só confirma que você abriu o programa certo. Quando abre, aparece um monte de texto escrito automaticamente. Você não precisa ler tudo agora, mas saiba o que significa:</span>
-<span id="cb41-63"><a href="#cb41-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-64"><a href="#cb41-64" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da interface do R](imagens/Interface inicial do R.png)</span>{width=80%} </span>
-<span id="cb41-65"><a href="#cb41-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-66"><a href="#cb41-66" aria-hidden="true" tabindex="-1"></a>Onde ta escrito copyright: diz que é gratuito, o naturalmente, sem garantia: significa que não tem ninguém responsável se der erro, o type 'demo()'...: são exemplos prontos para você rodar se quiser ver o que o R faz, type 'license'...: mostra as regras de uso.</span>
-<span id="cb41-67"><a href="#cb41-67" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-68"><a href="#cb41-68" aria-hidden="true" tabindex="-1"></a>Depois de todo aquele texto, você vai ver uma setinha maior que isso:</span>
-<span id="cb41-69"><a href="#cb41-69" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb41-72"><a href="#cb41-72" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-73"><a href="#cb41-73" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;</span></span>
-<span id="cb41-74"><a href="#cb41-74" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb41-75"><a href="#cb41-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-76"><a href="#cb41-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-77"><a href="#cb41-77" aria-hidden="true" tabindex="-1"></a>Esse simbolo "&gt;" é o "prompt", ele significa: "estou pronto!, escreva aqui o que você quer que eu faça." É exatamente na frente desse símbolo que você digita seus comandos. Quando você aperta Enter, o R executa e traz o resultado, e depois mostra o simbolo "&gt;"de novo, esperando o próximo comando.</span>
-<span id="cb41-78"><a href="#cb41-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-79"><a href="#cb41-79" aria-hidden="true" tabindex="-1"></a>Basicamente, você usa essa janela como se fosse uma calculadora super poderosa.</span>
-<span id="cb41-80"><a href="#cb41-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-81"><a href="#cb41-81" aria-hidden="true" tabindex="-1"></a>Exemplo do que fazer:</span>
-<span id="cb41-82"><a href="#cb41-82" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-83"><a href="#cb41-83" aria-hidden="true" tabindex="-1"></a>1- Clique com o mouse na frente do "&gt;".</span>
-<span id="cb41-84"><a href="#cb41-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-85"><a href="#cb41-85" aria-hidden="true" tabindex="-1"></a>2- Digite: "2 + 2"</span>
-<span id="cb41-86"><a href="#cb41-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-87"><a href="#cb41-87" aria-hidden="true" tabindex="-1"></a>3- Aperte Enter no teclado.</span>
-<span id="cb41-88"><a href="#cb41-88" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-89"><a href="#cb41-89" aria-hidden="true" tabindex="-1"></a>O resultado:</span>
-<span id="cb41-90"><a href="#cb41-90" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-93"><a href="#cb41-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-94"><a href="#cb41-94" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 + 2</span></span>
-<span id="cb41-95"><a href="#cb41-95" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 4</span></span>
-<span id="cb41-96"><a href="#cb41-96" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;</span></span>
-<span id="cb41-97"><a href="#cb41-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-98"><a href="#cb41-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-99"><a href="#cb41-99" aria-hidden="true" tabindex="-1"></a>O R calculou e respondeu "4", o "<span class="co">[</span><span class="ot">1</span><span class="co">]</span>" só quer dizer "esse é o primeiro resultado", e o "&gt;" aparece de novo esperando mais.</span>
-<span id="cb41-100"><a href="#cb41-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-101"><a href="#cb41-101" aria-hidden="true" tabindex="-1"></a>Outros exemplos para testar agora:</span>
-<span id="cb41-102"><a href="#cb41-102" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-105"><a href="#cb41-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-106"><a href="#cb41-106" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 * 10        # Multiplicação</span></span>
-<span id="cb41-107"><a href="#cb41-107" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 50</span></span>
-<span id="cb41-108"><a href="#cb41-108" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 100 / 4       # Divisão</span></span>
-<span id="cb41-109"><a href="#cb41-109" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 25</span></span>
-<span id="cb41-110"><a href="#cb41-110" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sqrt(16)      # Raiz quadrada</span></span>
-<span id="cb41-111"><a href="#cb41-111" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 4</span></span>
-<span id="cb41-112"><a href="#cb41-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-113"><a href="#cb41-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-114"><a href="#cb41-114" aria-hidden="true" tabindex="-1"></a>São essas operações basicas que podemos fazer na interface do R, para colocar a mão na massa agente usa o Rstudio que é a "casa" onde vamos escrever os códigos, deixando o programa mais bonito e fácil de usar.</span>
-<span id="cb41-115"><a href="#cb41-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-116"><a href="#cb41-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### As interfaces do Rstudio</span></span>
-<span id="cb41-117"><a href="#cb41-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-118"><a href="#cb41-118" aria-hidden="true" tabindex="-1"></a>Quando você abre o RStudio, a tela é dividida em 4 partes principais, que chamamos de quadrantes:</span>
-<span id="cb41-119"><a href="#cb41-119" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-120"><a href="#cb41-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Editor de Código ( superior esquerdo): É onde você escreve seus comandos. É como se fosse um bloco de notas.</span>
-<span id="cb41-121"><a href="#cb41-121" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Console (inferior esquerdo): É onde o R executa o que você escreveu. É aqui que os resultados aparecem.</span>
-<span id="cb41-122"><a href="#cb41-122" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ambiente/Histórico (superior direito): Mostra quais dados e objetos você criou e guardou na memória.</span>
-<span id="cb41-123"><a href="#cb41-123" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Arquivos/Gráficos/Ajuda (inferior direito): Aqui você vê seus arquivos, os gráficos que criar e pode pesquisar dúvidas.</span>
-<span id="cb41-124"><a href="#cb41-124" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-125"><a href="#cb41-125" aria-hidden="true" tabindex="-1"></a>Como funciona: Você escreve o comando no Editor, aperta (Ctrl + Enter) e o resultado aparece no Console. Assim como esta na imagem a seguir.</span>
-<span id="cb41-126"><a href="#cb41-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-127"><a href="#cb41-127" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da interface do Rstudio](imagens/foto1.png)</span>{width=80%}</span>
-<span id="cb41-128"><a href="#cb41-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-129"><a href="#cb41-129" aria-hidden="true" tabindex="-1"></a>Para teres minima ideia de como é o funcionamento do Rstudio, vamos criar um grafico simples como demostração.</span>
-<span id="cb41-130"><a href="#cb41-130" aria-hidden="true" tabindex="-1"></a>Primeira coisa a fazer é cliquar em "File &gt; New File &gt; R Script", para abrir uma nova janela no primeiro quadrante (em cima lado esquerdo), depois so passar os codigos.</span>
-<span id="cb41-131"><a href="#cb41-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-134"><a href="#cb41-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-135"><a href="#cb41-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Vamos criar dois conjuntos de números</span></span>
-<span id="cb41-136"><a href="#cb41-136" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb41-137"><a href="#cb41-137" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb41-138"><a href="#cb41-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-139"><a href="#cb41-139" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora vamos fazer um gráfico de pontos</span></span>
-<span id="cb41-140"><a href="#cb41-140" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">main=</span><span class="st">"Meu Primeiro Gráfico no RStudio!"</span>, <span class="at">col=</span><span class="st">"blue"</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
-<span id="cb41-141"><a href="#cb41-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-142"><a href="#cb41-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-143"><a href="#cb41-143" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-144"><a href="#cb41-144" aria-hidden="true" tabindex="-1"></a>Para rodar o Código é so colocar o mouse na primeira linha ("x &lt;- ...") e aperte Ctrl + Enter, faça o mesmo na segunda linha ("y &lt;- ..."), depois o mesmo na linha do "plot(...)", ou podes selecionar desde "x" até o final de "plot" e clicar em "Ctrl + Enter" e veras o resultado no painel inferior direito, na aba Plots mostrando um gráfico com pontos azuis, e no painel superior direito (Environment), aparecera "x" e "y" com os valores. </span>
-<span id="cb41-145"><a href="#cb41-145" aria-hidden="true" tabindex="-1"></a>È basicamente assim que funciona no Rstudio.</span>
-<span id="cb41-146"><a href="#cb41-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-147"><a href="#cb41-147" aria-hidden="true" tabindex="-1"></a>Agora, imagina que tens muitas informaçõe para guardar no computador: números, nomes, datas, resultados de provas, etc.</span>
-<span id="cb41-148"><a href="#cb41-148" aria-hidden="true" tabindex="-1"></a>Se jogares tudo misturado no programa, vai ficar uma bagunça e não vais encontrar nada depois.</span>
-<span id="cb41-149"><a href="#cb41-149" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-150"><a href="#cb41-150" aria-hidden="true" tabindex="-1"></a>Precisas guardar essas informações de forma arrumada, é aqui aonde funciona as estruturas de dados do R. </span>
-<span id="cb41-151"><a href="#cb41-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-152"><a href="#cb41-152" aria-hidden="true" tabindex="-1"></a><span class="fu">### Estrutura de Dados </span></span>
-<span id="cb41-153"><a href="#cb41-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-154"><a href="#cb41-154" aria-hidden="true" tabindex="-1"></a>No R, encontramos varios tipos de caixas ou organizadores, que servem para organizar e guardar os dados, encontrar a informação rápida depois, e fazer cálculos e gráficos sem errar, cada caixa contem um formato diferente servindo pra guardar um tipo especifico de dados.</span>
-<span id="cb41-155"><a href="#cb41-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-156"><a href="#cb41-156" aria-hidden="true" tabindex="-1"></a>Esses organizadores ou caixas mais usados são:</span>
-<span id="cb41-157"><a href="#cb41-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-158"><a href="#cb41-158" aria-hidden="true" tabindex="-1"></a>1- O vetor (Vector), é a estrutura mais básica que guarda valores do mesmo tipo.</span>
-<span id="cb41-159"><a href="#cb41-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-160"><a href="#cb41-160" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-161"><a href="#cb41-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-164"><a href="#cb41-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-165"><a href="#cb41-165" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb41-166"><a href="#cb41-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-167"><a href="#cb41-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-168"><a href="#cb41-168" aria-hidden="true" tabindex="-1"></a>Podem ser números, como tambem texto.</span>
-<span id="cb41-169"><a href="#cb41-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-172"><a href="#cb41-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-173"><a href="#cb41-173" aria-hidden="true" tabindex="-1"></a>nomes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>, <span class="st">"Carlos"</span>)</span>
-<span id="cb41-174"><a href="#cb41-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-175"><a href="#cb41-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-176"><a href="#cb41-176" aria-hidden="true" tabindex="-1"></a>2- A matriz (Matrix), são dados em formato de tabela (linhas e colunas), onde todos os elementos são do mesmo tipo.</span>
-<span id="cb41-177"><a href="#cb41-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-178"><a href="#cb41-178" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-179"><a href="#cb41-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-182"><a href="#cb41-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-183"><a href="#cb41-183" aria-hidden="true" tabindex="-1"></a>matriz <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb41-184"><a href="#cb41-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-185"><a href="#cb41-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-186"><a href="#cb41-186" aria-hidden="true" tabindex="-1"></a>3- O Data Frame, sendo mais usada no dia a dia como a realização de uma tabela do Excel, e pode ter tipos diferentes em cada coluna.</span>
-<span id="cb41-187"><a href="#cb41-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-188"><a href="#cb41-188" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-189"><a href="#cb41-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-192"><a href="#cb41-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-193"><a href="#cb41-193" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb41-194"><a href="#cb41-194" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>),</span>
-<span id="cb41-195"><a href="#cb41-195" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">25</span>),</span>
-<span id="cb41-196"><a href="#cb41-196" aria-hidden="true" tabindex="-1"></a>  <span class="at">aprovado =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb41-197"><a href="#cb41-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-198"><a href="#cb41-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-199"><a href="#cb41-199" aria-hidden="true" tabindex="-1"></a>Ele acaba misturando texto, número e lógico.</span>
-<span id="cb41-200"><a href="#cb41-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-201"><a href="#cb41-201" aria-hidden="true" tabindex="-1"></a>4- A lista (List), que pode guardar qualquer coisa dentro, e possui uma estrutura mais flexível.</span>
-<span id="cb41-202"><a href="#cb41-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-203"><a href="#cb41-203" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-204"><a href="#cb41-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-207"><a href="#cb41-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-208"><a href="#cb41-208" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb41-209"><a href="#cb41-209" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="st">"Ana"</span>,</span>
-<span id="cb41-210"><a href="#cb41-210" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="dv">20</span>,</span>
-<span id="cb41-211"><a href="#cb41-211" aria-hidden="true" tabindex="-1"></a>  <span class="at">notas =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))</span>
-<span id="cb41-212"><a href="#cb41-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-213"><a href="#cb41-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-214"><a href="#cb41-214" aria-hidden="true" tabindex="-1"></a>Ela pode ter vetor, número, texto tudo junto.</span>
-<span id="cb41-215"><a href="#cb41-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-216"><a href="#cb41-216" aria-hidden="true" tabindex="-1"></a>5- O fator (Factor), sendo usado para categorias.</span>
-<span id="cb41-217"><a href="#cb41-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-218"><a href="#cb41-218" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-219"><a href="#cb41-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-222"><a href="#cb41-222" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-223"><a href="#cb41-223" aria-hidden="true" tabindex="-1"></a>sexo <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"Masculino"</span>, <span class="st">"Feminino"</span>, <span class="st">"Feminino"</span>))</span>
-<span id="cb41-224"><a href="#cb41-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-225"><a href="#cb41-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-226"><a href="#cb41-226" aria-hidden="true" tabindex="-1"></a>Ele é muito usado em estatística.</span>
-<span id="cb41-227"><a href="#cb41-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-228"><a href="#cb41-228" aria-hidden="true" tabindex="-1"></a>Um exemplo usando todos juntos:</span>
-<span id="cb41-229"><a href="#cb41-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-232"><a href="#cb41-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-233"><a href="#cb41-233" aria-hidden="true" tabindex="-1"></a><span class="co"># Vetor</span></span>
-<span id="cb41-234"><a href="#cb41-234" aria-hidden="true" tabindex="-1"></a>notas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
-<span id="cb41-235"><a href="#cb41-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz</span></span>
-<span id="cb41-236"><a href="#cb41-236" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(notas, <span class="at">nrow =</span> <span class="dv">3</span>)</span>
-<span id="cb41-237"><a href="#cb41-237" aria-hidden="true" tabindex="-1"></a><span class="co"># Data frame</span></span>
-<span id="cb41-238"><a href="#cb41-238" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>), <span class="at">nota =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>))</span>
-<span id="cb41-239"><a href="#cb41-239" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista</span></span>
-<span id="cb41-240"><a href="#cb41-240" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(df, notas)</span>
-<span id="cb41-241"><a href="#cb41-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-242"><a href="#cb41-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-243"><a href="#cb41-243" aria-hidden="true" tabindex="-1"></a>È claro que não existe só esses, temos mais dois que são seus primos, sendo:</span>
-<span id="cb41-244"><a href="#cb41-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-245"><a href="#cb41-245" aria-hidden="true" tabindex="-1"></a>1- As expressões (Expressions), são como "códigos guardados" que ainda não rodaram.</span>
-<span id="cb41-246"><a href="#cb41-246" aria-hidden="true" tabindex="-1"></a>Imagine que você escreve uma conta em um papel, mas não calcula ainda, você guarda ela para rodar depois.</span>
-<span id="cb41-247"><a href="#cb41-247" aria-hidden="true" tabindex="-1"></a>Serve para programação mais avançada.</span>
-<span id="cb41-248"><a href="#cb41-248" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-249"><a href="#cb41-249" aria-hidden="true" tabindex="-1"></a>2- O objetos S4 / classes / tibble, são tipos mais "modernos" ou mais complexos.</span>
-<span id="cb41-250"><a href="#cb41-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-251"><a href="#cb41-251" aria-hidden="true" tabindex="-1"></a>O tibble: é praticamente um Data Frame, mas com cara mais bonita e comportamentos melhores. Muito usado no pacote "tidyverse".</span>
-<span id="cb41-252"><a href="#cb41-252" aria-hidden="true" tabindex="-1"></a>O S4: são estruturas muito organizadas, usadas em pacotes grandes, mas são mais difíceis.</span>
-<span id="cb41-253"><a href="#cb41-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-254"><a href="#cb41-254" aria-hidden="true" tabindex="-1"></a>No total são sete, mas os cinco primeiros seram oque iras usar em 99% do seu tempo quando trabalhares com R.</span>
-<span id="cb41-255"><a href="#cb41-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-256"><a href="#cb41-256" aria-hidden="true" tabindex="-1"></a>Imagine que tens uma panilha pronta no Excel ou no computador com milhares de linhas, não vais querer digitar tudo de novo no R né!</span>
-<span id="cb41-257"><a href="#cb41-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-258"><a href="#cb41-258" aria-hidden="true" tabindex="-1"></a>Aqui é que entra uma outra parte da beleza do R, que é a importação e exportação dos dados.</span>
-<span id="cb41-259"><a href="#cb41-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-260"><a href="#cb41-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### Importação e exportação de dados </span></span>
-<span id="cb41-261"><a href="#cb41-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-262"><a href="#cb41-262" aria-hidden="true" tabindex="-1"></a>A importação dos dados é o ato de trazer dados de fora para dentro do R. Pegar o arquivo do seu computador e abrir dentro do programa.</span>
-<span id="cb41-263"><a href="#cb41-263" aria-hidden="true" tabindex="-1"></a>A exportação de dados é o ato de levar dados do R para fora. Depois que você analisou, arrumou ou fez cálculos, você salva o resultado em um arquivo novo para enviar para alguém ou abrir no Excel.</span>
-<span id="cb41-264"><a href="#cb41-264" aria-hidden="true" tabindex="-1"></a>Esses dois atos economizam o seu tempo, te ajuda a trabalhar com dados reais e compartilha resultados.</span>
-<span id="cb41-265"><a href="#cb41-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-266"><a href="#cb41-266" aria-hidden="true" tabindex="-1"></a>Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.</span>
-<span id="cb41-267"><a href="#cb41-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-268"><a href="#cb41-268" aria-hidden="true" tabindex="-1"></a>Para arquivos CSV, escrevemos o seguinte:</span>
-<span id="cb41-269"><a href="#cb41-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-272"><a href="#cb41-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-273"><a href="#cb41-273" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read.csv("dados.csv", header = TRUE)</span></span>
-<span id="cb41-274"><a href="#cb41-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-275"><a href="#cb41-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-276"><a href="#cb41-276" aria-hidden="true" tabindex="-1"></a>Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:</span>
-<span id="cb41-277"><a href="#cb41-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-280"><a href="#cb41-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-281"><a href="#cb41-281" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb41-282"><a href="#cb41-282" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read_excel("dados.xlsx")</span></span>
-<span id="cb41-283"><a href="#cb41-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-284"><a href="#cb41-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-285"><a href="#cb41-285" aria-hidden="true" tabindex="-1"></a>Depois de fazer tudo isso o R precura o nosso arquivo, e o  encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela), e guarda dentro da caixinha que nomeamos de "meus_dados". </span>
-<span id="cb41-286"><a href="#cb41-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-287"><a href="#cb41-287" aria-hidden="true" tabindex="-1"></a>Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.</span>
-<span id="cb41-288"><a href="#cb41-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-289"><a href="#cb41-289" aria-hidden="true" tabindex="-1"></a>Já na realização da exportação salvando um data frame como CSV, escrevemos o seguinte:</span>
-<span id="cb41-290"><a href="#cb41-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-293"><a href="#cb41-293" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-294"><a href="#cb41-294" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")</span></span>
-<span id="cb41-295"><a href="#cb41-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-296"><a href="#cb41-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-297"><a href="#cb41-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### As funções do R</span></span>
-<span id="cb41-298"><a href="#cb41-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-299"><a href="#cb41-299" aria-hidden="true" tabindex="-1"></a>Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses (). As funções básicas como sum(): soma os valores, mean(): calcula a media, e o sqrt() : calcula a raiz quagrada, achar o minimo, são amplamente utilizadas para operações matemáticas, enquanto funções como data.frame() : criar tabelas, e subset() : filtrar dados são empregadas na manipulação e organização de dados. Temos outros como o max() : achar o maximo, o min() :  o c() : conbinar valores, o &lt;- (atribuição), o plot() : graficos basicos, o summary() : resumo estatístico, e muitos outros. </span>
-<span id="cb41-300"><a href="#cb41-300" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-301"><a href="#cb41-301" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-302"><a href="#cb41-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-305"><a href="#cb41-305" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-306"><a href="#cb41-306" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um vetor de notas</span></span>
-<span id="cb41-307"><a href="#cb41-307" aria-hidden="true" tabindex="-1"></a>notas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">6</span>)</span>
-<span id="cb41-308"><a href="#cb41-308" aria-hidden="true" tabindex="-1"></a><span class="co"># Soma das notas</span></span>
-<span id="cb41-309"><a href="#cb41-309" aria-hidden="true" tabindex="-1"></a>soma <span class="ot">&lt;-</span> <span class="fu">sum</span>(notas)</span>
-<span id="cb41-310"><a href="#cb41-310" aria-hidden="true" tabindex="-1"></a><span class="co"># Média</span></span>
-<span id="cb41-311"><a href="#cb41-311" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(notas)</span>
-<span id="cb41-312"><a href="#cb41-312" aria-hidden="true" tabindex="-1"></a><span class="co"># Maior nota</span></span>
-<span id="cb41-313"><a href="#cb41-313" aria-hidden="true" tabindex="-1"></a>maior <span class="ot">&lt;-</span> <span class="fu">max</span>(notas)</span>
-<span id="cb41-314"><a href="#cb41-314" aria-hidden="true" tabindex="-1"></a><span class="co"># Menor nota</span></span>
-<span id="cb41-315"><a href="#cb41-315" aria-hidden="true" tabindex="-1"></a>menor <span class="ot">&lt;-</span> <span class="fu">min</span>(notas)</span>
-<span id="cb41-316"><a href="#cb41-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantidade de alunos</span></span>
-<span id="cb41-317"><a href="#cb41-317" aria-hidden="true" tabindex="-1"></a>quantidade <span class="ot">&lt;-</span> <span class="fu">length</span>(notas)</span>
-<span id="cb41-318"><a href="#cb41-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrando resultados</span></span>
-<span id="cb41-319"><a href="#cb41-319" aria-hidden="true" tabindex="-1"></a>soma</span>
-<span id="cb41-320"><a href="#cb41-320" aria-hidden="true" tabindex="-1"></a>media</span>
-<span id="cb41-321"><a href="#cb41-321" aria-hidden="true" tabindex="-1"></a>maior</span>
-<span id="cb41-322"><a href="#cb41-322" aria-hidden="true" tabindex="-1"></a>menor</span>
-<span id="cb41-323"><a href="#cb41-323" aria-hidden="true" tabindex="-1"></a>quantidade</span>
-<span id="cb41-324"><a href="#cb41-324" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-325"><a href="#cb41-325" aria-hidden="true" tabindex="-1"></a> Já que até aqui, vimos como intalar o R e o Rstodio, vimos como R trabalha e os seus quadrantes, ouseja, a interface do Rstudio, sabemos oque são pacotes e conhecemos alguns deles, sabemos oque é uma função e conhecemos algumas funções.</span>
-<span id="cb41-326"><a href="#cb41-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-327"><a href="#cb41-327" aria-hidden="true" tabindex="-1"></a>Agora daremos um passo a mais, saberomos como se cria um projeto no R.</span>
-<span id="cb41-328"><a href="#cb41-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-329"><a href="#cb41-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### Criando projetos </span></span>
-<span id="cb41-330"><a href="#cb41-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-331"><a href="#cb41-331" aria-hidden="true" tabindex="-1"></a>Para manter seu trabalho organizado, é ideal criar um Projeto no RStudio. Cria-se uma pasta específica onde tudo (códigos, dados, resultados) fica salvo junto.</span>
-<span id="cb41-332"><a href="#cb41-332" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-333"><a href="#cb41-333" aria-hidden="true" tabindex="-1"></a>Para criar um projeto primeiramente vamos clicar em "File" -&gt; "New Project", depois escolhemos "New Directory" -&gt; "New Project", em seguida damos um nome ao projeto, ex: "MeuPrimeiroProjeto", e clicamos em "Create Project"".</span>
-<span id="cb41-334"><a href="#cb41-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-335"><a href="#cb41-335" aria-hidden="true" tabindex="-1"></a>Ao seguir esse passos o seu projeto estara pronto para ser elaborado.</span>
-<span id="cb41-336"><a href="#cb41-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-337"><a href="#cb41-337" aria-hidden="true" tabindex="-1"></a>Agora, aprenderemos sobre a estrutura dos dados  e como se faz a importação e exportação dos dados no R.</span>
-<span id="cb41-338"><a href="#cb41-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-339"><a href="#cb41-339" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-340"><a href="#cb41-340" aria-hidden="true" tabindex="-1"></a><span class="fu">### Importação e exportação de dados </span></span>
-<span id="cb41-341"><a href="#cb41-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-342"><a href="#cb41-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-343"><a href="#cb41-343" aria-hidden="true" tabindex="-1"></a>Em relação a importação e exportação de dados, vejamos que mutas das vezes temos dados em arquivos Excel ou CSV e queremos trazer para o R.</span>
-<span id="cb41-344"><a href="#cb41-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-345"><a href="#cb41-345" aria-hidden="true" tabindex="-1"></a>Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.</span>
-<span id="cb41-346"><a href="#cb41-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-347"><a href="#cb41-347" aria-hidden="true" tabindex="-1"></a>Para arquivos CSV, escrevemos o seguinte:</span>
-<span id="cb41-348"><a href="#cb41-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-351"><a href="#cb41-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-352"><a href="#cb41-352" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read.csv("dados.csv", header = TRUE)</span></span>
-<span id="cb41-353"><a href="#cb41-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-354"><a href="#cb41-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-355"><a href="#cb41-355" aria-hidden="true" tabindex="-1"></a>Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:</span>
-<span id="cb41-356"><a href="#cb41-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-359"><a href="#cb41-359" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-360"><a href="#cb41-360" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb41-361"><a href="#cb41-361" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read_excel("dados.xlsx")</span></span>
-<span id="cb41-362"><a href="#cb41-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-363"><a href="#cb41-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-364"><a href="#cb41-364" aria-hidden="true" tabindex="-1"></a>Depois de fazer tudo isso o R precura o nosso arquivo, e encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela),e guarda dentro da caixinha que nomeamos de "meus_dados". </span>
-<span id="cb41-365"><a href="#cb41-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-366"><a href="#cb41-366" aria-hidden="true" tabindex="-1"></a>Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.</span>
-<span id="cb41-367"><a href="#cb41-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-368"><a href="#cb41-368" aria-hidden="true" tabindex="-1"></a>Para fazer a exportação salvando um data frame como CSV, escrevemos o seguinte:</span>
-<span id="cb41-369"><a href="#cb41-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-372"><a href="#cb41-372" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-373"><a href="#cb41-373" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")</span></span>
-<span id="cb41-374"><a href="#cb41-374" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-375"><a href="#cb41-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-376"><a href="#cb41-376" aria-hidden="true" tabindex="-1"></a>Após isso, o R pega na tabela que foi criado quando fizemos a importação, e  faz um arquivo de verdade na pasta.</span>
-<span id="cb41-377"><a href="#cb41-377" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-378"><a href="#cb41-378" aria-hidden="true" tabindex="-1"></a>Agora, falaremos de uma das coisas mais lindas realizada pelo R, que é a sua interação com outras linguagens.</span>
-<span id="cb41-379"><a href="#cb41-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-380"><a href="#cb41-380" aria-hidden="true" tabindex="-1"></a><span class="fu">### Oque são pacotes do R</span></span>
-<span id="cb41-381"><a href="#cb41-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-382"><a href="#cb41-382" aria-hidden="true" tabindex="-1"></a>O R já vem com várias funções prontas, mas a comunidade cria ferramentas novas o tempo todo. Essas ferramentas extras são os Pacotes.</span>
-<span id="cb41-383"><a href="#cb41-383" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-384"><a href="#cb41-384" aria-hidden="true" tabindex="-1"></a>Para instalar: Usamos "install.packages("nome_do_pacote")".</span>
-<span id="cb41-385"><a href="#cb41-385" aria-hidden="true" tabindex="-1"></a>Para usar: Usamos "library(nome_do_pacote)".</span>
-<span id="cb41-386"><a href="#cb41-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-387"><a href="#cb41-387" aria-hidden="true" tabindex="-1"></a>Dica: Você instala apenas uma vez, mas precisa carregar ("library") sempre que abrir o programa.</span>
-<span id="cb41-388"><a href="#cb41-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-389"><a href="#cb41-389" aria-hidden="true" tabindex="-1"></a>Temos pacotes como:</span>
-<span id="cb41-390"><a href="#cb41-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-391"><a href="#cb41-391" aria-hidden="true" tabindex="-1"></a>1- O ggplot2, é usado para gráficos.</span>
-<span id="cb41-392"><a href="#cb41-392" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-393"><a href="#cb41-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-396"><a href="#cb41-396" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-397"><a href="#cb41-397" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb41-398"><a href="#cb41-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-399"><a href="#cb41-399" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb41-400"><a href="#cb41-400" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),</span>
-<span id="cb41-401"><a href="#cb41-401" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">15</span>,<span class="dv">25</span>))</span>
-<span id="cb41-402"><a href="#cb41-402" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dados, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
-<span id="cb41-403"><a href="#cb41-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-404"><a href="#cb41-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-405"><a href="#cb41-405" aria-hidden="true" tabindex="-1"></a>Gera um gráfico de linha.</span>
-<span id="cb41-406"><a href="#cb41-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-407"><a href="#cb41-407" aria-hidden="true" tabindex="-1"></a>2- O dplyr, usado para organizar e filtrar dados.</span>
-<span id="cb41-408"><a href="#cb41-408" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-409"><a href="#cb41-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-412"><a href="#cb41-412" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-413"><a href="#cb41-413" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb41-414"><a href="#cb41-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-415"><a href="#cb41-415" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>, <span class="st">"Carlos"</span>),</span>
-<span id="cb41-416"><a href="#cb41-416" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>))</span>
-<span id="cb41-417"><a href="#cb41-417" aria-hidden="true" tabindex="-1"></a>dados <span class="sc">%&gt;%</span></span>
-<span id="cb41-418"><a href="#cb41-418" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(idade <span class="sc">&gt;</span> <span class="dv">20</span>)</span>
-<span id="cb41-419"><a href="#cb41-419" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-420"><a href="#cb41-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-421"><a href="#cb41-421" aria-hidden="true" tabindex="-1"></a>Filtra pessoas com idade maior que 20.</span>
-<span id="cb41-422"><a href="#cb41-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-423"><a href="#cb41-423" aria-hidden="true" tabindex="-1"></a>3- O tidyr, arruma dados “bagunçados”.</span>
-<span id="cb41-424"><a href="#cb41-424" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-425"><a href="#cb41-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-428"><a href="#cb41-428" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-429"><a href="#cb41-429" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb41-430"><a href="#cb41-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-431"><a href="#cb41-431" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb41-432"><a href="#cb41-432" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>),</span>
-<span id="cb41-433"><a href="#cb41-433" aria-hidden="true" tabindex="-1"></a>  <span class="at">nota1 =</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>),</span>
-<span id="cb41-434"><a href="#cb41-434" aria-hidden="true" tabindex="-1"></a>  <span class="at">nota2 =</span> <span class="fu">c</span>(<span class="dv">9</span>,<span class="dv">10</span>))</span>
-<span id="cb41-435"><a href="#cb41-435" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_longer</span>(dados, <span class="at">cols =</span> nota1<span class="sc">:</span>nota2)</span>
-<span id="cb41-436"><a href="#cb41-436" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-437"><a href="#cb41-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-438"><a href="#cb41-438" aria-hidden="true" tabindex="-1"></a>Transforma dados de formato largo → longo.</span>
-<span id="cb41-439"><a href="#cb41-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-440"><a href="#cb41-440" aria-hidden="true" tabindex="-1"></a>4- O readr, para importar arquivos.</span>
-<span id="cb41-441"><a href="#cb41-441" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-442"><a href="#cb41-442" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-445"><a href="#cb41-445" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-446"><a href="#cb41-446" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb41-447"><a href="#cb41-447" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- read_csv("dados.csv")</span></span>
-<span id="cb41-448"><a href="#cb41-448" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-449"><a href="#cb41-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-450"><a href="#cb41-450" aria-hidden="true" tabindex="-1"></a>Lê arquivos CSV.</span>
-<span id="cb41-451"><a href="#cb41-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-452"><a href="#cb41-452" aria-hidden="true" tabindex="-1"></a>5- O shiny, criar aplicativos interativos.</span>
-<span id="cb41-453"><a href="#cb41-453" aria-hidden="true" tabindex="-1"></a>Exemplo simples:</span>
-<span id="cb41-454"><a href="#cb41-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-457"><a href="#cb41-457" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-458"><a href="#cb41-458" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="cb41-459"><a href="#cb41-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-460"><a href="#cb41-460" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(<span class="st">"Olá, mundo!"</span>)</span>
-<span id="cb41-461"><a href="#cb41-461" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {}</span>
-<span id="cb41-462"><a href="#cb41-462" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(ui, server)</span>
-<span id="cb41-463"><a href="#cb41-463" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-464"><a href="#cb41-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-465"><a href="#cb41-465" aria-hidden="true" tabindex="-1"></a>Cria um app básico.</span>
-<span id="cb41-466"><a href="#cb41-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-467"><a href="#cb41-467" aria-hidden="true" tabindex="-1"></a>6- O knitr, usado em R Markdown.</span>
-<span id="cb41-468"><a href="#cb41-468" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-469"><a href="#cb41-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-472"><a href="#cb41-472" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-473"><a href="#cb41-473" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(mtcars))</span>
-<span id="cb41-474"><a href="#cb41-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-475"><a href="#cb41-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-476"><a href="#cb41-476" aria-hidden="true" tabindex="-1"></a>Cria tabela formatada no relatório.</span>
-<span id="cb41-477"><a href="#cb41-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-478"><a href="#cb41-478" aria-hidden="true" tabindex="-1"></a>7- O lubridate, facilita trabalhar com datas.</span>
-<span id="cb41-479"><a href="#cb41-479" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
-<span id="cb41-480"><a href="#cb41-480" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-483"><a href="#cb41-483" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-484"><a href="#cb41-484" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb41-485"><a href="#cb41-485" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2026-04-11"</span>)</span>
-<span id="cb41-486"><a href="#cb41-486" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(data)</span>
-<span id="cb41-487"><a href="#cb41-487" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-488"><a href="#cb41-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-489"><a href="#cb41-489" aria-hidden="true" tabindex="-1"></a>Extrai o ano. E entere outros pacotes. </span>
-<span id="cb41-490"><a href="#cb41-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-491"><a href="#cb41-491" aria-hidden="true" tabindex="-1"></a>Como em outras linguagens, no R tanbém possue diversas funções.</span>
-<span id="cb41-492"><a href="#cb41-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-493"><a href="#cb41-493" aria-hidden="true" tabindex="-1"></a><span class="fu">### A interface do R com outras Linguagens</span></span>
-<span id="cb41-494"><a href="#cb41-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-495"><a href="#cb41-495" aria-hidden="true" tabindex="-1"></a>Uma das grandes vantagens do R é a sua flexibilidade e capacidade de se conectar com outras ferramentas. Ele não funciona sozinho; ele "conversa" com outras linguagens de programação, bancos de dados e sistemas, permitindo que você use o melhor de cada mundo em um mesmo projeto.</span>
-<span id="cb41-496"><a href="#cb41-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-497"><a href="#cb41-497" aria-hidden="true" tabindex="-1"></a>Isso é muito importante porque cada uma das linguagem tem o seu ponto forte. O R é melhor para estatística e gráficos, o Python é ótimo para machine learning e automação, o SQL é essencial para bancos de dados grandes, e o C/C++ serve para deixar cálculos muito mais rápidos.</span>
-<span id="cb41-498"><a href="#cb41-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-499"><a href="#cb41-499" aria-hidden="true" tabindex="-1"></a>Principais Integrações</span>
-<span id="cb41-500"><a href="#cb41-500" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-501"><a href="#cb41-501" aria-hidden="true" tabindex="-1"></a>1- A integração com Python: é a parceria mais famosa! Com o pacote "reticulate", você pode rodar código Python diretamente dentro do seu script R, usar bibliotecas Python (como Pandas ou Scikit-learn) e trocar dados entre as duas linguagens facilmente.</span>
-<span id="cb41-502"><a href="#cb41-502" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-503"><a href="#cb41-503" aria-hidden="true" tabindex="-1"></a>Exemplo Prático:</span>
-<span id="cb41-504"><a href="#cb41-504" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-507"><a href="#cb41-507" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-508"><a href="#cb41-508" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar o pacote</span></span>
-<span id="cb41-509"><a href="#cb41-509" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb41-510"><a href="#cb41-510" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora você pode escrever código Python usando py_run_string()</span></span>
-<span id="cb41-511"><a href="#cb41-511" aria-hidden="true" tabindex="-1"></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
-<span id="cb41-512"><a href="#cb41-512" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
-<span id="cb41-513"><a href="#cb41-513" aria-hidden="true" tabindex="-1"></a><span class="st">numeros = np.array([1, 2, 3, 4, 5])</span></span>
-<span id="cb41-514"><a href="#cb41-514" aria-hidden="true" tabindex="-1"></a><span class="st">print(numeros.mean())</span></span>
-<span id="cb41-515"><a href="#cb41-515" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
-<span id="cb41-516"><a href="#cb41-516" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-517"><a href="#cb41-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-518"><a href="#cb41-518" aria-hidden="true" tabindex="-1"></a> 2- A integração com C e C++: quando você precisa fazer cálculos muito pesados ou rápidos, o R pode chamar funções escritas em C ou C++. Isso é muito usado por desenvolvedores de pacotes para deixar o software mais eficiente.</span>
-<span id="cb41-519"><a href="#cb41-519" aria-hidden="true" tabindex="-1"></a>Usando as funções como o "C()"  ou "Call()" conectamos com os códigos compilados.</span>
-<span id="cb41-520"><a href="#cb41-520" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-521"><a href="#cb41-521" aria-hidden="true" tabindex="-1"></a> 3- A integração com Bancos de Dados (SQL): não precisamos importar todos os dados para o R. Pode se conectar diretamente em servidores como MySQL, PostgreSQL, SQL Server e fazer consultas usando a linguagem SQL sem sair do RStudio.</span>
-<span id="cb41-522"><a href="#cb41-522" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-523"><a href="#cb41-523" aria-hidden="true" tabindex="-1"></a>Exemplo com SQLite:</span>
-<span id="cb41-524"><a href="#cb41-524" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-527"><a href="#cb41-527" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-528"><a href="#cb41-528" aria-hidden="true" tabindex="-1"></a><span class="co"># Pacote para conexão</span></span>
-<span id="cb41-529"><a href="#cb41-529" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
-<span id="cb41-530"><a href="#cb41-530" aria-hidden="true" tabindex="-1"></a><span class="co"># Conectando ao banco</span></span>
-<span id="cb41-531"><a href="#cb41-531" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">"meu_banco.db"</span>)</span>
-<span id="cb41-532"><a href="#cb41-532" aria-hidden="true" tabindex="-1"></a><span class="co"># Escrevendo uma consulta SQL dentro do R</span></span>
-<span id="cb41-533"><a href="#cb41-533" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- dbGetQuery(con, "SELECT * FROM tabela_clientes WHERE idade &gt; 18")</span></span>
-<span id="cb41-534"><a href="#cb41-534" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver o resultado</span></span>
-<span id="cb41-535"><a href="#cb41-535" aria-hidden="true" tabindex="-1"></a><span class="co">#head(dados)</span></span>
-<span id="cb41-536"><a href="#cb41-536" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-537"><a href="#cb41-537" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-538"><a href="#cb41-538" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-539"><a href="#cb41-539" aria-hidden="true" tabindex="-1"></a>4- A integração com LaTeX e Markdown: o R trabalha muito bem com ferramentas de escrita de documentos. Com o pacote "rmarkdown", você cria relatórios, PDFs, apresentações e sites que misturam texto, código R e os resultados automaticamente. É a base do que chamamos de Ciência Reprodutível.</span>
-<span id="cb41-540"><a href="#cb41-540" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-541"><a href="#cb41-541" aria-hidden="true" tabindex="-1"></a> Tambem temos outras linguagens que o R tem interfaces, como o Java (pacote "rJava"), a Julia (para computação de alto desempenho), e o Fortran (muito usado em cálculos matemáticos antigos e robustos).</span>
-<span id="cb41-542"><a href="#cb41-542" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-543"><a href="#cb41-543" aria-hidden="true" tabindex="-1"></a>Portanto, esses foram as  principais estruturas do corpo da linguagem R.</span>
-<span id="cb41-544"><a href="#cb41-544" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-545"><a href="#cb41-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-546"><a href="#cb41-546" aria-hidden="true" tabindex="-1"></a><span class="fu">### Considerações Finais</span></span>
-<span id="cb41-547"><a href="#cb41-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-548"><a href="#cb41-548" aria-hidden="true" tabindex="-1"></a>Apresentamos os principais fundamentos da linguagem R, desde a instalação, organização da interface, uso de funções, pacotes e manipulação de dados. Vimos que, apesar de exigir prática inicial, o R é uma ferramenta poderosa, gratuita e versátil, capaz de se integrar com outras linguagens.</span>
-<span id="cb41-549"><a href="#cb41-549" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb41-550"><a href="#cb41-550" aria-hidden="true" tabindex="-1"></a>Aprender R exige dedicação, mas os benefícios são enormes. Com os conceitos aqui apresentados, você já possui a base necessária para desenvolver projetos, analisar informações e evoluir nos estudos de estatística e ciência de dados.</span>
-<span id="cb41-551"><a href="#cb41-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-552"><a href="#cb41-552" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Referências</span></span>
-<span id="cb41-553"><a href="#cb41-553" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-554"><a href="#cb41-554" aria-hidden="true" tabindex="-1"></a>BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. Disponível em: https://bendeivide.github.io/leem/. Acesso em: 12 de abr. de 2026.</span>
-<span id="cb41-555"><a href="#cb41-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-556"><a href="#cb41-556" aria-hidden="true" tabindex="-1"></a>CHAMBERS, John M. Extending R. Boca Raton: CRC Press, 2016.. </span>
-<span id="cb41-557"><a href="#cb41-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-558"><a href="#cb41-558" aria-hidden="true" tabindex="-1"></a>DALGAARD, Peter. Estatística Básica com R. Rio de Janeiro: Elsevier, 2008.</span>
-<span id="cb41-559"><a href="#cb41-559" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-560"><a href="#cb41-560" aria-hidden="true" tabindex="-1"></a>KABAKOFF, Robert. R in Action: Data Analysis and Graphics with R. 2. ed. Manning Publications, 2015.</span>
-<span id="cb41-561"><a href="#cb41-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-562"><a href="#cb41-562" aria-hidden="true" tabindex="-1"></a>POSIT. RStudio Documentation. Disponível em: https://posit.co/resources/. Acesso em: 12 de abr. de 2026.</span>
-<span id="cb41-563"><a href="#cb41-563" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-564"><a href="#cb41-564" aria-hidden="true" tabindex="-1"></a>R CORE TEAM.R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2025. Disponível em: https://www.R-project.org/. Acesso em: 12 de abr. de 2026.</span>
-<span id="cb41-565"><a href="#cb41-565" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-566"><a href="#cb41-566" aria-hidden="true" tabindex="-1"></a>WICKHAM, Hadley; GROLEMUND, Garrett. R para Ciência de Dados. 1. ed. Disponível em: https://livro.curso-r.com/. Acesso em: 12 de abr. de 2026.</span>
-<span id="cb41-567"><a href="#cb41-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-568"><a href="#cb41-568" aria-hidden="true" tabindex="-1"></a>WICKHAM, Hadley. Advanced R. 2. ed. Boca Raton: CRC Press, 2019. Disponível em: https://adv-r.hadley.nz/. Acesso em: 12 de abr. de 2026.</span>
-<span id="cb41-569"><a href="#cb41-569" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-570"><a href="#cb41-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-571"><a href="#cb41-571" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Wadmilson Costa da Fonseca e CRuz"</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A beleza da linguangem R"</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "DD/MM/YYYY, HH:mm"</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Introdução</span></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>A linguagem R é uma ferramenta poderosa e gratuita utilizada mundialmente para estatística, análise de dados e ciência de dados. Ela foi criada por Robert Gentleman e Ross Ihaka na Universidade de Auckland, Nova Zelândia, e hoje é mantida pela R Foundation for Statistical Computing.</span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>O grande diferencial do R é que ele não é apenas um software, mas sim uma linguagem de programação completa, o que significa que você pode escrever comandos para que o computador execute tarefas exatamente como você deseja. Mesmo parecendo complicado no início, com um pouco de prática e seguindo este guia, qualquer pessoa consegue aprender e dominar suas funções básicas.</span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>Este material tem como objetivo apresentar os conceitos fundamentais da linguagem R de forma simples e objetiva. Nosso foco é guiar o iniciante desde o processo de instalação até a compreensão de como o R organiza e trabalha com as informações, fornecendo exemplos práticos para facilitar o aprendizado.</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚  Fundamentação Teórica</span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Como baixar e intalar o R </span></span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>Para começar a usar, primeiro precisamos instalar dois programas:</span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>O R Base: é o "motor" da linguagem.- Acesse: https://cran.r-project.org/</span>
+<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Escolha seu sistema operacional (Windows, Mac ou Linux) e clique em Download.</span>
+<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>O RStudio: é a "casa" onde vamos escrever os códigos. Ele deixa o programa mais bonito e fácil de usar.- Acesse: https://www.rstudio.com/products/rstudio/download/</span>
+<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a>Baixe a versão Desktop Free.</span>
+<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a>OBS: Após instalar, ao abrir o RStudio, você verá que ele já conecta automaticamente com o R que você instalou primeiro</span>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a>Mais detalhes sobre as instalações do R e Rstudio podem ser vistas nas videos aulas e nos livros disponivel em https://bendeivide.github.io/. </span>
+<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Como o R trabalha e sua interface </span></span>
+<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a>O R tem três princípios (CHAMBERS, 2016) fundamentais que é necessario conhecer: o princípio do objeto (tudo que existe em R é um objeto), o princípio da função (tudo que acontece no R é uma chamada de função), e o princípio da interface (interfaces para outros programas são parte do R).</span>
+<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a>Quando você clica no ícone do R e abre o programa, após instala-lo, aparece uma janela preta ou cinza claro com letras brancas ou pretas. Parece uma "tela de comando" antiga. No topo diz algo como: R x.x.x (o número da versão). Isso só confirma que você abriu o programa certo. Quando abre, aparece um monte de texto escrito automaticamente. Você não precisa ler tudo agora, mas saiba o que significa:</span>
+<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da interface do R](imagens/Interface inicial do R.png)</span>{width=80%} </span>
+<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a>Onde ta escrito copyright: diz que é gratuito, o naturalmente, sem garantia: significa que não tem ninguém responsável se der erro, o type 'demo()'...: são exemplos prontos para você rodar se quiser ver o que o R faz, type 'license'...: mostra as regras de uso.</span>
+<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a>Depois de todo aquele texto, você vai ver uma setinha maior que isso:</span>
+<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;</span></span>
+<span id="cb29-74"><a href="#cb29-74" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb29-75"><a href="#cb29-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-76"><a href="#cb29-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-77"><a href="#cb29-77" aria-hidden="true" tabindex="-1"></a>Esse simbolo "&gt;" é o "prompt", ele significa: "estou pronto!, escreva aqui o que você quer que eu faça." É exatamente na frente desse símbolo que você digita seus comandos. Quando você aperta Enter, o R executa e traz o resultado, e depois mostra o simbolo "&gt;"de novo, esperando o próximo comando.</span>
+<span id="cb29-78"><a href="#cb29-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-79"><a href="#cb29-79" aria-hidden="true" tabindex="-1"></a>Basicamente, você usa essa janela como se fosse uma calculadora super poderosa.</span>
+<span id="cb29-80"><a href="#cb29-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-81"><a href="#cb29-81" aria-hidden="true" tabindex="-1"></a>Exemplo do que fazer:</span>
+<span id="cb29-82"><a href="#cb29-82" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-83"><a href="#cb29-83" aria-hidden="true" tabindex="-1"></a>1- Clique com o mouse na frente do "&gt;".</span>
+<span id="cb29-84"><a href="#cb29-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-85"><a href="#cb29-85" aria-hidden="true" tabindex="-1"></a>2- Digite: "2 + 2"</span>
+<span id="cb29-86"><a href="#cb29-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-87"><a href="#cb29-87" aria-hidden="true" tabindex="-1"></a>3- Aperte Enter no teclado.</span>
+<span id="cb29-88"><a href="#cb29-88" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-89"><a href="#cb29-89" aria-hidden="true" tabindex="-1"></a>O resultado:</span>
+<span id="cb29-90"><a href="#cb29-90" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-93"><a href="#cb29-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-94"><a href="#cb29-94" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 + 2</span></span>
+<span id="cb29-95"><a href="#cb29-95" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 4</span></span>
+<span id="cb29-96"><a href="#cb29-96" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;</span></span>
+<span id="cb29-97"><a href="#cb29-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-98"><a href="#cb29-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-99"><a href="#cb29-99" aria-hidden="true" tabindex="-1"></a>O R calculou e respondeu "4", o "<span class="co">[</span><span class="ot">1</span><span class="co">]</span>" só quer dizer "esse é o primeiro resultado", e o "&gt;" aparece de novo esperando mais.</span>
+<span id="cb29-100"><a href="#cb29-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-101"><a href="#cb29-101" aria-hidden="true" tabindex="-1"></a>Outros exemplos para testar agora:</span>
+<span id="cb29-102"><a href="#cb29-102" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-105"><a href="#cb29-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-106"><a href="#cb29-106" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 * 10        # Multiplicação</span></span>
+<span id="cb29-107"><a href="#cb29-107" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 50</span></span>
+<span id="cb29-108"><a href="#cb29-108" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 100 / 4       # Divisão</span></span>
+<span id="cb29-109"><a href="#cb29-109" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 25</span></span>
+<span id="cb29-110"><a href="#cb29-110" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sqrt(16)      # Raiz quadrada</span></span>
+<span id="cb29-111"><a href="#cb29-111" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] 4</span></span>
+<span id="cb29-112"><a href="#cb29-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-113"><a href="#cb29-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-114"><a href="#cb29-114" aria-hidden="true" tabindex="-1"></a>São essas operações basicas que podemos fazer na interface do R, para colocar a mão na massa agente usa o Rstudio que é a "casa" onde vamos escrever os códigos, deixando o programa mais bonito e fácil de usar.</span>
+<span id="cb29-115"><a href="#cb29-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-116"><a href="#cb29-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### As interfaces do Rstudio</span></span>
+<span id="cb29-117"><a href="#cb29-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-118"><a href="#cb29-118" aria-hidden="true" tabindex="-1"></a>Quando você abre o RStudio, a tela é dividida em 4 partes principais, que chamamos de quadrantes:</span>
+<span id="cb29-119"><a href="#cb29-119" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-120"><a href="#cb29-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Editor de Código ( superior esquerdo): É onde você escreve seus comandos. É como se fosse um bloco de notas.</span>
+<span id="cb29-121"><a href="#cb29-121" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Console (inferior esquerdo): É onde o R executa o que você escreveu. É aqui que os resultados aparecem.</span>
+<span id="cb29-122"><a href="#cb29-122" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ambiente/Histórico (superior direito): Mostra quais dados e objetos você criou e guardou na memória.</span>
+<span id="cb29-123"><a href="#cb29-123" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Arquivos/Gráficos/Ajuda (inferior direito): Aqui você vê seus arquivos, os gráficos que criar e pode pesquisar dúvidas.</span>
+<span id="cb29-124"><a href="#cb29-124" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-125"><a href="#cb29-125" aria-hidden="true" tabindex="-1"></a>Como funciona: Você escreve o comando no Editor, aperta (Ctrl + Enter) e o resultado aparece no Console. Assim como esta na imagem a seguir.</span>
+<span id="cb29-126"><a href="#cb29-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-127"><a href="#cb29-127" aria-hidden="true" tabindex="-1"></a><span class="al">![Foto da interface do Rstudio](imagens/foto1.png)</span>{width=80%}</span>
+<span id="cb29-128"><a href="#cb29-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-129"><a href="#cb29-129" aria-hidden="true" tabindex="-1"></a>Para teres minima ideia de como é o funcionamento do Rstudio, vamos criar um grafico simples como demostração.</span>
+<span id="cb29-130"><a href="#cb29-130" aria-hidden="true" tabindex="-1"></a>Primeira coisa a fazer é cliquar em "File &gt; New File &gt; R Script", para abrir uma nova janela no primeiro quadrante (em cima lado esquerdo), depois so passar os codigos.</span>
+<span id="cb29-131"><a href="#cb29-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-134"><a href="#cb29-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-135"><a href="#cb29-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Vamos criar dois conjuntos de números</span></span>
+<span id="cb29-136"><a href="#cb29-136" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb29-137"><a href="#cb29-137" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb29-138"><a href="#cb29-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-139"><a href="#cb29-139" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora vamos fazer um gráfico de pontos</span></span>
+<span id="cb29-140"><a href="#cb29-140" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">main=</span><span class="st">"Meu Primeiro Gráfico no RStudio!"</span>, <span class="at">col=</span><span class="st">"blue"</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
+<span id="cb29-141"><a href="#cb29-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-142"><a href="#cb29-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-143"><a href="#cb29-143" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-144"><a href="#cb29-144" aria-hidden="true" tabindex="-1"></a>Para rodar o Código é so colocar o mouse na primeira linha ("x &lt;- ...") e aperte Ctrl + Enter, faça o mesmo na segunda linha ("y &lt;- ..."), depois o mesmo na linha do "plot(...)", ou podes selecionar desde "x" até o final de "plot" e clicar em "Ctrl + Enter" e veras o resultado no painel inferior direito, na aba Plots mostrando um gráfico com pontos azuis, e no painel superior direito (Environment), aparecera "x" e "y" com os valores. </span>
+<span id="cb29-145"><a href="#cb29-145" aria-hidden="true" tabindex="-1"></a>È basicamente assim que funciona no Rstudio.</span>
+<span id="cb29-146"><a href="#cb29-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-147"><a href="#cb29-147" aria-hidden="true" tabindex="-1"></a>Agora, imagina que tens muitas informaçõe para guardar no computador: números, nomes, datas, resultados de provas, etc.</span>
+<span id="cb29-148"><a href="#cb29-148" aria-hidden="true" tabindex="-1"></a>Se jogares tudo misturado no programa, vai ficar uma bagunça e não vais encontrar nada depois.</span>
+<span id="cb29-149"><a href="#cb29-149" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-150"><a href="#cb29-150" aria-hidden="true" tabindex="-1"></a>Precisas guardar essas informações de forma arrumada, é aqui aonde funciona as estruturas de dados do R. </span>
+<span id="cb29-151"><a href="#cb29-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-152"><a href="#cb29-152" aria-hidden="true" tabindex="-1"></a><span class="fu">### Estrutura de Dados </span></span>
+<span id="cb29-153"><a href="#cb29-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-154"><a href="#cb29-154" aria-hidden="true" tabindex="-1"></a>No R, encontramos varios tipos de caixas ou organizadores, que servem para organizar e guardar os dados, encontrar a informação rápida depois, e fazer cálculos e gráficos sem errar, cada caixa contem um formato diferente servindo pra guardar um tipo especifico de dados.</span>
+<span id="cb29-155"><a href="#cb29-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-156"><a href="#cb29-156" aria-hidden="true" tabindex="-1"></a>Esses organizadores ou caixas mais usados são:</span>
+<span id="cb29-157"><a href="#cb29-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-158"><a href="#cb29-158" aria-hidden="true" tabindex="-1"></a>1- O vetor (Vector), é a estrutura mais básica que guarda valores do mesmo tipo.</span>
+<span id="cb29-159"><a href="#cb29-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-160"><a href="#cb29-160" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-161"><a href="#cb29-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-164"><a href="#cb29-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-165"><a href="#cb29-165" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb29-166"><a href="#cb29-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-167"><a href="#cb29-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-168"><a href="#cb29-168" aria-hidden="true" tabindex="-1"></a>Podem ser números, como tambem texto.</span>
+<span id="cb29-169"><a href="#cb29-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-172"><a href="#cb29-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-173"><a href="#cb29-173" aria-hidden="true" tabindex="-1"></a>nomes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>, <span class="st">"Carlos"</span>)</span>
+<span id="cb29-174"><a href="#cb29-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-175"><a href="#cb29-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-176"><a href="#cb29-176" aria-hidden="true" tabindex="-1"></a>2- A matriz (Matrix), são dados em formato de tabela (linhas e colunas), onde todos os elementos são do mesmo tipo.</span>
+<span id="cb29-177"><a href="#cb29-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-178"><a href="#cb29-178" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-179"><a href="#cb29-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-182"><a href="#cb29-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-183"><a href="#cb29-183" aria-hidden="true" tabindex="-1"></a>matriz <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb29-184"><a href="#cb29-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-185"><a href="#cb29-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-186"><a href="#cb29-186" aria-hidden="true" tabindex="-1"></a>3- O Data Frame, sendo mais usada no dia a dia como a realização de uma tabela do Excel, e pode ter tipos diferentes em cada coluna.</span>
+<span id="cb29-187"><a href="#cb29-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-188"><a href="#cb29-188" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-189"><a href="#cb29-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-192"><a href="#cb29-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-193"><a href="#cb29-193" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb29-194"><a href="#cb29-194" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>),</span>
+<span id="cb29-195"><a href="#cb29-195" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">25</span>),</span>
+<span id="cb29-196"><a href="#cb29-196" aria-hidden="true" tabindex="-1"></a>  <span class="at">aprovado =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>))</span>
+<span id="cb29-197"><a href="#cb29-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-198"><a href="#cb29-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-199"><a href="#cb29-199" aria-hidden="true" tabindex="-1"></a>Ele acaba misturando texto, número e lógico.</span>
+<span id="cb29-200"><a href="#cb29-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-201"><a href="#cb29-201" aria-hidden="true" tabindex="-1"></a>4- A lista (List), que pode guardar qualquer coisa dentro, e possui uma estrutura mais flexível.</span>
+<span id="cb29-202"><a href="#cb29-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-203"><a href="#cb29-203" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-204"><a href="#cb29-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-207"><a href="#cb29-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-208"><a href="#cb29-208" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb29-209"><a href="#cb29-209" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome =</span> <span class="st">"Ana"</span>,</span>
+<span id="cb29-210"><a href="#cb29-210" aria-hidden="true" tabindex="-1"></a>  <span class="at">idade =</span> <span class="dv">20</span>,</span>
+<span id="cb29-211"><a href="#cb29-211" aria-hidden="true" tabindex="-1"></a>  <span class="at">notas =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))</span>
+<span id="cb29-212"><a href="#cb29-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-213"><a href="#cb29-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-214"><a href="#cb29-214" aria-hidden="true" tabindex="-1"></a>Ela pode ter vetor, número, texto tudo junto.</span>
+<span id="cb29-215"><a href="#cb29-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-216"><a href="#cb29-216" aria-hidden="true" tabindex="-1"></a>5- O fator (Factor), sendo usado para categorias.</span>
+<span id="cb29-217"><a href="#cb29-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-218"><a href="#cb29-218" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-219"><a href="#cb29-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-222"><a href="#cb29-222" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-223"><a href="#cb29-223" aria-hidden="true" tabindex="-1"></a>sexo <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"Masculino"</span>, <span class="st">"Feminino"</span>, <span class="st">"Feminino"</span>))</span>
+<span id="cb29-224"><a href="#cb29-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-225"><a href="#cb29-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-226"><a href="#cb29-226" aria-hidden="true" tabindex="-1"></a>Ele é muito usado em estatística.</span>
+<span id="cb29-227"><a href="#cb29-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-228"><a href="#cb29-228" aria-hidden="true" tabindex="-1"></a>Um exemplo usando todos juntos:</span>
+<span id="cb29-229"><a href="#cb29-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-232"><a href="#cb29-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-233"><a href="#cb29-233" aria-hidden="true" tabindex="-1"></a><span class="co"># Vetor</span></span>
+<span id="cb29-234"><a href="#cb29-234" aria-hidden="true" tabindex="-1"></a>notas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb29-235"><a href="#cb29-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz</span></span>
+<span id="cb29-236"><a href="#cb29-236" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(notas, <span class="at">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb29-237"><a href="#cb29-237" aria-hidden="true" tabindex="-1"></a><span class="co"># Data frame</span></span>
+<span id="cb29-238"><a href="#cb29-238" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">nome =</span> <span class="fu">c</span>(<span class="st">"Ana"</span>, <span class="st">"João"</span>), <span class="at">nota =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>))</span>
+<span id="cb29-239"><a href="#cb29-239" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista</span></span>
+<span id="cb29-240"><a href="#cb29-240" aria-hidden="true" tabindex="-1"></a>lista <span class="ot">&lt;-</span> <span class="fu">list</span>(df, notas)</span>
+<span id="cb29-241"><a href="#cb29-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-242"><a href="#cb29-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-243"><a href="#cb29-243" aria-hidden="true" tabindex="-1"></a>È claro que não existe só esses, temos mais dois que são seus primos, sendo:</span>
+<span id="cb29-244"><a href="#cb29-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-245"><a href="#cb29-245" aria-hidden="true" tabindex="-1"></a>1- As expressões (Expressions), são como "códigos guardados" que ainda não rodaram.</span>
+<span id="cb29-246"><a href="#cb29-246" aria-hidden="true" tabindex="-1"></a>Imagine que você escreve uma conta em um papel, mas não calcula ainda, você guarda ela para rodar depois.</span>
+<span id="cb29-247"><a href="#cb29-247" aria-hidden="true" tabindex="-1"></a>Serve para programação mais avançada.</span>
+<span id="cb29-248"><a href="#cb29-248" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-249"><a href="#cb29-249" aria-hidden="true" tabindex="-1"></a>2- O objetos S4 / classes / tibble, são tipos mais "modernos" ou mais complexos.</span>
+<span id="cb29-250"><a href="#cb29-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-251"><a href="#cb29-251" aria-hidden="true" tabindex="-1"></a>O tibble: é praticamente um Data Frame, mas com cara mais bonita e comportamentos melhores. Muito usado no pacote "tidyverse".</span>
+<span id="cb29-252"><a href="#cb29-252" aria-hidden="true" tabindex="-1"></a>O S4: são estruturas muito organizadas, usadas em pacotes grandes, mas são mais difíceis.</span>
+<span id="cb29-253"><a href="#cb29-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-254"><a href="#cb29-254" aria-hidden="true" tabindex="-1"></a>No total são sete, mas os cinco primeiros seram oque iras usar em 99% do seu tempo quando trabalhares com R.</span>
+<span id="cb29-255"><a href="#cb29-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-256"><a href="#cb29-256" aria-hidden="true" tabindex="-1"></a>Imagine que tens uma panilha pronta no Excel ou no computador com milhares de linhas, não vais querer digitar tudo de novo no R né!</span>
+<span id="cb29-257"><a href="#cb29-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-258"><a href="#cb29-258" aria-hidden="true" tabindex="-1"></a>Aqui é que entra uma outra parte da beleza do R, que é a importação e exportação dos dados.</span>
+<span id="cb29-259"><a href="#cb29-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-260"><a href="#cb29-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### Importação e exportação de dados </span></span>
+<span id="cb29-261"><a href="#cb29-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-262"><a href="#cb29-262" aria-hidden="true" tabindex="-1"></a>A importação dos dados é o ato de trazer dados de fora para dentro do R. Pegar o arquivo do seu computador e abrir dentro do programa.</span>
+<span id="cb29-263"><a href="#cb29-263" aria-hidden="true" tabindex="-1"></a>A exportação de dados é o ato de levar dados do R para fora. Depois que você analisou, arrumou ou fez cálculos, você salva o resultado em um arquivo novo para enviar para alguém ou abrir no Excel.</span>
+<span id="cb29-264"><a href="#cb29-264" aria-hidden="true" tabindex="-1"></a>Esses dois atos economizam o seu tempo, te ajuda a trabalhar com dados reais e compartilha resultados.</span>
+<span id="cb29-265"><a href="#cb29-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-266"><a href="#cb29-266" aria-hidden="true" tabindex="-1"></a>Para importar esses dados, ou melhor, para trazer esses dados para dentro, usaremos uma linha de codigo para cada caso.</span>
+<span id="cb29-267"><a href="#cb29-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-268"><a href="#cb29-268" aria-hidden="true" tabindex="-1"></a>Para arquivos CSV, escrevemos o seguinte:</span>
+<span id="cb29-269"><a href="#cb29-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-272"><a href="#cb29-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-273"><a href="#cb29-273" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read.csv("dados.csv", header = TRUE)</span></span>
+<span id="cb29-274"><a href="#cb29-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-275"><a href="#cb29-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-276"><a href="#cb29-276" aria-hidden="true" tabindex="-1"></a>Agora para arquivos Excel precisaremos liberar o pacote 'readxl', por isso escrevemos o seguinte:</span>
+<span id="cb29-277"><a href="#cb29-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-280"><a href="#cb29-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-281"><a href="#cb29-281" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb29-282"><a href="#cb29-282" aria-hidden="true" tabindex="-1"></a><span class="co">#meus_dados &lt;- read_excel("dados.xlsx")</span></span>
+<span id="cb29-283"><a href="#cb29-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-284"><a href="#cb29-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-285"><a href="#cb29-285" aria-hidden="true" tabindex="-1"></a>Depois de fazer tudo isso o R precura o nosso arquivo, e o  encontrando ele da uma observasação, entende, transforma em Data Frame (em formato de tabela), e guarda dentro da caixinha que nomeamos de "meus_dados". </span>
+<span id="cb29-286"><a href="#cb29-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-287"><a href="#cb29-287" aria-hidden="true" tabindex="-1"></a>Se depois do R fazer isso e não enviar nenhuma mensagem é porque deu certo, pois o silencio é a resposta preferida do computador, porem se aparecer vermelho é porque deu alguma coisa errada então precisamos ver oque colocamos errado.</span>
+<span id="cb29-288"><a href="#cb29-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-289"><a href="#cb29-289" aria-hidden="true" tabindex="-1"></a>Já na realização da exportação salvando um data frame como CSV, escrevemos o seguinte:</span>
+<span id="cb29-290"><a href="#cb29-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-293"><a href="#cb29-293" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-294"><a href="#cb29-294" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(minha_tabela, file = "minha_tabela_pronta.csv")</span></span>
+<span id="cb29-295"><a href="#cb29-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-296"><a href="#cb29-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-297"><a href="#cb29-297" aria-hidden="true" tabindex="-1"></a>E assim, realizamos a importação e exportação de dados.</span>
+<span id="cb29-298"><a href="#cb29-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-299"><a href="#cb29-299" aria-hidden="true" tabindex="-1"></a>Um dos menbros do corpo do R que usas sem saber bem no inicio quando entras no Rstudio, e que é importante conheceres são as funções do R.</span>
+<span id="cb29-300"><a href="#cb29-300" aria-hidden="true" tabindex="-1"></a>Pense assim: Função é uma "ferramenta pronta".</span>
+<span id="cb29-301"><a href="#cb29-301" aria-hidden="true" tabindex="-1"></a>Imagine que você quer cortar um pão. Você não precisa fabricar uma faca do zero, né? Você pega a faca pronta, usa ela para cortar e pronto. No R é a mesma coisa.</span>
+<span id="cb29-302"><a href="#cb29-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-303"><a href="#cb29-303" aria-hidden="true" tabindex="-1"></a><span class="fu">### As funções do R</span></span>
+<span id="cb29-304"><a href="#cb29-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-305"><a href="#cb29-305" aria-hidden="true" tabindex="-1"></a>Funções são "receitas de bolo" prontas. Elas pegam informações, processam e devolvem um resultado. Tudo no R é função! Elas sempre têm parênteses "()". As funções básicas como "sum()": soma os valores, "mean()": calcula a media, e o "sqrt()": calcula a raiz quagrada, são amplamente utilizadas para operações matemáticas, enquanto funções como "data.frame()": criar tabelas, e "subset()": filtrar dados, são empregadas na manipulação e organização de dados. Temos outros como o "max()": achar o maximo, o "min()":  o "c()": conbinar valores, o "&lt;-" (atribuição), o "plot()": graficos basicos, o "summary()": resumo estatístico, e muitos outros. </span>
+<span id="cb29-306"><a href="#cb29-306" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-307"><a href="#cb29-307" aria-hidden="true" tabindex="-1"></a>Exemplo:</span>
+<span id="cb29-308"><a href="#cb29-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-311"><a href="#cb29-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-312"><a href="#cb29-312" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um vetor de notas</span></span>
+<span id="cb29-313"><a href="#cb29-313" aria-hidden="true" tabindex="-1"></a>notas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">6</span>)</span>
+<span id="cb29-314"><a href="#cb29-314" aria-hidden="true" tabindex="-1"></a><span class="co"># Soma das notas</span></span>
+<span id="cb29-315"><a href="#cb29-315" aria-hidden="true" tabindex="-1"></a>soma <span class="ot">&lt;-</span> <span class="fu">sum</span>(notas)</span>
+<span id="cb29-316"><a href="#cb29-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Média</span></span>
+<span id="cb29-317"><a href="#cb29-317" aria-hidden="true" tabindex="-1"></a>media <span class="ot">&lt;-</span> <span class="fu">mean</span>(notas)</span>
+<span id="cb29-318"><a href="#cb29-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Maior nota</span></span>
+<span id="cb29-319"><a href="#cb29-319" aria-hidden="true" tabindex="-1"></a>maior <span class="ot">&lt;-</span> <span class="fu">max</span>(notas)</span>
+<span id="cb29-320"><a href="#cb29-320" aria-hidden="true" tabindex="-1"></a><span class="co"># Menor nota</span></span>
+<span id="cb29-321"><a href="#cb29-321" aria-hidden="true" tabindex="-1"></a>menor <span class="ot">&lt;-</span> <span class="fu">min</span>(notas)</span>
+<span id="cb29-322"><a href="#cb29-322" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantidade de alunos</span></span>
+<span id="cb29-323"><a href="#cb29-323" aria-hidden="true" tabindex="-1"></a>quantidade <span class="ot">&lt;-</span> <span class="fu">length</span>(notas)</span>
+<span id="cb29-324"><a href="#cb29-324" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrando resultados</span></span>
+<span id="cb29-325"><a href="#cb29-325" aria-hidden="true" tabindex="-1"></a>soma</span>
+<span id="cb29-326"><a href="#cb29-326" aria-hidden="true" tabindex="-1"></a>media</span>
+<span id="cb29-327"><a href="#cb29-327" aria-hidden="true" tabindex="-1"></a>maior</span>
+<span id="cb29-328"><a href="#cb29-328" aria-hidden="true" tabindex="-1"></a>menor</span>
+<span id="cb29-329"><a href="#cb29-329" aria-hidden="true" tabindex="-1"></a>quantidade</span>
+<span id="cb29-330"><a href="#cb29-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-331"><a href="#cb29-331" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-332"><a href="#cb29-332" aria-hidden="true" tabindex="-1"></a>As funções são nativas do R, tornando-o em uma linguagem pratica, pois, se para somares "2 + 2", e tivesses de ensinar ao computador oque é a soma, isso daria muito trabalho e gastarias muito tempo.</span>
+<span id="cb29-333"><a href="#cb29-333" aria-hidden="true" tabindex="-1"></a>Essas funções existe para não reinventares a roda, e sim aproivetar e desfrutar da sua beleza.</span>
+<span id="cb29-334"><a href="#cb29-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-335"><a href="#cb29-335" aria-hidden="true" tabindex="-1"></a>È muito importante saber como se cria um projeto no R. </span>
+<span id="cb29-336"><a href="#cb29-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-337"><a href="#cb29-337" aria-hidden="true" tabindex="-1"></a><span class="fu">### Criando projetos </span></span>
+<span id="cb29-338"><a href="#cb29-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-339"><a href="#cb29-339" aria-hidden="true" tabindex="-1"></a>Para manter seu trabalho organizado, é ideal criar um Projeto no RStudio. Cria-se uma pasta específica onde tudo (códigos, dados, resultados) fica salvo junto.</span>
+<span id="cb29-340"><a href="#cb29-340" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-341"><a href="#cb29-341" aria-hidden="true" tabindex="-1"></a>Para criar um projeto primeiramente vamos clicar em "File" -&gt; "New Project", depois escolhemos "New Directory" -&gt; "New Project", em seguida damos um nome ao projeto, ex: "MeuPrimeiroProjeto", e clicamos em "Create Project"".</span>
+<span id="cb29-342"><a href="#cb29-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-343"><a href="#cb29-343" aria-hidden="true" tabindex="-1"></a>Ao seguir esse passos o seu projeto estara pronto para ser elaborado.</span>
+<span id="cb29-344"><a href="#cb29-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-345"><a href="#cb29-345" aria-hidden="true" tabindex="-1"></a>Busca compreender esse pensamento: " imagine o R como se fosse um celular novo. Quando você compra um celular, ele já vem com algumas funções básicas: calculadora, relógio, navegador. Isso é o R Base (o que já vem instalado).</span>
+<span id="cb29-346"><a href="#cb29-346" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-347"><a href="#cb29-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Oque são pacotes do R</span></span>
+<span id="cb29-348"><a href="#cb29-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-349"><a href="#cb29-349" aria-hidden="true" tabindex="-1"></a>Os Pacotes são como os APLICATIVOS que você baixa na loja. </span>
+<span id="cb29-350"><a href="#cb29-350" aria-hidden="true" tabindex="-1"></a>Eles são ferramentas extras que outras pessoas criaram e disponibilizaram de graça para você usar, e serevm para dar poderes novos ao R, ler arquivos do Execel, fazer graficos bonitos e coloridos, organizar e limpar dados muito rapido, e muito mais.</span>
+<span id="cb29-351"><a href="#cb29-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-352"><a href="#cb29-352" aria-hidden="true" tabindex="-1"></a>Os Pacotes mais Básicos e Importante do R são:</span>
+<span id="cb29-353"><a href="#cb29-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-354"><a href="#cb29-354" aria-hidden="true" tabindex="-1"></a>1- O readxl, Servindo para ler arquivos do Excel ( .xlsx ).</span>
+<span id="cb29-355"><a href="#cb29-355" aria-hidden="true" tabindex="-1"></a>Obs: O R "de fábrica" só lê CSV direitinho. Se você quiser abrir uma planilha do Excel, precisa desse pacote!</span>
+<span id="cb29-356"><a href="#cb29-356" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-357"><a href="#cb29-357" aria-hidden="true" tabindex="-1"></a>2- O ggplot2, Servindo para fazer gráficos.</span>
+<span id="cb29-358"><a href="#cb29-358" aria-hidden="true" tabindex="-1"></a>É o pacote mais famoso do mundo para criar gráficos com cara de profissional, bonitos e organizados.</span>
+<span id="cb29-359"><a href="#cb29-359" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-360"><a href="#cb29-360" aria-hidden="true" tabindex="-1"></a>3- O dplyr, Servindo para arrumar e manipular dados.</span>
+<span id="cb29-361"><a href="#cb29-361" aria-hidden="true" tabindex="-1"></a>Imagine que você tem uma tabela enorme e quer filtrar, ordenar ou juntar informações. Esse pacote faz tudo ficar mais fácil e rápido.</span>
+<span id="cb29-362"><a href="#cb29-362" aria-hidden="true" tabindex="-1"></a>Antes de usar cada pacote, o instalamos primeiro digitando:  r</span>
+<span id="cb29-363"><a href="#cb29-363" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb29-366"><a href="#cb29-366" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-367"><a href="#cb29-367" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb29-368"><a href="#cb29-368" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb29-369"><a href="#cb29-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-370"><a href="#cb29-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-371"><a href="#cb29-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-372"><a href="#cb29-372" aria-hidden="true" tabindex="-1"></a><span class="fu">### A interface do R com outras Linguagens</span></span>
+<span id="cb29-373"><a href="#cb29-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-374"><a href="#cb29-374" aria-hidden="true" tabindex="-1"></a>Uma das grandes vantagens do R é a sua flexibilidade e capacidade de se conectar com outras ferramentas. Ele não funciona sozinho; ele "conversa" com outras linguagens de programação, bancos de dados e sistemas, permitindo que você use o melhor de cada mundo em um mesmo projeto.</span>
+<span id="cb29-375"><a href="#cb29-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-376"><a href="#cb29-376" aria-hidden="true" tabindex="-1"></a>Isso é muito importante porque cada uma das linguagem tem o seu ponto forte. O R é melhor para estatística e gráficos, o Python é ótimo para machine learning e automação, o SQL é essencial para bancos de dados grandes, e o C/C++ serve para deixar cálculos muito mais rápidos.</span>
+<span id="cb29-377"><a href="#cb29-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-378"><a href="#cb29-378" aria-hidden="true" tabindex="-1"></a>Principais Integrações</span>
+<span id="cb29-379"><a href="#cb29-379" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-380"><a href="#cb29-380" aria-hidden="true" tabindex="-1"></a>1- A integração com Python: é a parceria mais famosa! Com o pacote "reticulate", você pode rodar código Python diretamente dentro do seu script R, usar bibliotecas Python (como Pandas ou Scikit-learn) e trocar dados entre as duas linguagens facilmente.</span>
+<span id="cb29-381"><a href="#cb29-381" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-382"><a href="#cb29-382" aria-hidden="true" tabindex="-1"></a>Exemplo Prático:</span>
+<span id="cb29-383"><a href="#cb29-383" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-386"><a href="#cb29-386" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-387"><a href="#cb29-387" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar o pacote</span></span>
+<span id="cb29-388"><a href="#cb29-388" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb29-389"><a href="#cb29-389" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora você pode escrever código Python usando py_run_string()</span></span>
+<span id="cb29-390"><a href="#cb29-390" aria-hidden="true" tabindex="-1"></a><span class="fu">py_run_string</span>(<span class="st">"</span></span>
+<span id="cb29-391"><a href="#cb29-391" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
+<span id="cb29-392"><a href="#cb29-392" aria-hidden="true" tabindex="-1"></a><span class="st">numeros = np.array([1, 2, 3, 4, 5])</span></span>
+<span id="cb29-393"><a href="#cb29-393" aria-hidden="true" tabindex="-1"></a><span class="st">print(numeros.mean())</span></span>
+<span id="cb29-394"><a href="#cb29-394" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb29-395"><a href="#cb29-395" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-396"><a href="#cb29-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-397"><a href="#cb29-397" aria-hidden="true" tabindex="-1"></a> 2- A integração com C e C++: quando você precisa fazer cálculos muito pesados ou rápidos, o R pode chamar funções escritas em C ou C++. Isso é muito usado por desenvolvedores de pacotes para deixar o software mais eficiente.</span>
+<span id="cb29-398"><a href="#cb29-398" aria-hidden="true" tabindex="-1"></a>Usando as funções como o "C()"  ou "Call()" conectamos com os códigos compilados.</span>
+<span id="cb29-399"><a href="#cb29-399" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-400"><a href="#cb29-400" aria-hidden="true" tabindex="-1"></a> 3- A integração com Bancos de Dados (SQL): não precisamos importar todos os dados para o R. Pode se conectar diretamente em servidores como MySQL, PostgreSQL, SQL Server e fazer consultas usando a linguagem SQL sem sair do RStudio.</span>
+<span id="cb29-401"><a href="#cb29-401" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-402"><a href="#cb29-402" aria-hidden="true" tabindex="-1"></a>Exemplo com SQLite:</span>
+<span id="cb29-403"><a href="#cb29-403" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-406"><a href="#cb29-406" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-407"><a href="#cb29-407" aria-hidden="true" tabindex="-1"></a><span class="co"># Pacote para conexão</span></span>
+<span id="cb29-408"><a href="#cb29-408" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
+<span id="cb29-409"><a href="#cb29-409" aria-hidden="true" tabindex="-1"></a><span class="co"># Conectando ao banco</span></span>
+<span id="cb29-410"><a href="#cb29-410" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">"meu_banco.db"</span>)</span>
+<span id="cb29-411"><a href="#cb29-411" aria-hidden="true" tabindex="-1"></a><span class="co"># Escrevendo uma consulta SQL dentro do R</span></span>
+<span id="cb29-412"><a href="#cb29-412" aria-hidden="true" tabindex="-1"></a><span class="co">#dados &lt;- dbGetQuery(con, "SELECT * FROM tabela_clientes WHERE idade &gt; 18")</span></span>
+<span id="cb29-413"><a href="#cb29-413" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver o resultado</span></span>
+<span id="cb29-414"><a href="#cb29-414" aria-hidden="true" tabindex="-1"></a><span class="co">#head(dados)</span></span>
+<span id="cb29-415"><a href="#cb29-415" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-416"><a href="#cb29-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-417"><a href="#cb29-417" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-418"><a href="#cb29-418" aria-hidden="true" tabindex="-1"></a>4- A integração com LaTeX e Markdown: o R trabalha muito bem com ferramentas de escrita de documentos. Com o pacote "rmarkdown", você cria relatórios, PDFs, apresentações e sites que misturam texto, código R e os resultados automaticamente. É a base do que chamamos de Ciência Reprodutível.</span>
+<span id="cb29-419"><a href="#cb29-419" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-420"><a href="#cb29-420" aria-hidden="true" tabindex="-1"></a> Tambem temos outras linguagens que o R tem interfaces, como o Java (pacote "rJava"), a Julia (para computação de alto desempenho), e o Fortran (muito usado em cálculos matemáticos antigos e robustos).</span>
+<span id="cb29-421"><a href="#cb29-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-422"><a href="#cb29-422" aria-hidden="true" tabindex="-1"></a>Portanto, esses foram as  principais estruturas do corpo da linguagem R.</span>
+<span id="cb29-423"><a href="#cb29-423" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-424"><a href="#cb29-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-425"><a href="#cb29-425" aria-hidden="true" tabindex="-1"></a><span class="fu">### Considerações Finais</span></span>
+<span id="cb29-426"><a href="#cb29-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-427"><a href="#cb29-427" aria-hidden="true" tabindex="-1"></a>Apresentamos os principais fundamentos da linguagem R, desde a instalação, organização da interface, uso de funções, pacotes e manipulação de dados. Vimos que, apesar de exigir prática inicial, o R é uma ferramenta poderosa, gratuita e versátil, capaz de se integrar com outras linguagens.</span>
+<span id="cb29-428"><a href="#cb29-428" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb29-429"><a href="#cb29-429" aria-hidden="true" tabindex="-1"></a>Aprender R exige dedicação, mas os benefícios são enormes. Com os conceitos aqui apresentados, você já possui a base necessária para desenvolver projetos, analisar informações e evoluir nos estudos de estatística e ciência de dados.</span>
+<span id="cb29-430"><a href="#cb29-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-431"><a href="#cb29-431" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📖 Referências</span></span>
+<span id="cb29-432"><a href="#cb29-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-433"><a href="#cb29-433" aria-hidden="true" tabindex="-1"></a>BRITO, Ben Dêivide. leem: Learning from Elementary Statistics Methodology. Disponível em: https://bendeivide.github.io/leem/. Acesso em: 12 de abr. de 2026.</span>
+<span id="cb29-434"><a href="#cb29-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-435"><a href="#cb29-435" aria-hidden="true" tabindex="-1"></a>CHAMBERS, John M. Extending R. Boca Raton: CRC Press, 2016.. </span>
+<span id="cb29-436"><a href="#cb29-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-437"><a href="#cb29-437" aria-hidden="true" tabindex="-1"></a>DALGAARD, Peter. Estatística Básica com R. Rio de Janeiro: Elsevier, 2008.</span>
+<span id="cb29-438"><a href="#cb29-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-439"><a href="#cb29-439" aria-hidden="true" tabindex="-1"></a>KABAKOFF, Robert. R in Action: Data Analysis and Graphics with R. 2. ed. Manning Publications, 2015.</span>
+<span id="cb29-440"><a href="#cb29-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-441"><a href="#cb29-441" aria-hidden="true" tabindex="-1"></a>POSIT. RStudio Documentation. Disponível em: https://posit.co/resources/. Acesso em: 12 de abr. de 2026.</span>
+<span id="cb29-442"><a href="#cb29-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-443"><a href="#cb29-443" aria-hidden="true" tabindex="-1"></a>R CORE TEAM.R: A Language and Environment for Statistical Computing. Vienna: R Foundation for Statistical Computing, 2025. Disponível em: https://www.R-project.org/. Acesso em: 12 de abr. de 2026.</span>
+<span id="cb29-444"><a href="#cb29-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-445"><a href="#cb29-445" aria-hidden="true" tabindex="-1"></a>WICKHAM, Hadley; GROLEMUND, Garrett. R para Ciência de Dados. 1. ed. Disponível em: https://livro.curso-r.com/. Acesso em: 12 de abr. de 2026.</span>
+<span id="cb29-446"><a href="#cb29-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-447"><a href="#cb29-447" aria-hidden="true" tabindex="-1"></a>WICKHAM, Hadley. Advanced R. 2. ed. Boca Raton: CRC Press, 2019. Disponível em: https://adv-r.hadley.nz/. Acesso em: 12 de abr. de 2026.</span>
+<span id="cb29-448"><a href="#cb29-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-449"><a href="#cb29-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-450"><a href="#cb29-450" aria-hidden="true" tabindex="-1"></a></span>
 </code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
