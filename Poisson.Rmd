@@ -1,0 +1,154 @@
+---
+title: "Distribuição Especiais de Probabilidade" 
+author: "Wadmilson Costa da Fonseca e Cruz / 2025014402"
+Data: "2026-05-05"
+output: html_document
+
+
+---
+
+## A distribuição de poisson é uma função probabilidade!
+
+Uma função de probabilidade é aquela que satisfaz duas condições:
+
+* o valor da função em qualquer ponto deve ser maior ou igual a zero.
+
+$$f(x) \ge 0 \quad \text{para todo } x$$
+
+* A soma total das probabilidades (nas discretas) ou a área sob a curva (em contínuas) deve ser igual a 1.
+
+- Variável discreta
+$$\sum_{x} f(x) = 1$$
+
+- Variável contínua
+$$\int_{-\infty}^{+\infty} f(x) dx = 1$$
+
+Pois, garante que a probabilidade de ocorrer algum evento dentro de todo o espaço amostral é de 100%.
+
+A distribuição de poisson é uma função de probabilidade. pois
+
+Vejamos:
+
+$$P(X=x) = \frac{\lambda^x \cdot e^{-\lambda}}{x!}$$
+
+- $x$ é número de eventos $(0,1,2,3,...)$
+- $\lambda$ é taxa média de ocorrência, x sempre maior que zero $(\lambda>0)$
+- $e$ é o numero de Euler e é positivo $(\approx 2,71828)$
+- $x!$ é o fatorial de $x$ é sempre positivo.
+
+Temos:
+
+- $e^{-\lambda}$, como $\lambda>0$, o $e$ elevado a qualquer número real é sempre positivo.
+
+- $\lambda^x$, como $\lambda$ é positivo e $x$ é inteiro não negativo, então o resultado é positivo.
+
+- $x!$, como o fatorial de um número inteiro é sempre positivo (não existe divisão por zero), logo
+
+$$\frac{(positivo) \cdot (positivo)}{positivo} = sempre \ positivo \ ou \ zero, \ então$$
+
+$$P(X=x) \ge 0 \quad \text{para todo } x.$$
+
+---
+
+Como a distribuição de Poisson é uma variável aleatória discreta, devemos usar a fórmula
+
+$$\sum_{x=0}^{\infty} P(X=x)$$
+
+para ver se é igual a 1.
+
+Temos:
+
+$$\sum_{x=0}^{\infty} \frac{\lambda^x e^{-\lambda}}{x!} = e^{-\lambda} \cdot \left[ \sum_{x=0}^{\infty} \frac{\lambda^x}{x!} \right]$$
+
+Na matemática, segundo a série de Taylor, sabemos que a série infinita
+
+$$\left[ \sum_{x=0}^{\infty} \frac{\lambda^x}{x!} \right]$$
+
+é a definição da função exponencial $e^{\lambda}$.
+
+Logo,
+
+$$e^{-\lambda} \cdot \sum_{x=0}^{\infty} \frac{\lambda^x}{x!} = e^{-\lambda} \cdot e^{\lambda} = e^{-\lambda+\lambda} = e^0 = 1$$
+
+Como na distribuição de poisson "$P(X=x) \ge 0$ para todo $x$ e
+
+$$\sum_{x=0}^{\infty} \frac{\lambda^x e^{-\lambda}}{x!} = 1$$
+
+portanto provamos que a distribuição de Poisson é uma função de probabilidade.
+
+
+---
+
+## Associação entre o X ~ Pois($\lambda$) como Y ~ Bin(n,p)
+
+A distribuição de Poisson pode ser obtida a partir da distribuição binomial quando:
+
+- $n$ é muito grande ($n \to \infty$)
+- $p$ é muito pequeno ($p \to 0$)
+- mas o produto "$\lambda = n \cdot p$" permanece constante.
+
+Sabemos que $P(X=x) = \binom{n}{x} p^x (1-p)^{n-x}$, na distribuição binomial sendo
+a mesma coisa que $P(X=x) = \frac{n!}{x! \cdot (n-x)!} \cdot p^x \cdot (1-p)^{n-x}$
+
+Como definimos $\lambda = n \cdot p$, logo temos que $p = \frac{\lambda}{n}$, substituindo o "p",
+temos:
+
+$$P(X=x) = \frac{n!}{x! \cdot (n-x)!} \cdot \left( \frac{\lambda}{n} \right)^x \cdot \left( 1 - \frac{\lambda}{n} \right)^{n-x}$$
+
+Separando as partes obtemos:
+
+$$P(X=x) = \frac{n!}{(n-x)! \cdot n^x} \cdot \frac{\lambda^x}{x!} \cdot \left( 1 - \frac{\lambda}{n} \right)^n \cdot \left( 1 - \frac{\lambda}{n} \right)^{-x}$$
+
+Analisando cada parte quando o número de ensaio fica infinitamente grande
+($n \to \infty$), temos:
+
+*1 - $\frac{n!}{(n-x)! \cdot n^x}$*
+
+Desenvolvendo o fatorial:
+$$\frac{n \cdot (n-1) \cdot (n-2) \cdots (n-x+1)}{n^x}$$
+
+Dividindo cada termo por n:
+$$\frac{n}{n} \cdot \frac{n-1}{n} \cdot \frac{n-2}{n} \cdots \frac{n-x+1}{n}$$
+
+$$= 1 \cdot \left(1 - \frac{1}{n}\right) \cdot \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{x-1}{n}\right)$$
+
+$$= 1 \cdot \left(1 - \frac{1}{\infty}\right) \cdot \left(1 - \frac{2}{\infty}\right) \cdots \left(1 - \frac{x-1}{\infty}\right)$$
+
+$$= 1 \cdot (1) \cdot (1) \cdot (1)$$
+
+$$= \mathbf{1}$$
+
+quando $n \to \infty$, essas frações tendem a 1.
+
+---
+
+*2 - $\left( 1 - \frac{\lambda}{n} \right)^{-x}$*
+
+como x é fixo e n cresce muito, $\frac{\lambda}{n}$ tende a zero:
+
+$$\left(1 - \frac{\lambda}{\infty}\right)^{-x} = (1 - 0)^{-x} = 1^{-x} = \mathbf{1}$$
+
+---
+
+*3 - $\left( 1 - \frac{\lambda}{n} \right)^n$*
+
+Sabemos que $\lim_{n \to \infty} \left(1 + \frac{a}{n}\right)^n = e^a$, logo
+
+$$\lim_{n \to \infty} \left(1 - \frac{\lambda}{n}\right)^n = \mathbf{e^{-\lambda}}$$
+
+---
+
+*Agora, substituindo os resultados na fórmula, vemos que:*
+
+$$P(X=x) = \frac{n!}{(n-x)! \cdot n^x} \cdot \frac{\lambda^x}{x!} \cdot \left( 1 - \frac{\lambda}{n} \right)^n \cdot \left( 1 - \frac{\lambda}{n} \right)^{-x}$$
+
+$$= 1 \cdot \frac{\lambda^x}{x!} \cdot e^{-\lambda} \cdot 1$$
+
+$$= \mathbf{\frac{\lambda^x \cdot e^{-\lambda}}{x!}}$$
+
+o que é exatamente a fórmula da distribuição de Poisson,
+mostrando ser um caso particular da binomial, usada
+quando temos muitas tentativas e pouca chance de sucesso.
+
+
+
