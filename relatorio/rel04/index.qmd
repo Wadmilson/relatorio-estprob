@@ -69,6 +69,8 @@ As variáveis aleatórias contínuas também possuem distribuição de probabili
 
 Na turma falamos sobre distribuições binomial, poisson e normal, buscaremos entender o funcionamento dessas distribuições.
 
+
+
 1- Distribuição Binomial
 
 É uma distribuição de probabilidade discreta que descreve o número de sucessos obtidos em uma sequência de $n$ ensaios independentes, em que cada ensaio tem apenas dois resultados possíveis: sucesso ou fracasso, e a probabilidade de sucesso $p$ permanece constante em todos os ensaios.
@@ -103,12 +105,15 @@ A probabilidade de que exatamente 5 dos 6 sensores estejam funcionando corretame
 
 ```{r}
 library(leem)
-n <- 6    # número total de sensores inspecionados
-p <- 0.92 # probabilidade de funcionamento correto
-x <- 5    # número de sensores em perfeito funcionamento
-probabilidade <- dbinom(x = x, size = n, prob = p)
-cat("Probabilidade de exatamente", x, "sensores funcionando corretamente =", round(probabilidade * 100, 2), "%\n")
+P(q = 5,
+  dist = "binomial",
+  size = 6,
+  prob = 0.92,
+  lower.tail = NULL)
 ```
+
+
+
 
 2- Distribuição de Poisson
 
@@ -159,13 +164,14 @@ A probabilidade de ocorrerem exatamente 2 falhas em uma semana é de aproximadam
 
 ```{r}
 
-library(leem)
-lambda <- 3   # taxa média de ocorrência
-x <- 2        # número de eventos desejado
-probabilidade <- dpois(x = x, lambda = lambda)
-cat("Probabilidade de ocorrerem exatamente", x, "falhas =", round(probabilidade * 100, 2), "%\n")
+P(q = 2,
+  dist = "poisson",
+  lambda = 3,    # taxa média de ocorrências
+  lower.tail = NULL)
 
 ```
+
+
 
 3- Distribuição Normal
 
@@ -256,18 +262,27 @@ A probabilidade de o eixo estar dentro da especificação é de *86,64%*.
 
 ```{r}
 
-library(leem)
-mu <- 15       # média
-sigma <- 0.2   # desvio padrão
-a <- 14.7      # limite inferior
-b <- 15.3      # limite superior
-probabilidade <- pnorm(q = b, mean = mu, sd = sigma) - pnorm(q = a, mean = mu, sd = sigma)
-cat("Probabilidade de o eixo estar dentro da especificação =", round(probabilidade * 100, 2), "%\n")
+p_entre <- P(q = 15.3,
+  dist = "normal",
+  mean = 15,     # média
+  sd = 0.2,      # desvio padrão
+  rounding = 8) - 
+  P(q = 14.7,
+  dist = "normal",
+  mean = 15,     # média
+  sd = 0.2,      # desvio padrão
+  rounding = 8)
+p_entre
 ```
 
 ### Outras Distribuições Especiais de Probabilidade
 
+
+
+
 Dentro das variáveis aleatórias discretas, tirando a distribuição binomial, e poisson temos outars duas distribuições de probabilidade que são:
+
+
 
 1- Distribuição Geometrica
 
@@ -322,13 +337,19 @@ $$
 Logo, a probabilidade de a primeira calibração correta ocorrer exatamente na 5ª tentativa é de aproximadamente *7,91%*.
 
 ```{r}
+p <- 0.25          # probabilidade de sucesso
+k <- 5             # 5ª tentativa
 
-library(leem)
-p <- 0.25   # probabilidade de calibração correta
-x <- 5      # tentativa desejada
-probabilidade <- dgeom(x = x - 1, prob = p)
-cat("Probabilidade de a primeira calibração correta ocorrer na", x, "ª tentativa =", round(probabilidade * 100, 2), "%\n")
+# Cálculo da probabilidade
+prob_geo <- (1 - p)^(k - 1) * p
+
+# Resultado
+cat("Probabilidade =", round(prob_geo * 100, 2), "%\n")
 ```
+
+
+
+
 
 2- Distribuição Uniforme Discreta
 
@@ -375,19 +396,24 @@ $$
 Portanto, a probabilidade de aparecer o código de erro número 4 é de aproximadamente *16,67%*.
 
 ```{r}
+a <- 1   # menor valor
+b <- 6   # maior valor
+x <- 4   # valor desejado
 
-library(leem)
-a <- 1       # menor valor possível
-b <- 6       # maior valor possível
-x <- 4       # valor desejado
-k <- b - a + 1  # total de valores
-probabilidade <- 1 / k
-cat("Probabilidade de ocorrer o valor", x, "=", round(probabilidade * 100, 2), "%\n")
+# Cálculo da probabilidade
+prob_unif <- 1 / (b - a + 1)
+
+# Resultado
+cat("Probabilidade =", round(prob_unif * 100, 2), "%\n")
 ```
 
 
 
+
+
 Tal como nas discretas, nas vaviáveis aleatórias continua, para além da distribuição normal, também podemos observar outras distribuições de propriedades, onde temos duas delas sendo a distribuição exponencial e a gama.
+
+
 
 
 1- Distribuição Exponencial
@@ -441,13 +467,18 @@ Portanto, a probabilidade de o controlador apresentar a primeira falha antes de 
 
 
 ```{r}
+lambda <- 0.02     # taxa de falhas por hora
+x <- 50            # tempo limite
 
-library(leem)
-lambda <- 0.02   # taxa média de falhas por hora
-x <- 50          # tempo limite em horas
-probabilidade <- pexp(q = x, rate = lambda)
-cat("Probabilidade de a primeira falha ocorrer antes de", x, "horas =", round(probabilidade * 100, 2), "%\n")
+# Cálculo da probabilidade
+prob_exp <- pexp(q = x, rate = lambda)
+
+# Resultado
+cat("Probabilidade =", round(prob_exp * 100, 2), "%\n")
 ```
+
+
+
 
 2- Distribuição Gama
 
@@ -489,36 +520,34 @@ Exemplo: Em um sistema automatizado, a taxa média de falhas de um conjunto de s
 
 Resolução:
 
-* $\lambda = 0,02$ → taxa média de falhas por hora
-* $r = 3$ → número de falhas desejadas
-* $x = 100$ → tempo limite em horas
-
-Para valores inteiros de $r$, temos $\Gamma(3) = (3 - 1)! = 2! = 2$. 
-Substituindo na fórmula da probabilidade acumulada:
 
 $$
 \begin{align*}
-P(X \leq 100) &= \int_{0}^{100} \frac{(0,02)^3}{2} \cdot x^{2} \cdot e^{-0,02 x} \, dx \\
-&= 1 - e^{-0,02 \cdot 100} \left[ 1 + \frac{0,02 \cdot 100}{1!} + \frac{(0,02 \cdot 100)^2}{2!} \right] \\
-&= 1 - e^{-2} \left[ 1 + 2 + \frac{4}{2} \right] \\
-&= 1 - 0,1353 \cdot 4 \\
-&= 1 - 0,5412 \\
-&= 0,4588
+P(X \leq 100) &= \int_{0}^{100} \frac{1}{\theta^{\,r} \cdot \Gamma(r)} \cdot x^{\,r-1} \cdot e^{-\frac{x}{\theta}} \, dx \\[6pt]
+&= \int_{0}^{100} \frac{1}{50^{\,3} \cdot 2!} \cdot x^{2} \cdot e^{-\frac{x}{50}} \, dx \\[6pt]
+&= 1 - e^{-\frac{100}{50}} \cdot \left[ 1 + \frac{100}{50} + \frac{\left(\frac{100}{50}\right)^2}{2!} \right] \\[6pt]
+&= 1 - e^{-2} \cdot \left[ 1 + 2 + \frac{2^2}{2} \right] \\[6pt]
+&= 1 - 0,135335 \cdot 4 \\[6pt]
+&= 1 - 0,54134 \\[6pt]
+&= 0,3233
 \end{align*}
 $$
 
-Poratanto, a probabilidade de ocorrerem até 3 falhas em 100 horas é de aproximadamente *45,88%*.
+$$
+\boxed{P(X \leq 100) = 0,3233 \quad \Rightarrow \quad 32,33\%}
+$$
+
 
 ```{r}
 
-library(leem)
-lambda <- 0.02   # taxa média de falhas por hora
-r <- 3           # número de falhas desejadas
-x <- 100         # tempo limite em horas
-probabilidade <- pgamma(q = x, shape = r, rate = lambda)
-cat("Probabilidade de ocorrer até", r, "falhas em", x, "horas =", round(probabilidade * 100, 2), "%\n")
+# Parâmetros
+lambda <- 0.02
+r <- 3
+theta <- 1 / lambda
+x <- 100
+prob_gama <- pgamma(q = x, shape = r, scale = theta)
+cat("Probabilidade =", round(prob_gama * 100, 2), "%\n")
 ```
-
 
 ### Conclusão
 
@@ -533,21 +562,10 @@ Essas ferramentas permitem entender e prever o comportamento de processos e equi
 
 ## 📖 Referências
 
-INSTITUTO DE MATEMÁTICA E ESTATÍSTICA – USP. Notas de Aula: Variáveis Aleatórias e Distribuições. Disponível em: https://www.ime.usp.br/~sandra/mae116/notas.pdf. Acesso em 07 mai. 2026.
-
-MONTGOMERY, D. C.; RUNGER, G. C. Estatística Aplicada e Probabilidade para Engenheiros. 6ª ed. Rio de Janeiro: LTC, 2016. Disponivel em: https://www.grupogen.com.br/livro-estatistica-aplicada-e-probabilidade-para-engenheiros. Acesso em 07 mai. 2026.
-
-MORETTIN, P. A.; BUSSAB, W. O. Estatística Básica. 9ª ed. São Paulo: Saraiva, 2017. Disponivel em: https://www.saraiva.com.br/estatistica-basica-paulo-alonso-morettin-9788547221483. Acesso em 07 mai. 2026.
-
 PACOTE LEEM. Documentação Oficial do LEEM. Disponível em: https://cran.r-project.org/web/packages/leem/leem.pdf. Acesso em 07 mai. 2026.
 
 R CORE TEAM. Documentação Oficial do R: Funções de Distribuição de Probabilidade. Disponível em: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Distributions. Acesso em 07 mai. 2026.
 
-ROSS, S. M. Probabilidade: Um Curso Moderno com Aplicações. 10ª ed. Porto Alegre: Bookman, 2019. Disponivel em: https://www.grupogen.com.br/livro-probabilidade-um-curso-moderno-com-aplicacoes. Acesso em 07 mai. 2026.
-
-TRIOLA, M. F. Introdução à Estatística. 12ª ed. Rio de Janeiro: LTC, 2017.https://www.grupogen.com.br/livro-introducao-a-estatistica. Acesso em 07 mai. 2026.
-
-UNIVERSIDADE FEDERAL DE SÃO CARLOS. Probabilidade e Estatística – Distribuições de Probabilidade. Disponível em: https://www.ufscar.br/ensino/graduacao/arquivos/probabilidade_estatistica.pdf. Acesso em 07 mai. 2026.
 
 WIKIPÉDIA ENCICLOPÉDIA LIVRE. Variável aleatória. Disponível em: https://pt.wikipedia.org/wiki/Vari%C3%A1vel_aleat%C3%B3ria. Acesso em 07 mai. 2026.
 
