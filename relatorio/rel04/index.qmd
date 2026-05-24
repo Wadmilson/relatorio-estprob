@@ -41,7 +41,7 @@ O foco deste relatorio consite em conhecer as variáveis aleatórias discritivas
 
 ### Variáveis aleatorias
 
-Sendo uma função que associa cada resultado de um experimento aleatório a um número real, permitindo quantificar e analisar fenômenos incertos, ou seja, transforma os resultados qualitativos ou não numéricos do espaço amostral em valores numéricos, facilitando o cálculo de probabilidades e medidas estatísticas (Wikipédia, 2025), ela é classificada como:
+Sendo uma função que associa cada resultado de um experimento aleatório a um número real, permitindo quantificar e analisar fenômenos incertos, ou seja, transforma os resultados qualitativos ou não numéricos do espaço amostral em valores numéricos, facilitando o cálculo de probabilidades e medidas estatísticas (Wikipédia, 2025), é classificada como:
 
 * *Variáveis aleatórias discretas* - são as que assumem valores em um conjunto finito ou infinito enumerável de números, ou seja, seus valores podem ser contados um a um.
 
@@ -62,6 +62,75 @@ $$P(a \leq X \leq b) = \int_{a}^{b} f(x) dx, \quad \text{com} \quad f(x) \geq 0 
 As variáveis aleatórias contínuas também possuem distribuição de probabilidade como: uniforme contínua, normal, exponencial, gama, qui-quadrado, etc.
 
 * *Variáveis aleatórias mistas* - que combinam características das duas anteriores, apresentando pontos com probabilidade definida e intervalos onde a probabilidade é calculada por meio de uma função densidade. Elas são menos frequentes em estudos introdutórios.
+
+Uma variável aleatória mista combina características das variáveis aleatórias discretas — que assumem valores isolados com probabilidade definida — e das variáveis aleatórias contínuas — que tomam valores em intervalos reais, descritas por uma função densidade de probabilidade.
+
+Diferentemente dos casos puros, não basta usar apenas a função massa de probabilidade nem apenas a função densidade de probabilidade: a representação fundamental e geral é feita por meio da \textbf{função de distribuição acumulada (FDA)}, válida para qualquer tipo de variável aleatória.
+
+\subsection*{Definição Formal}
+
+A função de distribuição acumulada da variável aleatória \(X\) é definida por:
+\[
+F_X(x) = P(X \leq x), \quad \forall x \in \mathbb{R}
+\]
+Ela satisfaz obrigatoriamente as seguintes propriedades:
+\begin{itemize}[leftmargin=*]
+    \item É uma função não decrescente e contínua à direita em todos os pontos, com limites nos extremos:
+    \[
+    \lim_{x \to -\infty} F_X(x) = 0 \quad \text{e} \quad \lim_{x \to +\infty} F_X(x) = 1
+    \]
+
+    \item \textbf{Parte discreta}: nos pontos de salto \(x_1, x_2, \dots, x_n\):
+    \[
+    P(X = x_i) = p_i = F_X(x_i) - F_X(x_i^-), \quad \sum_i p_i = p \quad (0 < p < 1)
+    \]
+    onde \(F_X(x_i^-) = \lim_{t \to x_i^-} F_X(t)\) representa o limite à esquerda de \(F_X\) no ponto \(x_i\).
+
+    \item \textbf{Parte contínua}: nos intervalos sem pontos de salto, \(F_X(x)\) é absolutamente contínua e derivável, e existe uma função densidade \(f_X(x) \geq 0\) tal que:
+    \[
+    P(a < X \leq b) = \int_{a}^{b} f_X(t) \, dt, \quad \int_{-\infty}^{+\infty} f_X(t) \, dt = 1-p
+    \]
+
+    \item Em aplicações práticas usuais, a variável não apresenta partes singulares puras.
+\end{itemize}
+
+\subsection*{2. Representação Completa da “Função de Probabilidade”}
+
+Podemos escrever \(F_X(x)\) como soma ponderada das duas componentes, discreta e contínua:
+\[
+F_X(x) = p \cdot F_d(x) + (1-p) \cdot F_c(x)
+\]
+Onde:
+\begin{itemize}[leftmargin=*]
+    \item \(0 < p < 1\): probabilidade total concentrada nos pontos discretos;
+    \item \(F_d(x)\): função de distribuição acumulada da parte discreta, definida por:
+    \[
+    F_d(x) = \sum_{\{x_i \leq x\}} P(X = x_i)
+    \]
+    \item \(F_c(x)\): função de distribuição acumulada da parte contínua, definida por:
+    \[
+    F_c(x) = \int_{-\infty}^{x} f_X(t) \, dt
+    \]
+\end{itemize}
+
+\subsection*{🧩 Exemplos de Uso}
+
+Elas aparecem em situações onde há dois comportamentos distintos: um resultado fixo com probabilidade definida, ou valores variáveis ao longo de um intervalo:
+
+\begin{enumerate}[label=\arabic*., wide=0pt, itemsep=0.8em]
+    \item \textbf{Tempo de funcionamento com falha imediata} \\
+    Ao ligar um equipamento, 10\% das vezes ele já está defeituoso: \(X = 0\) (parte discreta). Nos outros 90\%, o tempo de operação segue uma distribuição exponencial: \(X \sim \text{Exp}(\lambda)\) (parte contínua). Logo, \(X\) é uma variável aleatória mista.
+
+    \item \textbf{Indenização em seguros} \\
+    Se o valor do dano for menor que a franquia contratada, não há pagamento: \(X = 0\) com probabilidade \(p\). Se ultrapassar a franquia, o valor pago varia continuamente conforme o prejuízo verificado. É o modelo principal da atuária.
+
+    \item \textbf{Tempo de conclusão de uma prova} \\
+    Cerca de 20\% dos alunos entregam a prova exatamente aos 30 minutos após o início: \(X = 30\) min (discreto). Os 80\% restantes gastam um tempo entre 30 e 120 minutos, distribuído uniformemente nesse intervalo (contínuo).
+
+    \item \textbf{Controle de altura mínima para entrada} \\
+    Em uma triagem, todas as pessoas com altura inferior a 1,50 m são registradas como tendo exatamente 1,50 m: \(X = 1{,}50\) m com probabilidade \(p\). Acima desse val
+
+
 
 ---
 

@@ -1,0 +1,216 @@
+---
+# Só mude aqui!!!!
+author: "Wadmilson Costa da Fonseca e Cruz"
+title: "Relatório 05"
+bibliography: referencias.bib
+# A partir daqui nao faca alteracoes!!!!!
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+subtitle: "<a href='https://bendeivide.github.io/courses/epaec/' target='_blank'>Estatística e Probabilidade</a> </br> <a href='https://bendeivide.github.io' target='_blank'>Prof. Ben Dêivide (DEFIM/CAP/UFSJ)</a>"
+include-before-body: header.html
+date: now
+date-format: "DD/MM/YYYY, HH:mm"
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: bootstrap
+    #css: styles.css
+    code-fold: true
+    code-tools: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## OBS: 
+Professor te pesso emenço perdão por ter enviado o relatorio do dia 19 só hoje, dia 24, pois só agora que vi que tinha rel05 para fazer, pois eu não tinha assistido a aula que conserteza falaste para fazer o rel e esquece de perguntar aos colegas.
+
+## 📌 Introdução
+As distribuições de probabilidade são ferramentas fundamentais na estatística para modelar e compreender fenômenos aleatórios. Dentre elas, destacam-se: as *distribuições binomial* (aplicada a experimentos com ensaios independentes, dois resultados possíveis (sucesso ou fracasso) e probabilidade constante), *distribuições de poisson* (usada para contar ocorrências de eventos em um intervalo fixo de tempo, espaço ou volume), *distribuição normal* (contínua, em forma de sino, simétrica, e é a mais importante da estatística, pois descreve muitos fenômenos naturais e é base para métodos de inferência).
+ 
+Embora a *binomial* e a *poisson* sejam distribuições discretas, e a *normal* seja contínua, há relações matemáticas que permitem aproximar uma pela outra quando certas condições são atendidas. Esse fato é consequência do Teorema Central do Limite (TCL), que garante que, à medida que o número de observações aumenta, a distribuição da soma ou da média de variáveis aleatórias converge para uma distribuição Normal.
+
+
+## 🎯 Objetivos
+
+### Objetivo geral
+
+O foco deste relatorio consiste em discorrer sobre como as distribuições *binomial* e *poisson* podem ser aproximadas à distribuição *normal*, apresentar as demonstrações teóricas dessa relação, explicar as condições necessárias para que a aproximação seja válida, além de mostrar exemplos práticos, aplicações e orientações de como utilizar essa aproximação em problemas reais.
+
+---
+
+## 📚  Fundamentação Teórica
+
+### Distribuição binominal e sua aproximação a normal (Características da binomial)
+
+Uma variável aleatória $X$ segue distribuição Binomial com parâmetros $n$ (número de ensaios) e $p$ (probabilidade de sucesso em cada ensaio):
+
+$X \sim B(n, p)$
+
+- *Média:* $\mu = n \cdot p$
+ - *Variância:* $\sigma^2 = n \cdot p \cdot (1 - p)$
+ - *Desvio padrão:* $\sigma = \sqrt{n \cdot p \cdot (1 - p)}$
+
+É uma distribuição discreta, com valores possíveis $0, 1, 2, \dots, n$.  
+Quando $n$ é pequeno ou $p$ está muito próximo de 0 ou de 1, a forma da Binomial é assimétrica; à medida que $n$ aumenta, ela se torna cada vez mais simétrica e semelhante à curva Normal.
+
+A aproximação é considerada boa quando:
+
+$n \cdot p \geq 5 \quad \text{e} \quad n \cdot (1 - p) \geq 5$
+
+Algumas referências adotam o valor 10 como limite mais rigoroso.
+
+Quando essas condições são satisfeitas, podemos aproximar:
+
+$B(n, p) \approx N\left(\mu = n p, \, \sigma^2 = n p (1 - p)\right)$
+
+*Ajuste de continuidade:*  
+Como passamos de variável discreta para contínua, devemos somar ou subtrair 0,5 no valor de $X$ ao calcular probabilidades, para corrigir a diferença entre os tipos de variável.
+
+## 3.2 Demonstração
+
+A demonstração parte do *Teorema Central do Limite*:
+
+Cada ensaio da Binomial é uma variável de Bernoulli $Y_i \sim B(1, p)$, com $E(Y_i) = p$ e $Var(Y_i) = p(1-p)$.
+
+A variável Binomial é a soma:
+
+$X = Y_1 + Y_2 + \dots + Y_n$
+
+Pelo TCL, a soma de $n$ variáveis independentes e identicamente distribuídas, com média e variância finitas, converge em distribuição para uma Normal:
+
+$\frac{X - n p}{\sqrt{n p (1-p)}} \xrightarrow{n \to \infty} N(0,1)$
+
+Isso significa que, para $n$ grande, $X$ se comporta aproximadamente como uma Normal com média $n p$ e variância $n p (1-p)$.
+
+## 3.2 Exemplo prático
+
+*Problema:* Uma moeda honesta é lançada 100 vezes. Qual a probabilidade de obter entre 45 e 55 caras?
+
+- $n = 100$, $p = 0,5$
+- $\mu = 100 \cdot 0,5 = 50$
+- $\sigma = \sqrt{100 \cdot 0,5 \cdot 0,5} = 5$
+- Condições: $n p = 50 \geq 5$ e $n(1-p) = 50 \geq 5$ → aproximação válida.
+
+Aplicando ajuste de continuidade:
+
+$P(45 \leq X \leq 55) \approx P\left( \frac{44,5 - 50}{5} \leq Z \leq \frac{55,5 - 50}{5} \right)$
+
+$= P(-1,1 \leq Z \leq 1,1) = \Phi(1,1) - \Phi(-1,1) \approx 0,7286$
+
+Resultado: cerca de 72,86% de chance, valor muito próximo do exato calculado pela Binomial.
+
+---
+
+# 4 Distribuição de Poisson e sua aproximação à Normal (Características da Poisson)
+
+Uma variável aleatória $X$ segue Poisson com parâmetro $\lambda > 0$:
+
+$X \sim Po(\lambda)$
+
+- Média: $\mu = \lambda$
+- Variância: $\sigma^2 = \lambda$
+- Desvio padrão: $\sigma = \sqrt{\lambda}$
+
+Também é discreta, com valores $0, 1, 2, \dots$. Para valores pequenos de $\lambda$, a distribuição é assimétrica; à medida que $\lambda$ cresce, ela se torna simétrica e aproxima-se da Normal.
+
+## 4.2 Condições para aproximação
+
+É válida quando:
+
+$\lambda \geq 10$
+
+Quanto maior o valor de $\lambda$, melhor a aproximação.
+
+Então:
+
+$Po(\lambda) \approx N\left(\mu = \lambda, \, \sigma^2 = \lambda\right)$
+
+📌 *Também usa ajuste de continuidade*, da mesma forma que na Binomial.
+
+## 4.3 Demonstração
+
+A Poisson tem uma propriedade importante: a soma de variáveis Poisson independentes também é Poisson.
+
+Seja $X = X_1 + X_2 + \dots + X_k$, onde cada $X_i \sim Po(\lambda_0)$, então $X \sim Po(k \lambda_0)$.
+
+Pelo Teorema Central do Limite, como cada $X_i$ tem média e variância finitas:
+
+$\frac{X - k \lambda_0}{\sqrt{k \lambda_0}} \xrightarrow{k \to \infty} N(0,1)$
+
+Fazendo $\lambda = k \lambda_0$, concluímos que para $\lambda$ grande, $X$ aproxima-se de uma Normal com média e variância iguais a $\lambda$.
+
+## 4.4 Exemplo prático
+
+*Problema:* Uma central de atendimento recebe em média 30 chamadas por hora. Qual a probabilidade de receber entre 25 e 35 chamadas em uma hora?
+
+- $\lambda = 30$ → $\mu = 30$, $\sigma = \sqrt{30} \approx 5,477$
+- Condição: $\lambda = 30 \geq 10$ → aproximação válida.
+
+Ajuste de continuidade:
+
+$P(25 \leq X \leq 35) \approx P\left( \frac{24,5 - 30}{5,477} \leq Z \leq \frac{35,5 - 30}{5,477} \right)$
+
+$= P(-1,004 \leq Z \leq 1,004) \approx 0,685$
+
+Resultado: cerca de 68,5% de chance, muito próximo do valor exato.
+
+
+\section{Aplicações e como utilizar}
+
+\subsection{Quando usar}
+
+\begin{itemize}
+    \item \textbf{Binomial $\rightarrow$ Normal:} para experimentos com muitos ensaios, quando calcular probabilidades exatas seria trabalhoso ou inviável. Ex: pesquisas de opinião, controle de qualidade, estudos de prevalência.
+    
+    \item \textbf{Poisson $\rightarrow$ Normal:} para contagens de eventos frequentes. Ex: número de clientes, falhas em equipamentos, acidentes, chegadas em filas.
+\end{itemize}
+
+\subsection{Passo a passo da utilização}
+
+\begin{enumerate}
+    \item Identifique a distribuição e seus parâmetros.
+    \item Verifique as condições de aproximação.
+    \item Calcule média e desvio padrão.
+    \item Aplique o ajuste de continuidade (+0,5 ou -0,5) nos limites do intervalo.
+    \item Padronize para $Z = \frac{X - \mu}{\sigma}$.
+    \item Consulte a tabela da distribuição Normal padrão ou use software para obter a probabilidade.
+\end{enumerate}
+
+## Vantagem
+
+Reduz drasticamente o cálculo, evita somatórias extensas e permite usar toda a teoria da distribuição Normal para intervalos de confiança, testes de hipóteses e inferência estatística.
+
+
+## 🧠 Considerações finais
+
+- A aproximação só é válida se as condições forem respeitadas: $n p \geq 5$ e $n(1-p) \geq 5$ para Binomial; $\lambda \geq 10$ para Poisson.
+    
+- Sempre usar o ajuste de continuidade, pois aproxima variável discreta de contínua.
+    
+- Quanto maior o tamanho da amostra ou o parâmetro $\lambda$, melhor a qualidade da aproximação.
+    
+- Essa relação confirma a importância do Teorema Central do Limite como elo unificador entre distribuições discretas e contínuas.
+
+
+### Conclusão
+
+As distribuições Binomial e Poisson, embora sejam modelos para variáveis discretas, podem ser muito bem aproximadas pela distribuição Normal quando seus parâmetros são suficientemente grandes. Essa aproximação, fundamentada no Teorema Central do Limite, simplifica cálculos, amplia o uso de métodos estatísticos e é amplamente aplicada em áreas como engenharia, administração, saúde e ciências exatas. Saber aplicar essa relação corretamente é essencial para a análise de dados e tomada de decisão baseada em probabilidades.
+
+
+## 📖 Referências
+
+- BEN DÊIVIDE. Material Didático de Estatística e Probabilidade — Aproximação de distribuições. DEFIM / CAP / UFSJ.
+Disponível em: https://bendeivide.github.io/courses/epaec/
+​
+- WIKIPÉDIA. Distribuição normal. 2026.
+Disponível em: https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_normal
+​
+- WIKIPÉDIA. Distribuição binomial. 2026.
+Disponível em: https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_binomial
+​
+- WIKIPÉDIA. Distribuição de Poisson. 2026.
+Disponível em: https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_de_Poisson

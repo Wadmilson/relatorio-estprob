@@ -1,15 +1,11 @@
 ---
-title: "Wadmilson Costa da Fonseca e CRUZ"
-image: "carlinho.jpg"
-links:
-  - label: GitHub
-    url: "https://github.com/Wadmilson"
-  - label: Email
-    url: "ecruzcarlinho@aluno.ufsj.edu.br"
-  - label: Relatórios
-    url: "./relatorio/"
-output:
-  postcards::jolla
+title: "Relatorio 05"
+author: "Wadmilson Costada Fonseca e Cruz"
+date: "19-05-2026"
+output: html_document
 ---
 
-Aluno de Engenharia Mecatronica da UFSJ/CAP!
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
