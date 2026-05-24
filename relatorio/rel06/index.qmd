@@ -1,7 +1,7 @@
 ---
 # Só mude aqui!!!!
-author: "Nome do Aluno"
-title: "Relatório de Aula Prática 01"
+author: "Wadmilson Costa da Fonseca e Cruz"
+title: "Relatorio 06"
 bibliography: referencias.bib
 # A partir daqui nao faca alteracoes!!!!!
 link-citations: true
@@ -28,99 +28,250 @@ execute:
 
 ## 📌 Introdução
 
-Descreva o contexto da prática e sua importância.
+Na estatística inferencial, ao trabalhar com populações que seguem distribuição normal $X \sim N(\mu, \sigma^2)$, surgem funções fundamentais que relacionam parâmetros populacionais com medidas obtidas de amostras, como a média amostral $\bar{X}$ e a variância amostral $S^2$. Duas dessas funções são:
 
-> Exemplo: análise da variabilidade em experimentos físicos utilizando uma catapulta.
+$$
+\frac{(n-1)S^2}{\sigma^2} \quad \text{e} \quad \sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma} \right)^2
+$$
 
+Ambas são construídas a partir de somas de quadrados padronizados e seguem distribuições probabilísticas conhecidas, a Qui-Quadrado ($\chi^2$). Embora pareçam diferentes, há uma relação matemática rigorosa entre elas, ligando a variabilidade total dos dados à variabilidade interna da amostra e ao desvio da média.
 
+Para o engenheiro mecatrônico, compreender essa relação é essencial: ela serve de base para análise de precisão, controle de processos, validação de sensores, projeto de sistemas automatizados e tomada de decisão baseada em dados, temas centrais da área.
 
-## 🎯 Objetivos
+## 🎯 Objetivo Geral
 
-### Objetivo geral
+O foco deste relatório consiste na  apresentação a relação matemática e estatística entre as duas funções mencionadas, demonstrar como ela ocorre, ilustrar com exemplos práticos aplicados à Engenharia Mecatrônica e explicar como esses resultados impactam diretamente o trabalho profissional, desde o projeto até a manutenção e otimização de sistemas mecatrônicos.
 
-Descrever o objetivo principal da prática.
-
-### Objetivos específicos
-
-- Coletar dados experimentais  
-- Aplicar estatística descritiva  
-- Construir gráficos  
-- Interpretar resultados  
 
 ---
 
 ## 📚  Fundamentação Teórica
 
-Apresente os conceitos principais:
+### Relação entre as funções (Definições e Distribuições)
 
-- Média
-- Variância
-- Desvio padrão
-- Amostragem
+
+Seja uma variável aleatória:
 
 $$
-\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
+X \sim N(\mu, \sigma^2)
 $$
 
+Onde:
+- $\mu$: média populacional
+- $\sigma^2$: variância populacional
+
+De uma amostra aleatória $X_1, X_2, \dots, X_n$, definimos:
+
+- Média amostral:
+$$
+\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i
+$$
+
+- Variância amostral (estimativa não viciada):
+$$
+S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2
+$$
+
+*Primeira função:*
+$$
+\frac{(n-1)S^2}{\sigma^2} = \sum_{i=1}^n \left( \frac{X_i - \bar{X}}{\sigma} \right)^2
+$$
+
+*Propriedade:* Para população normal, segue distribuição Qui-Quadrado com $n-1$ graus de liberdade:
+$$
+\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
+$$
+
+O grau de liberdade é $n-1$ porque estimamos $\mu$ por $\bar{X}$, impondo a restrição:
+$$
+\sum_{i=1}^n (X_i - \bar{X}) = 0
+$$
+
+*Segunda função:*
+$$
+\sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma} \right)^2
+$$
+
+Cada termo:
+$$
+Z_i = \frac{X_i - \mu}{\sigma} \sim N(0,1)
+$$
+
+(variável normal padrão, independente).
+
+Pela definição da distribuição Qui-Quadrado:
+$$
+\sum_{i=1}^n Z_i^2 \sim \chi^2_n
+$$
+
+Aqui, usamos o valor verdadeiro de $\mu$, sem estimativa → $n$ graus de liberdade.
+
+### Demonstração da Relação
+
+Podemos ligar as duas expressões algebricamente:
+
+$$
+\sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma} \right)^2
+= \sum_{i=1}^n \left[ \frac{(X_i - \bar{X}) + (\bar{X} - \mu)}{\sigma} \right]^2
+$$
+
+Desenvolvendo o quadrado:
+$$
+= \sum_{i=1}^n \left( \frac{X_i - \bar{X}}{\sigma} \right)^2
++ 2 \cdot \frac{\bar{X} - \mu}{\sigma^2} \sum_{i=1}^n (X_i - \bar{X})
++ n \cdot \left( \frac{\bar{X} - \mu}{\sigma} \right)^2
+$$
+
+Como $\sum_{i=1}^n (X_i - \bar{X}) = 0$, o termo do meio desaparece:
+
+$$
+= \underbrace{\frac{(n-1)S^2}{\sigma^2}}{\sim \chi^2{n-1}}
++ \underbrace{\left( \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \right)^2}_{\sim \chi^2_1}
+$$
+
+*Conclusão da relação:*
+
+A segunda função ($\chi^2_n$) é igual à primeira ($\chi^2_{n-1}$) mais o quadrado da variável normalizada da média amostral ($\chi^2_1$).
+Isso confirma a propriedade aditiva: $\chi^2_n = \chi^2_{n-1} + \chi^2_1$, ou seja,$$\text{Variabilidade total} = \text{Variabilidade interna à amostra} + \text{Desvio quadrático da média em relação ao valor populacional}
+$$
+
+### Exemplos Práticos
+
+*Exemplo 1: Precisão de Sensor de Posição*
+
+Um sensor de posição em um robô industrial tem especificação:
+
+- Valor nominal ($\mu$) = 50 mm
+- Desvio padrão populacional ($\sigma$) = 0,2 mm
+
+Foram coletadas $n = 15$ medições, obtendo variância amostral $S^2 = 0,048 \, \text{mm}^2$.
+
+- *Cálculo da primeira função:*
+$$
+\frac{(n-1)S^2}{\sigma^2} = \frac{(15-1) \cdot 0,048}{0,2^2} = \frac{14 \cdot 0,048}{0,04} = 16,8
+$$
+
+Valor segue $\chi^2_{14}$. Consultando tabela: o valor 16,8 está dentro da região de aceitação → variabilidade está conforme especificação.
+
+- *Cálculo da segunda função:*
+Suponha as medições: 49,8; 50,1; 49,9; ...
+$$
+\sum_{i=1}^{15} \left( \frac{X_i - 50}{0,2} \right)^2 = 18,2
+$$
+
+Que segue $\chi^2_{15}$.
+
+*Relação:*
+$$
+18,2 = 16,8 + \left( \frac{\bar{X} - 50}{0,2/\sqrt{15}} \right)^2
+$$
+
+Se $\bar{X} = 49,95$:
+$$
+\left( \frac{49,95 - 50}{0,0516} \right)^2 \approx 0,94^2 \approx 0,88
+$$
+
+- *Interpretação:* A variabilidade total vem quase toda das flutuações internas do sensor; o erro de calibração é pequeno.
+
+*Exemplo 2: Controle de Qualidade em Atuador Hidráulico*
+
+Um atuador deve fornecer força de $\mu = 1000 \, \text{N}$, com $\sigma = 15 \, \text{N}$.
+Amostra: $n=20$, $S^2 = 320 \, \text{N}^2$, $\bar{X} = 992 \, \text{N}$.
+
+- *Primeira função*:
+$$
+\frac{(20-1) \cdot 320}{15^2} = \frac{19 \cdot 320}{225} \approx 27,02 \quad (\sim \chi^2_{19})
+$$
+
+- *Segunda função*:
+$$
+\sum_{i=1}^{20} \left( \frac{X_i - 1000}{15} \right)^2 = 27,02 + \left( \frac{992 - 1000}{15/\sqrt{20}} \right)^2
+$$
+$$
+= 27,02 + (-2,385)^2 = 27,02 + 5,69 = 32,71 \quad (\sim \chi^2_{20})
+$$
+
+- *Interpretação*: Há variabilidade interna normal, mas o desvio da média é significativo → o atuador está descalibrado.
+
+### Impactos na Aplicação como Engenheiro Mecatrônico
+
+*Análise de Precisão e Repetibilidade*
+
+- A estatística $\frac{(n-1)S^2}{\sigma^2}$ permite construir intervalos de confiança para variância e desvio padrão:
+
+$$
+P\left( \chi^2_{1-\alpha/2,\,n-1} < \frac{(n-1)S^2}{\sigma^2} < \chi^2_{\alpha/2,\,n-1} \right) = 1 - \alpha
+$$
+
+\textbf{Aplicação:} Verificar se sensores, encoders, motores e sistemas de medição atendem às normas de precisão para automação e robótica.
+
+*Controle Estatístico de Processos (CEP)*
+
+- Teste de hipótese para variância:
+$H_0: \sigma^2 = \sigma^2_{\text{especificado}}$ vs $H_1: \sigma^2 \neq \sigma^2_{\text{especificado}}$
+
+\textbf{Aplicação:} Monitorar variabilidade em linhas de produção, usinagem CNC, sistemas de montagem automatizada. Detectar aumento de variabilidade = desgaste, falha ou descalibração.
+
+*Validação de Modelos e Sistemas*
+
+- A decomposição: $\text{Variabilidade Total} = \text{Variabilidade Interna} + \text{Erro de Centralização}$
+
+\textbf{Aplicação:} Avaliar desempenho de controladores PID, filtros, algoritmos de visão computacional: separar se o erro vem de ruído ou de erro sistemático.
+
+*Projeto de Experimentos*
+
+- Base da ANOVA (Análise de Variância): a mesma lógica de soma de quadrados.
+
+\textbf{Aplicação:} Testar diferentes materiais, parâmetros de controle, configurações de robôs e escolher a melhor alternativa com base em dados.
+
+*Relação com outras distribuições*
+
+- Daqui derivam:
+
+- Distribuição $t$ de Student: usada para testar médias quando $\sigma$ é desconhecido.
+
+- Distribuição $F$ de Snedecor: compara variâncias de dois processos.
+
+\textbf{Aplicação:} Comparar precisão de dois sensores, avaliar eficiência de duas estratégias de controle.
+
 ---
-
-## ⚙️ Metodologia
-
-::: {.callout-note}
-Descreva como o experimento foi realizado.
-:::
-
-- Materiais utilizados  
-- Procedimento  
-- Número de repetições  
-
----
-
-## 🔍 Resultados e Discussão
-
-Apresente e interprete os resultados obtidos a partir dos dados coletados.
-
-- Descreva os principais resultados numéricos (média, variabilidade, etc.).
-- Comente o comportamento dos dados observados nos gráficos.
-- Indique se há presença de valores discrepantes (outliers).
-- Avalie se os dados apresentam simetria ou tendência.
-
-Em seguida, discuta os resultados à luz dos conceitos teóricos:
-
-- Os resultados estão de acordo com o esperado?
-- Há grande variabilidade? O que isso significa no contexto do experimento?
-- Quais fatores podem ter influenciado os resultados?
-- Existem possíveis fontes de erro experimental?
-
-Procure não apenas descrever, mas **interpretar os dados**.
-
-### 💬 Exemplo de como citar uma referência bibliográfica
-
-Depois de inserido as informaçõe no arquivo **referencias.bib**, use:
-
-- Segundo @Rbasico2022
-- Tudo é um objeto em R [@Rbasico2022]
-
-### 📊  Análise de Dados
-
-```{r}
-distancia <- c(10.2, 9.8, 10.5, 10.1, 9.9, 10.3)
-distancia
-```
 
 ## 🧠 Considerações finais
 
-Apresente uma síntese dos principais pontos observados no experimento.
+- A relação depende essencialmente da normalidade da população: se os dados não forem normais, as distribuições $\chi^2$ não valem, e é necessário métodos não paramétricos.
 
-- Retome o objetivo da prática e indique se ele foi alcançado.
-- Destaque os principais aprendizados obtidos.
-- Comente brevemente sobre a qualidade dos dados coletados.
-- Sugira possíveis melhorias no procedimento experimental.
+- A diferença de graus de liberdade ($n$ vs $n-1$) é crítica: usar o valor populacional ou estimado altera toda a inferência.
 
-Evite repetir apenas os resultados; foque nas **conclusões e reflexões** sobre a prática realizada.
+- A decomposição da variabilidade é o princípio fundamental para entender a origem dos erros em sistemas mecatrônicos.
 
-## Aprenda Quarto
+- Quanto maior a amostra, mais precisas as estimativas, mas a estrutura da relação permanece válida.
 
-Acesse [Quarto](https://quarto.org/).
+### Conclusão
+
+As funções $\frac{(n-1)S^2}{\sigma^2}$ e $\sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma} \right)^2$ não são independentes: a segunda é a soma da primeira com o erro quadrático da média. Ambas seguem distribuição Qui-Quadrado, diferindo apenas nos graus de liberdade.
+
+Para o engenheiro mecatrônico, esse conhecimento não é apenas teórico: ele permite quantificar precisão, controlar processos, identificar causas de erro, validar equipamentos e tomar decisões técnicas fundamentadas. Em um setor onde exatidão e confiabilidade são essenciais, dominar essa relação estatística é indispensável para projetar, operar e manter sistemas automatizados, robôs e máquinas inteligentes com qualidade e segurança.
+
+
 
 ## 📖 Referências
+
+
+
+\bibitem{wikiqui}
+WIKIPÉDIA.
+\textit{Distribuição qui-quadrado}. 2026.
+\\Disponível em: https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_qui-quadrado.
+\\(Confira: Definição, propriedades, graus de liberdade e relação com variância amostral)
+
+\bibitem{bendeivide}
+BEN DÊIVIDE.
+\textit{Material Didático de Estatística e Probabilidade — Distribuições Amostrais}. DEFIM / CAP / UFSJ.
+\\Disponível em: https://bendeivide.github.io/courses/epaec/.
+\\(Confira: Seção 5 – Relação entre parâmetros e estatísticas amostrais)
+
+\bibitem{ifsp}
+IFSP — Campus São Paulo.
+\textit{Estatística para Engenharia — Controle de Processos}.
+\\Disponível em: https://spo.ifsp.edu.br/images/documentos/ensino/graduacao/engenharia/estatistica_aplicada.pdf.
+\\(Confira: Aplicações em controle de qualidade e precisão de sistemas)
