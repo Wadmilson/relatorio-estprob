@@ -1,0 +1,536 @@
+---
+# Só mude aqui!!!!
+author: "Wadmilson Costa da Fonseca e Cruz"
+title: "Relatório 07"
+bibliography: referencias.bib
+# A partir daqui nao faca alteracoes!!!!!
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+subtitle: "<a href='https://bendeivide.github.io/courses/epaec/' target='_blank'>Estatística e Probabilidade</a> </br> <a href='https://bendeivide.github.io' target='_blank'>Prof. Ben Dêivide (DEFIM/CAP/UFSJ)</a>"
+include-before-body: header.html
+date: now
+date-format: "DD/MM/YYYY, HH:mm"
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: bootstrap
+    #css: styles.css
+    code-fold: true
+    code-tools: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+## 📌 Introdução
+
+A Estatística Inferencial reúne métodos que permitem estender informações obtidas em amostras para toda a população de origem, sendo a estimação por intervalo uma das técnicas mais completas e utilizadas. 
+
+Diferente da estimação pontual, que apresenta apenas um valor único como suposta estimativa do parâmetro, o estimador intervalar define um conjunto de limites prováveis, associado a um grau de confiança, e torna possível quantificar a incerteza e a precisão dos resultados. 
+
+Sua construção segue regras e propriedades específicas, que mudam conforme o parâmetro que se deseja estimar, a informação disponível e o comportamento da variável em estudo, especialmente quando se trata de distribuições conhecidas como a normal e a distribuição de Bernoulli.
+
+
+
+## 🎯 Objetivos
+
+Este relatorio consiste na dedução dos estimadores intervalares para os casos: média populacional com variância conhecida e variância populacional, ambos para distribuição normal; diferença entre médias de duas populações normais independentes, considerando variâncias homogêneas e também heterogêneas; razão entre variâncias populacionais; além de estimador aproximado e forma exata para o parâmetro da distribuição de Bernoulli, explicitando o fundamento teórico utilizado. Estabelecer a relação desses conteúdos com o que foi estudado no Relatório 6, aplicar e simular esses resultados por meio de códigos na linguagem R, e identificar e descrever formas de aplicação desses estimadores na engenharia mecatronica.
+
+---
+
+## 📚  Fundamentação Teórica
+
+### Estimador intervalar para a média populacional – variância populacional conhecida
+
+Uma população com distribuição Normal, representada por $X \sim N(\mu, \sigma^2)$. O parâmetro que se deseja estimar é a média populacional $\mu$, cujo valor é desconhecido, enquanto a variância $\sigma^2$ — ou desvio padrão $\sigma$ — é tratada como informação conhecida, obtida de registros históricos, estudos anteriores ou especificações consolidadas. Adota-se ainda que a amostra coletada é aleatória e que as observações são independentes entre si.
+
+Por propriedade da distribuição Normal, quando a população segue este modelo probabilístico, a estatística média calculada sobre a amostra também apresenta distribuição normal. Sendo definida a média amostral por:
+
+$$\bar{X} = \frac{\sum_{i=1}^{n} X_i}{n}$$
+
+Sua distribuição é caracterizada por:
+$$E(\bar{X}) = \mu \quad \quad \text{e} \quad \quad Var(\bar{X}) = \frac{\sigma^2}{n}$$
+
+O valor esperado igual ao parâmetro populacional indica a propriedade de não viés, enquanto a variância reduzida em função do tamanho amostral demonstra que quanto maior a quantidade de dados, maior a precisão da estimativa. Escreve-se então:
+
+$$\bar{X} \sim N\left(\mu \,;\, \frac{\sigma^2}{n}\right)$$
+
+Como esta expressão ainda contém o parâmetro desconhecido que se quer estimar, realiza-se a transformação denominada padronização, que resulta numa variável com distribuição Normal Padrão $N(0,1)$, livre de parâmetros a determinar:
+
+$$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)$$
+
+Define-se $1 - \alpha$ como nível de confiança, correspondente à probabilidade de que o método utilizado resulte num intervalo válido que contenha o valor real do parâmetro; $\alpha$ representa o risco de erro admitido. Pela simetria da curva normal, adota-se o valor crítico $z_{\alpha/2}$, tal que:
+
+$$P\left(-z_{\alpha/2} < Z < z_{\alpha/2}\right) = 1 - \alpha$$
+
+Substituindo a expressão da variável padronizada e reorganizando algebricamente para isolar $\mu$ entre os limites, sem alterar a relação de probabilidade:
+
+$$P\left(-z_{\alpha/2} < \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} < z_{\alpha/2}\right) = 1 - \alpha$$
+$$P\left(\bar{X} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} < \mu < \bar{X} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\right) = 1 - \alpha$$
+
+Desta dedução, obtém-se a expressão final do estimador intervalar:
+
+$$\boxed{IC(\mu \,;\, 1-\alpha) = \bar{X} \quad \pm \quad z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}}$$
+
+Com esta construção, afirma-se que, com confiança de $(1-\alpha) \times 100\%$, o intervalo calculado a partir dos dados amostrais contém o verdadeiro valor da média da população.
+
+
+### Estimador intervalar para a variância populacional
+
+Uma população com distribuição Normal, representada por $X \sim N(\mu, \sigma^2)$. O parâmetro que se deseja estimar neste caso é a variância populacional $\sigma^2$, cujo valor é desconhecido, enquanto a média $\mu$ também pode ser desconhecida e não é necessária para a construção deste estimador. Adota-se como premissa que a amostra coletada é aleatória e que as observações são independentes entre si.
+
+Para a estimação deste parâmetro, utiliza-se como estatística o valor da variância calculada na amostra, definida por:
+
+$$S^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}$$
+
+Pela teoria das distribuições amostrais, sabe-se que, sob distribuição normal, a quantidade construída a partir da variância amostral segue a distribuição Qui-Quadrado ($\chi^2$), definida por:
+
+$$\frac{(n - 1)S^2}{\sigma^2} \sim \chi^2_{(n-1)}$$
+
+Nesta relação, o parâmetro que define a forma da distribuição é o número de graus de liberdade, igual a $n - 1$, correspondente ao tamanho da amostra menos uma unidade. Diferente da distribuição normal, esta é uma distribuição assimétrica, definida apenas para valores positivos e cujo formato varia conforme os graus de liberdade.
+
+Define-se $1 - \alpha$ como nível de confiança, correspondente à probabilidade de o método conduzir a um intervalo que contenha o valor real do parâmetro, sendo $\alpha$ o risco de erro admitido. Por se tratar de uma distribuição assimétrica, os valores críticos que delimitam as regiões de probabilidade $\alpha/2$ em cada extremidade são diferentes entre si, representados por $\chi^2_{1-\alpha/2,(n-1)}$ e $\chi^2_{\alpha/2,(n-1)}$, tais que:
+
+$$P\left(\chi^2_{1-\alpha/2} < \frac{(n - 1)S^2}{\sigma^2} < \chi^2_{\alpha/2}\right) = 1 - \alpha$$
+
+Reorganizam-se os termos da expressão algébrica de modo a isolar $\sigma^2$ no centro das desigualdades, preservando a relação de probabilidade estabelecida:
+
+$$P\left(\frac{(n - 1)S^2}{\chi^2_{\alpha/2}} < \sigma^2 < \frac{(n - 1)S^2}{\chi^2_{1-\alpha/2}}\right) = 1 - \alpha$$
+
+Desta dedução, obtém-se a expressão final do estimador intervalar para a variância:
+
+$$\boxed{IC(\sigma^2 \,;\, 1-\alpha) = \left[ \frac{(n - 1)S^2}{\chi^2_{\alpha/2}} \,;\, \frac{(n - 1)S^2}{\chi^2_{1-\alpha/2}} \right]}$$
+
+Com esta construção, afirma-se que, com confiança de $(1-\alpha) \times 100\%$, o intervalo calculado a partir dos dados amostrais contém o verdadeiro valor da variância da população.
+
+
+### (A) Estimador intervalar para a diferença entre duas médias populacionais – variâncias desconhecidas e iguais}
+
+
+Sejam duas populações independentes, ambas com distribuição Normal, representadas por $X_1 \sim N(\mu_1, \sigma_1^2)$ e $X_2 \sim N(\mu_2, \sigma_2^2)$. O parâmetro de interesse é a diferença entre as médias $\mu_1 - \mu_2$, cujo valor é desconhecido. Admite-se neste caso que as variâncias populacionais, embora também desconhecidas, são equivalentes entre si, ou seja, $\sigma_1^2 = \sigma_2^2 = \sigma^2$, condição denominada homocedasticidade. As amostras coletadas são aleatórias, de tamanhos respectivamente $n_1$ e $n_2$, e todas as observações são independentes.
+
+Calculam-se as estatísticas amostrais: médias $\bar{X}1 = \frac{\sum{i=1}^{n_1} X_{1i}}{n_1}$ e $\bar{X}2 = \frac{\sum{j=1}^{n_2} X_{2j}}{n_2}$, e variâncias $S_1^2 = \frac{\sum_{i=1}^{n_1} (X_{1i} - \bar{X}1)^2}{n_1 - 1}$ e $S_2^2 = \frac{\sum{j=1}^{n_2} (X_{2j} - \bar{X}_2)^2}{n_2 - 1}$. Por propriedade das distribuições amostrais, a diferença entre as médias também segue distribuição Normal, tal que:
+
+$$\bar{X}_1 - \bar{X}_2 \sim N\left(\mu_1 - \mu_2 \,,\, \sigma^2 \left( \frac{1}{n_1} + \frac{1}{n_2} \right) \right)$$
+
+Como a variância comum $\sigma^2$ não é conhecida, ela é estimada por uma variância agrupada, calculada a partir das informações de ambas as amostras:
+
+$$S_p^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}$$
+
+Essa estimativa combina a precisão das duas amostras e apresenta $n_1 + n_2 - 2$ graus de liberdade. Substituindo o parâmetro desconhecido por essa estimativa, a variável padronizada resultante deixa de seguir distribuição normal e passa a seguir a distribuição $t$ de Student:
+
+$$T = \frac{(\bar{X}1 - \bar{X}_2) - (\mu_1 - \mu_2)}{S_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t{(n_1 + n_2 - 2)}$$
+
+Define-se $1 - \alpha$ como nível de confiança, correspondente à probabilidade de sucesso do método, e obtém-se o valor crítico $t_{\alpha/2 \,;\, n_1 + n_2 - 2}$, ponto da distribuição que delimita a probabilidade $\alpha/2$ em cada extremidade, satisfazendo:
+
+$$P\left( -t_{\alpha/2} < T < t_{\alpha/2} \right) = 1 - \alpha$$
+
+Substituindo a expressão da variável e reorganizando os termos de modo a isolar o parâmetro $\mu_1 - \mu_2$ no interior das desigualdades, mantendo inalterada a relação de probabilidade:
+
+$$P\left( -t_{\alpha/2} < \frac{(\bar{X}1 - \bar{X}_2) - (\mu_1 - \mu_2)}{S_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} < t{\alpha/2} \right) = 1 - \alpha$$
+
+$$
+\begin{aligned}
+P\Bigg[ (\bar{X}1 - \bar{X}_2) - t{\alpha/2} \cdot S_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}} & < \mu_1 - \mu_2 \\
+& < (\bar{X}1 - \bar{X}_2) + t{\alpha/2} \cdot S_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}} \Bigg] = 1 - \alpha
+\end{aligned}
+$$
+
+Desta dedução, obtém-se o estimador intervalar:
+
+$$
+\boxed{IC(\mu_1 - \mu_2 \,;\, 1-\alpha) = (\bar{X}1 - \bar{X}_2) \quad \pm \quad t{\alpha/2 \,;\, n_1+n_2-2} \cdot S_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}
+$$
+
+Afirma-se que, com confiança de $(1-\alpha) \times 100\%$, o intervalo construído contém o valor verdadeiro da diferença entre as médias das duas populações.
+
+
+### (B) Estimador intervalar para a diferença entre duas médias populacionais – variâncias desconhecidas e diferentes}
+
+
+Sejam duas populações independentes com distribuição Normal, representadas por $X_1 \sim N(\mu_1, \sigma_1^2)$ e $X_2 \sim N(\mu_2, \sigma_2^2)$. O parâmetro de interesse é a diferença entre médias $\mu_1 - \mu_2$, de valor desconhecido. Admite-se que as variâncias populacionais $\sigma_1^2$ e $\sigma_2^2$ são desconhecidas e diferentes entre si, ou seja $\sigma_1^2 \neq \sigma_2^2$. As amostras são aleatórias, de tamanhos $n_1$ e $n_2$, com observações independentes.
+
+Calculam-se as estatísticas: médias $\bar{X}1 = \frac{\sum{i=1}^{n_1} X_{1i}}{n_1}$, $\bar{X}2 = \frac{\sum{j=1}^{n_2} X_{2j}}{n_2}$ e variâncias $S_1^2 = \frac{\sum_{i=1}^{n_1} (X_{1i} - \bar{X}1)^2}{n_1 - 1}$, $S_2^2 = \frac{\sum{j=1}^{n_2} (X_{2j} - \bar{X}_2)^2}{n_2 - 1}$. A diferença entre médias segue distribuição:
+
+$$\bar{X}_1 - \bar{X}_2 \sim N\left(\mu_1 - \mu_2 \,,\, \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} \right)$$
+
+Como $\sigma_1^2$ e $\sigma_2^2$ são desconhecidas, substituem-se por suas estimativas amostrais. Por esta condição, a variável obtida segue aproximadamente a distribuição $t$ de Student, com graus de liberdade $v$ calculado por:
+
+$$v = \frac{\left( \frac{S_1^2}{n_1} + \frac{S_2^2}{n_2} \right)^2}{\frac{(S_1^2 / n_1)^2}{n_1 - 1} + \frac{(S_2^2 / n_2)^2}{n_2 - 1}}$$
+
+Define-se então:
+
+$$T = \frac{(\bar{X}1 - \bar{X}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}}} \approx t{(v)}$$
+
+Para nível de confiança $1 - \alpha$, adota-se o valor crítico $t_{\alpha/2 \,;\, v}$, tal que:
+
+$$P\left( -t_{\alpha/2} < T < t_{\alpha/2} \right) = 1 - \alpha$$
+
+Substituindo e reorganizando para isolar o parâmetro:
+
+$$P\left( -t_{\alpha/2} < \frac{(\bar{X}1 - \bar{X}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}}} < t{\alpha/2} \right) = 1 - \alpha$$
+
+$$P\Bigg[ (\bar{X}1 - \bar{X}_2) - t{\alpha/2} \cdot \sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}} < \mu_1 - \mu_2 < (\bar{X}1 - \bar{X}_2) + t{\alpha/2} \cdot \sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}} \Bigg] = 1 - \alpha$$
+
+Resultado final:
+
+$$\boxed{IC(\mu_1 - \mu_2 \,;\, 1-\alpha) = (\bar{X}1 - \bar{X}_2) \quad \pm \quad t{\alpha/2 \,;\, v} \cdot \sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}}}$$
+
+Afirma-se que, com confiança de $(1-\alpha) \times 100\%$, o intervalo obtido contém o valor verdadeiro da diferença entre as médias populacionais.
+
+
+### (C) Estimador intervalar para a razão entre variâncias de duas populações
+
+
+Sejam duas populações independentes, ambas com distribuição Normal, representadas por $X_1 \sim N(\mu_1, \sigma_1^2)$ e $X_2 \sim N(\mu_2, \sigma_2^2)$. O parâmetro de interesse é a razão entre as variâncias populacionais $\frac{\sigma_1^2}{\sigma_2^2}$, cujo valor é desconhecido. As médias e as variâncias de ambas as populações também são desconhecidas. As amostras coletadas são aleatórias, de tamanhos $n_1$ e $n_2$, e as observações são independentes entre si.
+
+Calculam-se as variâncias obtidas nas amostras:
+$$S_1^2 = \frac{\sum_{i=1}^{n_1} (X_{1i} - \bar{X}1)^2}{n_1 - 1} \quad \quad \text{e} \quad \quad S_2^2 = \frac{\sum{j=1}^{n_2} (X_{2j} - \bar{X}_2)^2}{n_2 - 1}$$
+
+Pela teoria das distribuições amostrais, a razão entre as variâncias amostrais, ajustada pelos parâmetros populacionais, segue a distribuição de probabilidade denominada Distribuição $F$ de Snedecor, definida por:
+
+$$F = \frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} \sim F_{(n_1 - 1 \,;\, n_2 - 1)}$$
+
+Esta distribuição depende de dois conjuntos de graus de liberdade: o primeiro associado à primeira amostra $(n_1 - 1)$ e o segundo associado à segunda amostra $(n_2 - 1)$, e é uma distribuição assimétrica definida apenas para valores positivos.
+
+Define-se $1 - \alpha$ como nível de confiança, correspondente à probabilidade de o intervalo construído conter o valor real do parâmetro, sendo $\alpha$ o risco de erro admitido. Os valores críticos $F_{1-\alpha/2 \,;\, v_1 \,;\, v_2}$ e $F_{\alpha/2 \,;\, v_1 \,;\, v_2}$ são os pontos que delimitam a probabilidade $\alpha/2$ em cada extremidade, satisfazendo:
+
+$$P\left( F_{1-\alpha/2} < \frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} < F_{\alpha/2} \right) = 1 - \alpha$$
+
+Sabe-se ainda por propriedade desta distribuição que $F_{1-\alpha/2 \,;\, v_1 \,;\, v_2} = \frac{1}{F_{\alpha/2 \,;\, v_2 \,;\, v_1}}$, relação utilizada para obtenção do valor crítico da cauda inferior.
+
+Reorganizam-se os termos da expressão algébrica de forma a isolar o parâmetro de interesse $\frac{\sigma_1^2}{\sigma_2^2}$ no centro das desigualdades, mantendo a relação de probabilidade:
+
+$$P\left( F_{1-\alpha/2} \cdot \frac{S_2^2}{S_1^2} < \frac{\sigma_1^2}{\sigma_2^2} < F_{\alpha/2} \cdot \frac{S_2^2}{S_1^2} \right) = 1 - \alpha$$
+
+Desta dedução, obtém-se a expressão final do estimador intervalar:
+
+$$\boxed{IC\left( \frac{\sigma_1^2}{\sigma_2^2} \,;\, 1-\alpha \right) = \left[ F_{1-\alpha/2 \,;\, n_1-1 \,;\, n_2-1} \cdot \frac{S_2^2}{S_1^2} \,;\, F_{\alpha/2 \,;\, n_1-1 \,;\, n_2-1} \cdot \frac{S_2^2}{S_1^2} \right]}$$
+
+Afirma-se que, com confiança de $(1-\alpha) \times 100\%$, o intervalo obtido contém o verdadeiro valor da razão entre as variâncias das duas populações.
+
+### Baseado em uma população de Bernoulli
+
+
+- *(A) Determinação do estimador aproximado para o parâmetro $p$*
+
+Seja a variável aleatória $X$ que segue distribuição de Bernoulli, representada por $X \sim Bernoulli(p)$, onde $p$ é o parâmetro de interesse, correspondente à probabilidade de ocorrência do evento considerado ou proporção de elementos com determinada característica na população, sendo o seu valor desconhecido. Temos apenas dois resultados possíveis: $X=1$ se ocorre o evento, $X=0$ se não ocorre, com probabilidades $p$ e $1-p$ respetivamente. A amostra é aleatória, constituída por $n$ observações independentes.
+
+Define-se como estimativa pontual a proporção observada dentro da amostra:
+
+$$\hat{p} = \frac{\text{número de sucessos observados}}{n} = \frac{\sum_{i=1}^{n} X_i}{n}$$
+
+Para amostras de tamanho suficiente, a distribuição desta estimativa aproxima-se da distribuição Normal, com média e variância dadas por:
+
+$$\hat{p} \sim N\left( p \,,\, \frac{p(1-p)}{n} \right)$$
+
+Padronizando, obtemos variável aproximadamente normal padrão:
+
+$$Z = \frac{\hat{p} - p}{\sqrt{\frac{p(1-p)}{n}}} \approx N(0,1)$$
+
+Como o termo da variância depende do próprio parâmetro desconhecido, substitui-se na prática pelo valor estimado $\hat{p}$ sem perda relevante de precisão. Fixado o nível de confiança $1 - \alpha$ e valor crítico $z_{\alpha/2}$, temos:
+
+$$P\left(-z_{\alpha/2} < Z < z_{\alpha/2}\right) = 1 - \alpha$$
+
+Substituindo e reorganizando para isolar $p$:
+
+$$P\left( \hat{p} - z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} < p < \hat{p} + z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \right) = 1 - \alpha$$
+
+Resultando no estimador intervalar aproximado:
+
+$$\boxed{IC_{aproximado}(p \,;\, 1-\alpha) = \hat{p} \quad \pm \quad z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}$$
+
+Afirma-se que, com confiança de $(1-\alpha) \times 100\%$, este intervalo contém o valor real de $p$.
+
+- *(B) Fundamento da construção do intervalo aproximado*
+
+A construção apresentada assenta-se fundamentalmente no *Teorema Central do Limite*, resultado central da teoria de probabilidades que estabelece: quando se considera uma soma ou média de variáveis aleatórias independentes e identicamente distribuídas, qualquer que seja a forma da distribuição original, à medida que aumenta o tamanho da amostra, a distribuição dessa estatística aproxima-se cada vez mais da distribuição Normal.
+
+No caso da distribuição de Bernoulli, a distribuição original é discreta e muito diferente da forma da curva normal. Porém, ao calcularmos a proporção amostral — que corresponde a uma média dessas observações — o teorema garante que, com $n$ suficiente, podemos substituir a distribuição real pela aproximação normal, tornando possível todo o desenvolvimento e uso de valores críticos tabelados, que são simples e consagrados.
+
+Essa aproximação é considerada válida habitualmente quando se verifica simultaneamente:
+$$n \cdot p \geq 5 \quad \text{e} \quad n \cdot (1-p) \geq 5$$
+ou usando os valores estimados:
+$$n \cdot \hat{p} \geq 5 \quad \text{e} \quad n \cdot (1 - \hat{p}) \geq 5$$
+
+- *(c) Desenvolvimento do intervalo exato para $p$*
+
+Quando as condições de aproximação não são satisfeitas, ou quando se exige rigor sem recorrer a hipóteses aproximadas, recorre-se ao método exato, também designado método de Clopper–Pearson. Ele parte diretamente da distribuição Binomial, que é a distribuição verdadeira da quantidade de sucessos numa amostra extraída de população Bernoulli.
+
+Sendo $k = \sum X_i$ o número de ocorrências observadas, temos:
+$$k \sim Binomial(n , p)$$
+
+Os limites do intervalo são definidos com base nas probabilidades acumuladas dessa distribuição, de modo a garantir que a probabilidade de o parâmetro verdadeiro estar fora do intervalo seja igual ou inferior a $\alpha/2$ em cada lado.
+
+Matematicamente, o limite inferior $p_{inf}$ satisfaz:
+ $$P\left( K \geq k \,|\, p = p_{inf} \right) = \frac{\alpha}{2}$$
+ E o limite superior $p_{sup}$ satisfaz:
+ $$P\left( K \leq k \,|\, p = p_{sup} \right) = \frac{\alpha}{2}$$
+ Resolvendo estas igualdades, obtém-se o intervalo exato:
+ $$\boxed{IC_{exato}(p \,;\, 1-\alpha) = \left[ \, p_{inf} \,;\, p_{sup} \, \right]}$$
+ Este método não depende de tamanho mínimo de amostra nem de aproximações, mantém o nível de confiança definido em qualquer situação e é considerado referência teórica, embora exija resolução numérica ou uso de tabelas específicas.
+
+
+### Relação destes estimadores com o conteúdo estudado no Relatório 6
+
+
+Todo o desenvolvimento apresentado corresponde à aplicação direta dos conceitos e resultados estudados no Rel06. Nele, foram definidos os conceitos de parâmetro, estatística e distribuição amostral, além das propriedades que tornam um estimador adequado (não viés, eficiência e consistência).
+
+Foi também lá que foram apresentadas as distribuições fundamentais, a Normal, Qui-Quadrado, $t$ de Student e $F$ de Snedecor e, o Teorema Central do Limite. Em cada dedução aqui feita, a escolha da distribuição, o cálculo dos graus de liberdade e a determinação dos valores críticos seguiram exatamente o que foi estabelecido e explicado nessa base teórica.
+
+Portanto, o Rel06 forneceu os fundamentos e as leis que regem o comportamento das medidas, enquanto que o Rel07 aplicou esses conhecimentos para construir os estimadores e definir os intervalos de confiança, fechando o percurso entre a teoria e a sua utilização prática.
+
+
+### Aplicação dos resultados em linguagem R
+
+Apresentando a implementação prática de todos os estimadores deduzidos, através da simulação de amostras e construção de código para cálculo automático dos intervalos de confiança, seguindo exatamente os conceitos e expressões desenvolvidos.
+
+
+- *1-1 Média, variância populacional conhecida*
+
+Simulação: população normal, média verdadeira $\mu=50$, variância conhecida $\sigma^2=16$, amostra de tamanho $n=30$.
+
+
+```{r}
+
+# Definição de parâmetros
+mu_verdadeiro <- 50
+sigma <- 4   # desvio padrão conhecido
+n <- 30
+
+# Simular amostra
+set.seed(123) # garantir resultado reproduzível
+amostra <- rnorm(n, mean = mu_verdadeiro, sd = sigma)
+
+# Estatística
+x_bar <- mean(amostra)
+
+# Valor crítico
+alfa <- 0.05
+z_crit <- qnorm(1 - alfa/2)
+
+# Limites
+lim_inf <- x_bar - z_crit * sigma / sqrt(n)
+lim_sup <- x_bar + z_crit * sigma / sqrt(n)
+
+# Resultado
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+- *1-2 Variância populacional*
+ 
+Simulação: população normal com variância verdadeira $\sigma^2=9$, amostra $n=20$.
+
+
+```{r}
+# Parâmetros
+sigma2_verdadeiro <- 9
+n <- 20
+
+# Simulação
+set.seed(123)
+amostra <- rnorm(n, mean = 50, sd = sqrt(sigma2_verdadeiro))
+
+# Estatística
+s2 <- var(amostra)
+
+# Valores críticos distribuição Qui-Quadrado
+alfa <- 0.05
+qui2_inf <- qchisq(alfa/2, df = n - 1)
+qui2_sup <- qchisq(1 - alfa/2, df = n - 1)
+
+# Intervalo
+lim_inf <- (n - 1) * s2 / qui2_sup
+lim_sup <- (n - 1) * s2 / qui2_inf
+
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+
+
+- *1-3 (a) Diferença de médias, variâncias desconhecidas e iguais*
+ 
+Duas populações independentes, variâncias iguais.
+
+
+```{r}
+# Tamanhos
+n1 <- 25 ; n2 <- 30
+
+# Simulação
+set.seed(123)
+amostra1 <- rnorm(n1, mean = 50, sd = 3)
+amostra2 <- rnorm(n2, mean = 45, sd = 3)
+
+# Estatísticas
+x1_bar <- mean(amostra1) ; x2_bar <- mean(amostra2)
+s1 <- var(amostra1) ; s2 <- var(amostra2)
+
+# Variância combinada
+sp2 <- ((n1 - 1)*s1 + (n2 - 1)*s2) / (n1 + n2 - 2)
+sp <- sqrt(sp2)
+
+# Valor crítico t Student
+alfa <- 0.05
+t_crit <- qt(1 - alfa/2, df = n1 + n2 - 2)
+
+# Intervalo
+dif_med <- x1_bar - x2_bar
+erro <- sp * sqrt(1/n1 + 1/n2)
+
+lim_inf <- dif_med - t_crit * erro
+lim_sup <- dif_med + t_crit * erro
+
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+
+
+- *1-3 (b) Diferença de médias, variâncias desconhecidas e diferentes*
+
+
+```{r}
+n1 <- 25 ; n2 <- 30
+
+set.seed(123)
+amostra1 <- rnorm(n1, mean = 50, sd = 4)
+amostra2 <- rnorm(n2, mean = 45, sd = 2)
+
+x1_bar <- mean(amostra1) ; x2_bar <- mean(amostra2)
+s1 <- var(amostra1) ; s2 <- var(amostra2)
+
+# Graus de liberdade pela aproximação
+erro_quad <- s1/n1 + s2/n2
+v <- erro_quad^2 / ( (s1/n1)^2/(n1-1) + (s2/n2)^2/(n2-1) )
+
+alfa <- 0.05
+t_crit <- qt(1 - alfa/2, df = floor(v))
+
+dif_med <- x1_bar - x2_bar
+erro <- sqrt(s1/n1 + s2/n2)
+
+lim_inf <- dif_med - t_crit * erro
+lim_sup <- dif_med + t_crit * erro
+
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+
+
+- *1-3 (c) Razão entre variâncias*
+
+
+```{r}
+n1 <- 25 ; n2 <- 30
+
+set.seed(123)
+amostra1 <- rnorm(n1, mean = 50, sd = 4)
+amostra2 <- rnorm(n2, mean = 45, sd = 2)
+
+s1 <- var(amostra1) ; s2 <- var(amostra2)
+
+alfa <- 0.05
+f_inf <- qf(alfa/2, df1 = n1-1, df2 = n2-1)
+f_sup <- qf(1 - alfa/2, df1 = n1-1, df2 = n2-1)
+
+lim_inf <- (s1/s2) / f_sup
+lim_sup <- (s1/s2) / f_inf
+
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+
+- *1-4 Parâmetro de proporção (Bernoulli), (a) Intervalo aproximado*
+
+
+```{r}
+n <- 100
+p_verdadeiro <- 0.3
+
+set.seed(123)
+sucessos <- rbinom(1, size = n, prob = p_verdadeiro)
+p_chapeu <- sucessos / n
+
+alfa <- 0.05
+z_crit <- qnorm(1 - alfa/2)
+
+erro <- sqrt(p_chapeu*(1 - p_chapeu)/n)
+lim_inf <- p_chapeu - z_crit * erro
+lim_sup <- p_chapeu + z_crit * erro
+
+c(limite_inferior = lim_inf, limite_superior = lim_sup)
+```
+
+
+
+- *1-4 (b) Fundamento utilizado na construção*
+
+ 
+O método aplicado assenta-se rigorosamente no Teorema Central do Limite, princípio que garante que, para tamanhos de amostra suficientes, a distribuição da proporção observada aproxima-se da distribuição Normal, qualquer que seja a forma da distribuição original, que neste caso é discreta e assimétrica.
+ 
+Para que esta aproximação seja válida e o resultado confiável, exige-se cumprir a regra prática:
+$n \cdot \hat{p} \geq 5 \quad \text{e} \quad n \cdot (1 - \hat{p}) \geq 5$
+ 
+Podemos incluir essa verificação no código como critério de decisão:
+
+```{r}
+# Verificação das condições de validade
+if( n*p_chapeu >=5 & n*(1-p_chapeu) >=5 ){
+  cat("Aproximação adequada, intervalo aproximado é válido.\n")
+}else{
+  cat("Condições não cumpridas: deve usar método exato.\n")
+}
+```
+
+
+
+- *1-4 (c) Intervalo exato*
+
+```{r}
+# Método Clopper–Pearson, função própria do R
+limites <- binom.test(x = sucessos, n = n, conf.level = 0.95)$conf.int
+limites
+```
+
+
+
+### Aplicações destes estimadores na área de Engenharia Mecatrônica
+
+
+Na Engenharia Mecatrônica estes métodos são usados em todas as fases de desenvolvimento, ensaio, controlo e validação de sistemas, equipamentos e processos, nomeadamente:
+
+
+- *Estimadores para média e variância:* aplicam-se no estudo de grandezas como precisão de sensores, resposta de atuadores, resistência mecânica, variação dimensional de peças, consumo elétrico ou temperatura de funcionamento. Permitem definir valores de referência e limites de funcionamento fiáveis, com base em resultados de testes.
+
+
+- *Intervalos para diferença de médias e razão de variâncias:* utilizam-se para comparar soluções, materiais, componentes ou estratégias de controlo diferentes, verificando se existem diferenças reais de desempenho, repetibilidade ou estabilidade, servindo de suporte à escolha e otimização de projetos.
+
+
+- *Estimador para proporção:* emprega-se na avaliação de taxas de avaria, índices de não conformidade, probabilidade de bom funcionamento ou cumprimento de normas técnicas, sendo fundamental na gestão de qualidade, planos de manutenção e critérios de aceitação de lotes produzidos.
+
+Em todos os casos, permitem transformar dados de ensaios em conclusões seguras e generalizáveis, base essencial para o projeto e tomada de decisão em sistemas mecatrônicos.
+
+---
+
+### Conclusão
+
+Os estimadores intervalares constituem ferramentas centrais da Estatística Inferencial, pois permitem chegar a conclusões seguras sobre características de uma população, utilizando apenas informação obtida por meio de amostras. É indispensável respeitar as condições e hipóteses de cada modelo, pois a validade dos resultados depende diretamente do cumprimento desses pressupostos teóricos.
+
+No contexto da Engenharia Mecatrônica, estes métodos têm aplicação relevante e transversal, sendo usados em ensaios, comparação de soluções, dimensionamento e controlo de qualidade. Servem como base rigorosa para a tomada de decisão, contribuindo para projetos mais seguros, eficazes e com fiabilidade comprovada.
+
+
+
+## 📖 Referências
+
+
+BATISTA, Ben Dêivide de O. Estimação Estatística. 2021. Disponível em: https://bendeivide.github.io/books/estest/. Acesso em: 30 mai. 2026.
+ 
+BATISTA, Ben Dêivide de O. Estatística e Probabilidade Aplicada às Engenharias e Ciências. 1. ed. 2022. Disponível em: https://bendeivide.github.io/book-epaec/. Acesso em: 30 mai. 2026.
+
+WIKIPÉDIA. Intervalo de confiança. Disponível em: https://pt.wikipedia.org/wiki/Intervalo_de_confian%C3%A7a
+ 
+WIKIPÉDIA. Teorema central do limite. Disponível em: https://pt.wikipedia.org/wiki/Teorema_central_do_limite.
